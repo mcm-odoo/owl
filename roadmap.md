@@ -1,6 +1,6 @@
 # 🦉 OWL Roadmap 🦉
 
-- Current version: 1.2.5
+- Current version: 1.3.8
 - Status: stable
 
 This roadmap is only an attempt at predicting Owl's future.  Everything may

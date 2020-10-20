@@ -121,8 +121,7 @@ npm install @odoo/owl
 
 If you want to use a simple `<script>` tag, the last release can be downloaded here:
 
-- [owl-1.2.5.js](https://github.com/odoo/owl/releases/download/v1.2.5/owl.js)
-- [owl-1.2.5.min.js](https://github.com/odoo/owl/releases/download/v1.2.5/owl.min.js)
+- [owl-1.3.8](https://github.com/SimonGenin/owl/releases/tag/v1.3.8)
 
 ## License
 
