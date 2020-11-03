@@ -9,7 +9,7 @@ export interface Browser {
   fetch: Window["fetch"];
   localStorage: Window["localStorage"];
 }
-
+// test
 export const browser: Browser = {
   setTimeout: window.setTimeout.bind(window),
   clearTimeout: window.clearTimeout.bind(window),
