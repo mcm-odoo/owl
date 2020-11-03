@@ -22,7 +22,7 @@ jobs:
           path-to-document: 'https://github.com/odoo/odoo/blob/master/doc/cla/icla-1.0.md' # e.g. a CLA or a DCO document
           # branch should not be protected
           branch: 'master'
-          allowlist: *-odoo,SimonGenin,brboi,kebeclibre,bot*
+          allowlist: SimonGenin,brboi,kebeclibre,*-odoo,bot*
           use-dco-flag: false #'Set this to true if you want to use a dco instead of a cla'
           
          #below are the optional inputs - If the optional inputs are not given, then default values will be taken
