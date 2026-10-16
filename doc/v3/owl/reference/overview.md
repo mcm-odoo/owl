@@ -53,9 +53,15 @@ Here is a list of everything exported by the Owl library.
 ## Plugins
 
 - [`Plugin`](plugins.md): base class for plugins
+- [`PluginSet`](plugins.md#plugin-sets): a reactive set of plugin definitions
+- [`createPluginKey`](plugins.md#plugin-keys): a key for a value that is not a plugin
+- [`registrations`](plugins.md#factories-and-overrides): helpers building plugin factories
+- [`PluginHost`](plugins.md#plugin-hosts): starts the plugins of a set and owns their instances
 - [`usePlugin`](plugins.md): import a plugin dependency
+- [`resolvers`](plugins.md#resolvers): alternative ways for `usePlugin` to resolve a plugin
 - [`providePlugins`](plugins.md): make plugins available to a component subtree
-- [`useConfig`](plugins.md#configuration): read a value from the plugin manager's config
+- [`usePluginHost`](plugins.md#standalone-hosts): create a standalone plugin host
+- [`useConfig`](plugins.md#configuration): read a value from the plugin host's config
 
 ## Type Validation
 

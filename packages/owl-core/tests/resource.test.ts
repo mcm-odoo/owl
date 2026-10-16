@@ -1,4 +1,4 @@
-import { effect, Plugin, PluginManager, Resource, types as t } from "../src";
+import { effect, Plugin, PluginHost, PluginSet, Resource, types as t } from "../src";
 import { waitScheduler } from "./helpers";
 
 test("can add and get values", () => {
@@ -182,8 +182,8 @@ describe("use()", () => {
       }
     }
 
-    const manager = new PluginManager({});
-    manager.startPlugins([A]);
+    const manager = new PluginHost({}, new PluginSet().add(A));
+    manager.start();
     expect(shared.items()).toEqual(["red"]);
 
     manager.destroy();
@@ -199,8 +199,8 @@ describe("use()", () => {
       }
     }
 
-    const manager = new PluginManager({});
-    manager.startPlugins([A]);
+    const manager = new PluginHost({}, new PluginSet().add(A));
+    manager.start();
     expect(shared.items()).toEqual(["a", "b", "c"]);
 
     manager.destroy();
@@ -218,8 +218,8 @@ describe("use()", () => {
       }
     }
 
-    const manager = new PluginManager({});
-    manager.startPlugins([A]);
+    const manager = new PluginHost({}, new PluginSet().add(A));
+    manager.start();
     expect(shared.items()).toEqual(["b", "c", "a"]);
   });
 
@@ -238,11 +238,11 @@ describe("use()", () => {
     }
 
     const app = {};
-    const parent = new PluginManager(app);
-    parent.startPlugins([A]);
+    const parent = new PluginHost(app, new PluginSet().add(A));
+    parent.start();
 
-    const child = new PluginManager(app, { parent });
-    child.startPlugins([B]);
+    const child = parent.createChild(parent.set.createChild().add(B));
+    child.start();
     expect(shared.items()).toEqual(["a", "b"]);
 
     child.destroy();

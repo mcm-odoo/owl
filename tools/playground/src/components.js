@@ -1882,23 +1882,25 @@ class ContentView extends Component {
 
       const nonMainFiles = Object.entries(jsFiles).filter(([name]) => name !== entryPoint);
 
-      // Build blob URLs in multiple passes. Each pass creates blobs with
-      // imports rewritten to the previous pass's URLs. Pass 0 uses original
-      // code, subsequent passes rewrite relative imports to blob URLs.
-      // N passes support import chains N-1 levels deep among non-main files.
+      // Relative imports are rewritten to a stable bare specifier per file
+      // ("@playground/<name>"), mapped to the file's blob URL by the import
+      // map. Each file is thus loaded once (a single module instance, shared
+      // by all its importers, whatever the import order), and import cycles
+      // work.
       const fileUrlMap = {};
-      for (let pass = 0; pass < 4; pass++) {
-        for (const [name, code] of nonMainFiles) {
-          const src = pass === 0 ? code : rewriteImports(code, name, fileUrlMap);
-          const blob = new Blob([src], { type: "application/javascript" });
-          const url = URL.createObjectURL(blob);
-          blobUrls.push(url);
-          fileUrlMap["./" + name] = url;
-          if (name.endsWith(".js")) fileUrlMap["./" + name.slice(0, -3)] = url;
-        }
+      for (const [name] of nonMainFiles) {
+        const specifier = `@playground/${name}`;
+        fileUrlMap["./" + name] = specifier;
+        if (name.endsWith(".js")) fileUrlMap["./" + name.slice(0, -3)] = specifier;
       }
-
-      Object.assign(imports, fileUrlMap);
+      for (const [name, code] of nonMainFiles) {
+        const blob = new Blob([rewriteImports(code, name, fileUrlMap)], {
+          type: "application/javascript",
+        });
+        const url = URL.createObjectURL(blob);
+        blobUrls.push(url);
+        imports[`@playground/${name}`] = url;
+      }
 
       const importMap = doc.createElement("script");
       importMap.type = "importmap";

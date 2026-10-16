@@ -70,6 +70,17 @@ const EXAMPLES_V3 = [
     files: { "main.js": "plugins/main.js" },
   },
   {
+    id: "orm",
+    category: "Examples",
+    description: "Isolated plugin system (ORM)",
+    files: {
+      "main.js": "orm/main.js",
+      "main.css": "orm/main.css",
+      "orm.js": "orm/orm.js",
+      "models.js": "orm/models.js",
+    },
+  },
+  {
     id: "async_suspense",
     category: "Examples",
     description: "Async + Suspense",

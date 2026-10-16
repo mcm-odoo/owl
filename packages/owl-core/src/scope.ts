@@ -1,21 +1,21 @@
 import { OwlError } from "./owl_error";
 import { ComputationAtom, disposeComputation } from "./computations";
 import { STATUS, StatusValue } from "./status";
-import type { PluginManager } from "./plugin_manager";
+import type { PluginHost } from "./plugin_manager";
 
 // -----------------------------------------------------------------------------
 // Scope
 // -----------------------------------------------------------------------------
 //
 // A Scope is the shared lifetime machinery used by every entity that outlives a
-// single synchronous call: components and plugin managers. It unifies:
+// single synchronous call: components and plugins. It unifies:
 //   - "who is currently constructing?" (via the global scopeStack)
 //   - "is this still alive?" (status + AbortSignal)
 //   - "run this when I'm destroyed" (onDestroy callbacks)
 //   - "dispose these computations on destroy" (computations list)
 //
 // Scope is `abstract`: the only concrete scopes in the runtime are
-// `ComponentNode` and `PluginManager`, each of which extends Scope directly
+// `ComponentNode` and `PluginScope`, each of which extends Scope directly
 // (rather than composing a separate scope object).
 //
 // `app` is typed as `any` because the concrete App type lives in owl-runtime;
@@ -41,16 +41,17 @@ export function useScope(): Scope {
 
 export abstract class Scope {
   app: any;
-  pluginManager: PluginManager;
+  // the host `usePlugin` resolves plugins from
+  pluginHost: PluginHost;
   status: StatusValue = STATUS.NEW;
   computations: ComputationAtom[] = [];
   willStart: Array<() => any> = [];
   private _controller: AbortController | null = null;
   private _destroyCbs: Array<() => void> | null = null;
 
-  constructor(app: any) {
+  constructor(app: any, pluginHost: PluginHost) {
     this.app = app;
-    this.pluginManager = app.pluginManager;
+    this.pluginHost = pluginHost;
   }
 
   /**

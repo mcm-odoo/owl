@@ -42,7 +42,7 @@ await root.mount(document.body);
   (true once the render phase has finished), and `destroyed` (true once
   `destroy()` has been called). `options` accepts `{ props }`.
 
-- **`app.destroy()`**: destroys every root, the plugin manager, and the
+- **`app.destroy()`**: destroys every root, the plugins of the app, and the
   application itself.
 
 ### `mount` helper
@@ -90,9 +90,12 @@ The `App` config accepts the following fields:
   see [Custom Directives](template_syntax.md#custom-directives).
 - **`globalValues (object)`**: values exposed to every compiled template
   under the `__globals__` namespace.
-- **`plugins (PluginConstructor[] | Resource<PluginConstructor>)`**: plugins
-  to start when the app boots — see [plugins](plugins.md). Plugins'
-  `onWillStart` callbacks defer the first root render until they resolve.
+- **`plugins (PluginClass[] | PluginSet)`**: plugins to start when the app
+  boots, by the app's plugin host (`app.pluginHost`) — see
+  [plugins](plugins.md). A list of plugin classes is added, with their default
+  definition, to a new set. A set is reactive: plugins added to it later are
+  started as well. Plugins' `onWillStart` callbacks defer the first root render
+  until they resolve.
 - **`config (Record<string, any>)`**: values readable from plugin code via
   the `useConfig()` hook — see
   [Plugins — Configuration](plugins.md#configuration).
@@ -121,6 +124,23 @@ root.destroy();
 Roots created via `createRoot` are owned by your code: it is your
 responsibility to call `root.destroy()` (before the target is removed from
 the DOM); Owl will not clean them up for you.
+
+A root created by `app.createRoot` uses the app's plugin host, or the one given
+with the `pluginHost` option: a host of the same app, e.g. a child of
+`app.pluginHost` (see [plugin hosts](plugins.md#plugin-hosts)). Create the root
+once that host is ready: creating a root builds its component, whose
+`usePlugin` calls would otherwise create plugins on demand, before the host's
+async plugins are ready.
+
+```js
+const host = app.pluginHost.createChild(servicesSet);
+await host.start(); // waits for the app's host first
+await app.createRoot(WebClient, { pluginHost: host }).mount(document.body);
+```
+
+To create roots from a component or a plugin, with the plugins provided to it
+(or other plugins), use [`useCreateRoot`](plugins.md#roots): its roots are
+destroyed with their creator.
 
 ### Two-phase mounting: `prepare` and `mount`
 

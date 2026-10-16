@@ -914,14 +914,15 @@ class EnvPlugin extends Plugin {
 const useEnv = () => usePlugin(EnvPlugin).env;
 owl.useEnv = useEnv;
 
+// EnvPlugin must be in the app's plugin set
 owl.useSubEnv = function (extension) {
   const env = useEnv();
   const subEnv = Object.assign(Object.create(env), extension);
-  class SubEnvPlugin extends Plugin {
-    static id = "EnvPlugin";
+  class SubEnvPlugin extends EnvPlugin {
     env = subEnv;
   }
-  providePlugins([SubEnvPlugin]);
+  // registered under the EnvPlugin key: usePlugin(EnvPlugin) returns it
+  providePlugins((set) => set.add(EnvPlugin, { use: registrations.create(SubEnvPlugin) }));
 }
 
 owl.onWillRender = (cb) => {

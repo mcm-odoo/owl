@@ -624,11 +624,11 @@ patch(Component.prototype, {
 owl.useSubEnv = function (extension) {
   const env = useEnv();
   const subEnv = Object.assign(Object.create(env), extension);
-  class SubEnvPlugin extends Plugin {
-    static id = "EnvPlugin";
+  class SubEnvPlugin extends EnvPlugin {
     env = subEnv;
   }
-  providePlugins([SubEnvPlugin]);
+  // registered under the EnvPlugin key: usePlugin(EnvPlugin) returns it
+  providePlugins((set) => set.add(EnvPlugin, { use: registrations.create(SubEnvPlugin) }));
 }
 ```
 
@@ -1850,7 +1850,7 @@ class Editor extends Component {
 
   setup() {
     providePlugins([ContentPlugin, SelectionPlugin, TextToolsPlugin, GEDPlugin], {
-      ContentPlugin: { el: this.editable },
+      config: { el: this.editable },
     });
     this.textTools = usePlugin(TextToolsPlugin);
   }

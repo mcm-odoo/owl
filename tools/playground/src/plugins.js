@@ -3,7 +3,6 @@ import { generateId, getFileType, makeFileEntry } from "./file_utils.js";
 import { EXAMPLES, HELLO_WORLD_JS, TUTORIALS, WELCOME_STATE, loadFilesFromMapping } from "./samples.js";
 import { VERSIONS } from "./versions.js";
 class CodePlugin extends Plugin {
-  static id = "code";
 
   files = signal([]);
   contents = signal({});
@@ -197,8 +196,6 @@ class CodePlugin extends Plugin {
 }
 
 class VersionPlugin extends Plugin {
-  static id = "version";
-  static sequence = 10;
 
   version = signal("v3");
   versions = VERSIONS;
@@ -219,10 +216,11 @@ class VersionPlugin extends Plugin {
 }
 
 class TemplatePlugin extends Plugin {
-  static id = "templates";
 
   version = usePlugin(VersionPlugin);
   code = usePlugin(CodePlugin);
+  // lazy: ProjectPlugin depends on this plugin
+  project = usePlugin(ProjectPlugin, { lazy: true });
 
   examples = computed(() => {
     const version = this.version.version();
@@ -265,10 +263,6 @@ class TemplatePlugin extends Plugin {
     return WELCOME_STATE[version] ?? {pills: [], version: "unknown"};
   });
 
-  setup() {
-    this.project = usePlugin(ProjectPlugin);
-  }
-
   async openTutorial(tutorial) {
     const { steps, name, description, id: tutorialId } = tutorial;
 
@@ -283,13 +277,14 @@ class TemplatePlugin extends Plugin {
     const validSteps = stepsWithContent.filter((step) => Object.keys(step.files).length > 0);
     if (validSteps.length === 0) return;
 
-    const projects = this.project.projects();
-    const activeProject = this.project.activeProject();
-    if (projects.length === 1 && activeProject && !this.project.isProjectDirty(activeProject)) {
-      this.project.deleteProject(activeProject.id, true);
+    const project = this.project();
+    const projects = project.projects();
+    const activeProject = project.activeProject();
+    if (projects.length === 1 && activeProject && !project.isProjectDirty(activeProject)) {
+      project.deleteProject(activeProject.id, true);
     }
 
-    const projectId = this.project.createTutorialProject(
+    const projectId = project.createTutorialProject(
       name || description,
       validSteps,
       description,
@@ -298,7 +293,7 @@ class TemplatePlugin extends Plugin {
 
     if (projectId) {
       const readmeFile = "readme.md";
-      const proj = this.project.projects().find((p) => p.id === projectId);
+      const proj = project.projects().find((p) => p.id === projectId);
       if (proj && proj.fileNames.includes(readmeFile)) {
         this.code.selectFile(readmeFile);
       }
@@ -307,7 +302,6 @@ class TemplatePlugin extends Plugin {
 }
 
 class ProjectPlugin extends Plugin {
-  static id = "project";
 
   code = usePlugin(CodePlugin);
   version = usePlugin(VersionPlugin);
@@ -875,7 +869,6 @@ class ProjectPlugin extends Plugin {
 }
 
 class LocalStoragePlugin extends Plugin {
-  static id = "localStorage";
 
   code = usePlugin(CodePlugin);
   project = usePlugin(ProjectPlugin);
@@ -1024,7 +1017,6 @@ class LocalStoragePlugin extends Plugin {
 }
 
 class SettingsPlugin extends Plugin {
-  static id = "settings";
 
   fontSize = signal(parseInt(localStorage.getItem("owl-playground-font-size")) || 13);
   autoRun = signal(localStorage.getItem("owl-playground-auto-run") === "true");
@@ -1077,7 +1069,6 @@ class SettingsPlugin extends Plugin {
 }
 
 class DialogPlugin extends Plugin {
-  static id = "dialog";
 
   dialogComponent = signal(null);
   dialogProps = signal({});
@@ -1094,7 +1085,6 @@ class DialogPlugin extends Plugin {
 }
 
 class ViewPlugin extends Plugin {
-  static id = "view";
 
   showProjectManager = signal(false);
   toggleProjectManager() {

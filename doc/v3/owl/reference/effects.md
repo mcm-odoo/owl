@@ -147,9 +147,8 @@ class MyComponent extends Component {
 `useImmediateEffect` is the same hook for an [immediate
 effect](#immediate-effects).
 
-`useEffect` can also be called inside a [plugin](plugins.md)'s `setup`. Individual
-plugins don't have their own lifetime, though: the effect is bound to the
-lifetime of the shared plugin manager, and is disposed only when that manager
+`useEffect` can also be called inside a [plugin](plugins.md)'s `setup`. The
+effect is bound to the lifetime of the plugin, and is disposed when the plugin
 is destroyed.
 
 ## untrack

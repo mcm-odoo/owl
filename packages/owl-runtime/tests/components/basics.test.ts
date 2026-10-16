@@ -1,6 +1,6 @@
-import { PluginManager, STATUS } from "@odoo/owl-core";
+import { STATUS } from "@odoo/owl-core";
 import { describe, expect, test } from "vitest";
-import { App, Component, mount, Plugin, providePlugins, proxy, types as t, toRaw, usePlugin, useProps, useScope, xml } from "../../src";
+import { App, Component, mount, Plugin, PluginSet, providePlugins, proxy, types as t, toRaw, usePlugin, useProps, useScope, xml } from "../../src";
 import { markup } from "../../src/utils";
 import {
   elem,
@@ -984,7 +984,7 @@ describe("basics", () => {
     `);
   });
 
-  test("providePlugins in a root with a custom plugin manager extends it", async () => {
+  test("providePlugins in a root with a custom plugin host extends it", async () => {
     class PluginA extends Plugin {
       name = "A";
     }
@@ -1002,18 +1002,18 @@ describe("basics", () => {
       static template = xml`<Child/>`;
       static components = { Child };
       setup() {
-        providePlugins([PluginB]);
+        providePlugins((set) => set.add(PluginB));
       }
     }
 
     const app = new App();
-    const subPluginManager = new PluginManager(app);
-    subPluginManager.startPlugins([PluginA]);
+    const subPluginHost = app.pluginHost.createChild(app.pluginHost.set.createChild().add(PluginA));
+    subPluginHost.start();
 
     await app
       .createRoot(Root, {
         // @ts-ignore
-        pluginManager: subPluginManager,
+        pluginHost: subPluginHost,
       })
       .mount(fixture);
     expect(fixture.textContent).toBe("A - B");

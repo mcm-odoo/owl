@@ -45,11 +45,11 @@ export class Suspense extends Component {
     // MountFiber — its willStart fires in parallel with the outer tree.
     const root = suspenseNode.app.createRoot(SuspenseHost, {
       props: { slots: this.props.slots },
-      // Thread the plugin manager so `providePlugins` contributions from
+      // Thread the plugin host so `providePlugins` contributions from
       // ancestors are visible inside the default slot. (createRoot defaults
-      // sub-roots to the app-level plugin manager; override here.) Destroy
+      // sub-roots to the app-level plugin host; override here.) Destroy
       // cascade is handled explicitly below via `onWillDestroy`.
-      pluginManager: suspenseNode.pluginManager,
+      pluginHost: suspenseNode.pluginHost,
       // Route errors from the sub-root back into Suspense's parent chain so
       // consumer `onError` handlers still catch descendant failures.
       onError: forwardErrorToParent(suspenseNode),

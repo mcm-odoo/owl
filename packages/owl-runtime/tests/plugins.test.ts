@@ -1,4 +1,4 @@
-import { Atom, atomSymbol, PluginManager, STATUS, types, usePlugin } from "@odoo/owl-core";
+import { Atom, atomSymbol } from "@odoo/owl-core";
 import { describe, expect, test } from "vitest";
 import {
   App,
@@ -9,336 +9,54 @@ import {
   onWillDestroy,
   onWillStart,
   Plugin,
-  PluginInstance,
+  PluginHost,
+  PluginSet,
   providePlugins,
   Resource,
   signal,
   types as t,
   useConfig,
   useListener,
-  xml
+  usePlugin,
+  xml,
 } from "../src";
-import { makeDeferred, makeTestFixture, nextMicroTick, nextTick, waitScheduler } from "./helpers";
+import { makeDeferred, makeTestFixture, nextTick, waitScheduler } from "./helpers";
+
+// Most of the plugin system is tested in owl-core (plugin_manager.test.ts):
+// these tests are about its integration with the app and components.
 
 describe("basic features", () => {
-  test("can instantiate and destroy a plugin", () => {
+  test("plugins of the app are started and destroyed with it", () => {
     const steps: string[] = [];
-
     class A extends Plugin {
       setup() {
         steps.push("setup");
-        onWillDestroy(() => {
-          steps.push("destroy");
-        });
+        onWillDestroy(() => steps.push("destroy"));
       }
     }
-
-    const manager = new PluginManager(new App());
-    expect(steps.splice(0)).toEqual([]);
-
-    manager.startPlugins([A]);
+    const app = new App({ plugins: new PluginSet().add(A) });
     expect(steps.splice(0)).toEqual(["setup"]);
-
-    manager.destroy();
+    app.destroy();
     expect(steps.splice(0)).toEqual(["destroy"]);
   });
 
-  test("can start plugins directly from constructor", () => {
+  test("plugins of the app can be given as a list", () => {
     const steps: string[] = [];
-
     class A extends Plugin {
       setup() {
-        steps.push("setup");
-        onWillDestroy(() => {
-          steps.push("destroy");
-        });
-      }
-    }
-
-    const manager = new PluginManager(new App());
-    expect(steps.splice(0)).toEqual([]);
-
-    manager.startPlugins([A]);
-    expect(steps.splice(0)).toEqual(["setup"]);
-
-    manager.destroy();
-    expect(steps.splice(0)).toEqual(["destroy"]);
-  });
-
-  test("can set a custom id", () => {
-    class A extends Plugin {
-      static id = "plugin-id";
-    }
-    const pm = new PluginManager(new App());
-    pm.startPlugins([A]);
-    expect(pm.getPluginById("A")).toBe(null);
-    expect(pm.getPluginById("plugin-id")).toBeInstanceOf(A);
-  });
-
-  test("fails if plugins has falsy id", () => {
-    class A extends Plugin {
-      static id = "";
-    }
-    expect(() => new PluginManager(new App()).startPlugins([A])).toThrow(`Plugin "A" has no id`);
-  });
-
-  test("can get a plugin", () => {
-    let a;
-    let isDestroyed = false;
-
-    class A extends Plugin {
-      static id = "a";
-
-      setup() {
-        a = this;
-        onWillDestroy(() => (isDestroyed = true));
-      }
-    }
-
-    const manager = new PluginManager(new App());
-    manager.startPlugins([A]);
-    const plugin = manager.getPluginById("a");
-    expect(plugin).toBe(a);
-    expect(isDestroyed).toBe(false);
-
-    manager.destroy();
-    expect(isDestroyed).toBe(true);
-  });
-
-  test("can get a plugin with no setup and no id", () => {
-    class P extends Plugin {
-      value = 1;
-    }
-
-    class A extends Plugin {
-      p = usePlugin(P);
-    }
-
-    const manager = new PluginManager(new App());
-    manager.startPlugins([A]);
-    const a = manager.getPlugin(A)!;
-    expect(a.p.value).toBe(1);
-  });
-
-  test("fails if trying to start two plugin with the same id", () => {
-    class A extends Plugin {
-      static id = "plugin";
-    }
-    class B extends Plugin {
-      static id = "plugin";
-    }
-    expect(() => new PluginManager(new App()).startPlugins([A, B])).toThrow(
-      `Trying to start a plugin with the same id as an other plugin (id: 'plugin', existing plugin: 'A', starting plugin: 'B')`
-    );
-  });
-
-  test("plugin depending on another plugin with the same id (start only A, B is started implicitly)", () => {
-    class A extends Plugin {
-      static id = "plugin";
-      b = usePlugin(B);
-    }
-    class B extends Plugin {
-      static id = "plugin";
-    }
-    expect(() => new PluginManager(new App()).startPlugins([A])).not.toThrow();
-  });
-
-  test("plugin depending on another plugin with the same id (start A and B)", () => {
-    class A extends Plugin {
-      static id = "plugin";
-      b = usePlugin(B);
-    }
-    class B extends Plugin {
-      static id = "plugin";
-    }
-    expect(() => new PluginManager(new App()).startPlugins([A, B])).toThrow(
-      `Trying to start a plugin with the same id as an other plugin (id: 'plugin', existing plugin: 'A', starting plugin: 'B')`
-    );
-  });
-
-  test("plugin depending on another plugin with the same id (start B then A)", () => {
-    class A extends Plugin {
-      static id = "plugin";
-      b = usePlugin(B);
-    }
-    class B extends Plugin {
-      static id = "plugin";
-    }
-    expect(() => new PluginManager(new App()).startPlugins([B, A])).toThrow(
-      `Trying to start a plugin with the same id as an other plugin (id: 'plugin', existing plugin: 'B', starting plugin: 'A')`
-    );
-  });
-
-  test("destroy order is reverse of setup order", () => {
-    const steps: string[] = [];
-
-    class A extends Plugin {
-      setup() {
-        steps.push("setup A");
-        onWillDestroy(() => {
-          steps.push("destroy A");
-        });
+        steps.push("A");
       }
     }
     class B extends Plugin {
-      setup() {
-        steps.push("setup B");
-        onWillDestroy(() => {
-          steps.push("destroy B");
-        });
-      }
-    }
-
-    const manager = new PluginManager(new App());
-    expect(steps.splice(0)).toEqual([]);
-
-    manager.startPlugins([A, B]);
-    expect(steps.splice(0)).toEqual(["setup A", "setup B"]);
-
-    manager.destroy();
-    expect(steps.splice(0)).toEqual(["destroy B", "destroy A"]);
-  });
-
-  test("plugins do not start twice", () => {
-    const steps: string[] = [];
-
-    class A extends Plugin {
-      setup() {
-        steps.push("setup");
-      }
-    }
-
-    const manager = new PluginManager(new App());
-    expect(steps.splice(0)).toEqual([]);
-
-    manager.startPlugins([A, A]);
-    expect(steps.splice(0)).toEqual(["setup"]);
-  });
-
-  test("plugin can have dependencies", () => {
-    const steps: string[] = [];
-    let a = null;
-    let b = null;
-
-    class A extends Plugin {
-      static id = "a";
-      setup() {
-        a = this;
-        steps.push("setup A");
-      }
-    }
-
-    class B extends Plugin {
-      static id = "b";
-
       a = usePlugin(A);
       setup() {
-        b = this;
-        steps.push("setup B");
+        steps.push("B");
       }
     }
-
-    class C extends Plugin {
-      static id = "c";
-
-      a = usePlugin(A);
-      b = usePlugin(B);
-      setup() {
-        steps.push("setup C");
-      }
-    }
-
-    const manager = new PluginManager(new App());
-    expect(steps.splice(0)).toEqual([]);
-
-    manager.startPlugins([A, B, C]);
-    expect(steps.splice(0)).toEqual(["setup A", "setup B", "setup C"]);
-    expect(manager.getPluginById<B>("b")!.a).toBe(a);
-    expect(manager.getPluginById<C>("c")!.a).toBe(a);
-    expect(manager.getPluginById<C>("c")!.b).toBe(b);
-  });
-
-  test("can get plugins from pluginmanager", () => {
-    let a = null;
-
-    class A extends Plugin {
-      static id = "a";
-      setup() {
-        a = this;
-      }
-    }
-
-    const manager = new PluginManager(new App());
-    manager.startPlugins([A]);
-    expect(manager.getPluginById<A>("a")).toBe(a);
-    expect(manager.getPluginById<A>("b")).toBe(null);
-    expect(manager.getPlugin(A)).toBe(a);
-  });
-
-  test("plugin auto start dependencies", () => {
-    const steps: string[] = [];
-    let a = null;
-    let b = null;
-
-    class A extends Plugin {
-      static id = "a";
-      setup() {
-        a = this;
-        steps.push("setup A");
-      }
-    }
-
-    class B extends Plugin {
-      static id = "b";
-
-      a = usePlugin(A);
-      setup() {
-        b = this;
-        steps.push("setup B");
-      }
-    }
-
-    class C extends Plugin {
-      static id = "c";
-
-      b = usePlugin(B);
-      a = usePlugin(A);
-      setup() {
-        steps.push("setup C");
-      }
-    }
-
-    const manager = new PluginManager(new App());
-    expect(steps.splice(0)).toEqual([]);
-
-    manager.startPlugins([C]); // note that we only start plugin C
-    expect(steps.splice(0)).toEqual(["setup A", "setup B", "setup C"]);
-    expect(manager.getPluginById<B>("b")!.a).toBe(a);
-    expect(manager.getPluginById<C>("c")!.a).toBe(a);
-    expect(manager.getPluginById<C>("c")!.b).toBe(b);
-  });
-
-  test("dependency can be set in setup", () => {
-    let a = null;
-
-    class A extends Plugin {
-      setup() {
-        a = this;
-      }
-    }
-
-    class B extends Plugin {
-      static id = "b";
-
-      declare a: PluginInstance<typeof A>;
-      setup() {
-        this.a = usePlugin(A);
-      }
-    }
-
-    const manager = new PluginManager(new App());
-    manager.startPlugins([B]);
-    expect(manager.getPluginById<B>("b")!.a).toBe(a);
+    const app = new App({ plugins: [B, A] });
+    expect(steps).toEqual(["A", "B"]);
+    expect(app.pluginHost.getPlugin(B).a).toBe(app.pluginHost.getPlugin(A));
+    app.destroy();
   });
 
   test("plugin fn cannot be called outside Plugin and Component", () => {
@@ -346,257 +64,110 @@ describe("basic features", () => {
     expect(() => usePlugin(A)).toThrow(`No active scope`);
   });
 
-  test("plugin lifecycle", () => {
-    class A extends Plugin {}
-    const manager = new PluginManager(new App());
-    expect(manager.status).toBe(STATUS.NEW);
-
-    manager.startPlugins([A]);
-    expect(manager.status).toBe(STATUS.MOUNTED);
-
-    manager.destroy();
-    expect(manager.status).toBe(STATUS.DESTROYED);
-  });
-
-  test("resource can be used to start plugins", async () => {
+  test("config can be given from app", () => {
     const steps: string[] = [];
-
-    class PluginA extends Plugin {
-      setup(): void {
-        steps.push("PluginA.setup");
-      }
-    }
-    class PluginB extends Plugin {
-      setup(): void {
-        steps.push("PluginB.setup");
-      }
-    }
-
-    const plugins = new Resource({ validation: t.constructor(Plugin) }).add(PluginA);
-    const app = new App({ plugins });
-    expect(steps.splice(0)).toEqual(["PluginA.setup"]);
-
-    plugins.add(PluginB);
-    await nextMicroTick();
-    expect(steps.splice(0)).toEqual(["PluginB.setup"]);
-
-    app.destroy();
-  });
-
-  test("config can be given from app", async () => {
-    const steps: string[] = [];
-
-    class PluginA extends Plugin {
+    class A extends Plugin {
       input = useConfig("input");
-      defaulted = useConfig("defaulted", types.string().optional("default"));
-
+      defaulted = useConfig("defaulted", t.string().optional("default"));
       setup(): void {
-        steps.push(`PluginA - ${this.input} - ${this.defaulted}`);
+        steps.push(`A - ${this.input} - ${this.defaulted}`);
       }
     }
-
-    const plugins = new Resource({ validation: t.constructor(Plugin) }).add(PluginA);
-    const app = new App({ plugins, config: { input: "hello" } });
-    expect(steps.splice(0)).toEqual(["PluginA - hello - default"]);
-
+    const app = new App({ plugins: new PluginSet().add(A), config: { input: "hello" } });
+    expect(steps.splice(0)).toEqual(["A - hello - default"]);
     app.destroy();
   });
 
-  test("config default can be declared in the type (.optional(value))", async () => {
+  test("config default can be declared in the type (.optional(value))", () => {
     const steps: string[] = [];
-
-    class PluginA extends Plugin {
-      defaulted = useConfig("defaulted", types.string().optional("default"));
-      given = useConfig("given", types.string().optional("unused"));
-
+    class A extends Plugin {
+      defaulted = useConfig("defaulted", t.string().optional("default"));
+      given = useConfig("given", t.string().optional("unused"));
       setup(): void {
-        steps.push(`PluginA - ${this.defaulted} - ${this.given}`);
+        steps.push(`A - ${this.defaulted} - ${this.given}`);
       }
     }
-
-    const plugins = new Resource({ validation: t.constructor(Plugin) }).add(PluginA);
-    const app = new App({ plugins, config: { given: "hello" } });
-    expect(steps.splice(0)).toEqual(["PluginA - default - hello"]);
-
+    const app = new App({ plugins: new PluginSet().add(A), config: { given: "hello" } });
+    expect(steps.splice(0)).toEqual(["A - default - hello"]);
     app.destroy();
+  });
+
+  test("can use useListener in a plugin", () => {
+    let n: number = 0;
+    const bus = new EventTarget();
+    class A extends Plugin {
+      setup() {
+        useListener(bus, "blip", () => n++);
+        expect(n).toBe(0);
+        bus.dispatchEvent(new Event("blip"));
+        expect(n).toBe(1);
+      }
+    }
+    const host = new PluginHost(new App(), new PluginSet().add(A));
+    host.start();
+    expect(n).toBe(1);
+    bus.dispatchEvent(new Event("blip"));
+    expect(n).toBe(2);
+    host.destroy();
+    expect(n).toBe(2);
+    bus.dispatchEvent(new Event("blip"));
+    expect(n).toBe(2);
+  });
+
+  test("destroying a plugin with computed cleans up signal observers", () => {
+    const selectedId = signal(0);
+    const selectedIdAtom: Atom = (selectedId as any)[atomSymbol];
+    class A extends Plugin {
+      isSelected = computed(() => selectedId() === 42);
+    }
+    const host = new PluginHost(new App(), new PluginSet().add(A));
+    host.start();
+    const a = host.getPlugin(A);
+    // Evaluate the computed to establish subscriptions
+    a.isSelected();
+    expect(selectedIdAtom.observers.size).toBe(1);
+    host.destroy();
+    // After destruction, the computed should be cleaned up from selectedId's observers
+    expect(selectedIdAtom.observers.size).toBe(0);
   });
 });
 
-describe("sub plugin managers", () => {
-  test("basic feature", () => {
+describe("hosts provided by components", () => {
+  test("a destroyed provided host is not retained by its parent", async () => {
     const steps: string[] = [];
-
-    class A extends Plugin {
-      setup() {
-        steps.push("setup A");
-        onWillDestroy(() => {
-          steps.push("destroy A");
-        });
-      }
-    }
-
-    class B extends Plugin {
-      setup() {
-        steps.push("setup B");
-        onWillDestroy(() => {
-          steps.push("destroy B");
-        });
-      }
-    }
-
-    const app = new App();
-    const manager = new PluginManager(app);
-    manager.startPlugins([A]);
-    expect(steps.splice(0)).toEqual(["setup A"]);
-
-    const subManager = new PluginManager(app, { parent: manager });
-    subManager.startPlugins([B]);
-    expect(steps.splice(0)).toEqual(["setup B"]);
-
-    subManager.destroy();
-    expect(steps.splice(0)).toEqual(["destroy B"]);
-
-    manager.destroy();
-    expect(steps.splice(0)).toEqual(["destroy A"]);
-  });
-
-  test("destroying parent plugin manager does not destroy sub managers", () => {
-    // The parent keeps no reference to its sub managers (it would retain
-    // destroyed ones forever): whoever creates a sub manager destroys it.
-    const steps: string[] = [];
-
-    class A extends Plugin {
-      setup() {
-        steps.push("setup A");
-        onWillDestroy(() => {
-          steps.push("destroy A");
-        });
-      }
-    }
-
-    class B extends Plugin {
-      setup() {
-        steps.push("setup B");
-        onWillDestroy(() => {
-          steps.push("destroy B");
-        });
-      }
-    }
-
-    const app = new App();
-    const manager = new PluginManager(app);
-    manager.startPlugins([A]);
-    const subManager = new PluginManager(app, { parent: manager });
-    subManager.startPlugins([B]);
-    expect(steps.splice(0)).toEqual(["setup A", "setup B"]);
-
-    manager.destroy();
-    expect(steps.splice(0)).toEqual(["destroy A"]);
-
-    subManager.destroy();
-    expect(steps.splice(0)).toEqual(["destroy B"]);
-  });
-
-  test("destroyed sub plugin manager is not retained by its parent", async () => {
-    const steps: string[] = [];
-
     class P extends Plugin {
       setup() {
         steps.push("setup P");
-        onWillDestroy(() => {
-          steps.push("destroy P");
-        });
+        onWillDestroy(() => steps.push("destroy P"));
       }
     }
-
     class Child extends Component {
       static template = xml`child`;
       setup() {
-        providePlugins([P]);
+        providePlugins((set) => set.add(P));
       }
     }
-
     class Root extends Component {
       static components = { Child };
       static template = xml`<Child t-if="this.show()"/>`;
       show = signal(true);
     }
-
     const fixture = makeTestFixture();
     const app = new App();
-    const root = app.createRoot(Root);
-    const component = (await root.mount(fixture)) as Root;
+    const component = (await app.createRoot(Root).mount(fixture)) as Root;
     expect(steps.splice(0)).toEqual(["setup P"]);
-
     for (let i = 0; i < 3; i++) {
       component.show.set(false);
       await nextTick();
       expect(steps.splice(0)).toEqual(["destroy P"]);
-
       component.show.set(true);
       await nextTick();
       expect(steps.splice(0)).toEqual(["setup P"]);
     }
-
-    // The app-level manager must not accumulate references to the destroyed
-    // sub managers (and through them, all their plugin instances).
-    expect((app.pluginManager as any)._destroyCbs ?? []).toHaveLength(0);
+    // the app's host keeps no reference to the hosts of its descendants
+    expect((app.pluginHost as any).scopes).toHaveLength(0);
     app.destroy();
     expect(steps.splice(0)).toEqual(["destroy P"]);
-  });
-
-  test("can access plugin in parent manager", () => {
-    const steps: string[] = [];
-
-    class A extends Plugin {
-      setup() {
-        steps.push("setup A");
-      }
-      someFunction() {
-        return 1;
-      }
-    }
-
-    class B extends Plugin {
-      a = usePlugin(A);
-      setup() {
-        steps.push("setup B");
-        steps.push("value " + this.a.someFunction());
-      }
-    }
-
-    const app = new App();
-    const manager = new PluginManager(app);
-    manager.startPlugins([A]);
-    expect(steps.splice(0)).toEqual(["setup A"]);
-
-    new PluginManager(app, { parent: manager }).startPlugins([B]);
-    expect(steps).toEqual(["setup B", "value 1"]);
-  });
-
-  test("plugin can be shadowed", () => {
-    class A extends Plugin {
-      someFunction() {
-        return 1;
-      }
-    }
-
-    class ShadowA extends Plugin {
-      static id = "A";
-
-      someFunction() {
-        return 123;
-      }
-    }
-
-    const app = new App();
-    const manager = new PluginManager(app);
-    manager.startPlugins([A]);
-    expect(manager.getPluginById<A>("A")!.someFunction()).toBe(1);
-
-    const subManager = new PluginManager(app, { parent: manager });
-    subManager.startPlugins([ShadowA]);
-    expect(subManager.getPluginById<A>("A")!.someFunction()).toBe(123);
   });
 });
 
@@ -607,7 +178,6 @@ describe("plugins and resources", () => {
     }
     class B extends Plugin {
       a = usePlugin(A);
-
       setup() {
         this.a.colors.add("red");
       }
@@ -617,11 +187,9 @@ describe("plugins and resources", () => {
         usePlugin(A).colors.use("green").use("blue");
       }
     }
-
-    const manager = new PluginManager(new App());
-    manager.startPlugins([A, B, C]);
-    const a = manager.getPluginById("A") as A;
-    expect(a.colors.items()).toEqual(["red", "green", "blue"]);
+    const host = new PluginHost(new App(), new PluginSet().add(A).add(B).add(C));
+    host.start();
+    expect(host.getPlugin(A).colors.items()).toEqual(["red", "green", "blue"]);
   });
 
   test("resources from child plugins are available in parent plugins", () => {
@@ -638,18 +206,15 @@ describe("plugins and resources", () => {
         usePlugin(A).colors.use("green").use("blue");
       }
     }
-
-    const app = new App();
-    const manager = new PluginManager(app);
-    manager.startPlugins([A, B]);
-    const a = manager.getPlugin(A)!;
+    const set = new PluginSet().add(A).add(B);
+    const host = new PluginHost(new App(), set);
+    host.start();
+    const a = host.getPlugin(A);
     expect(a.colors.items()).toEqual(["red"]);
-
-    const subManager = new PluginManager(app, { parent: manager });
-    subManager.startPlugins([C]);
+    const childHost = host.createChild(set.createChild().add(C));
+    childHost.start();
     expect(a.colors.items()).toEqual(["red", "green", "blue"]);
-
-    subManager.destroy();
+    childHost.destroy();
     expect(a.colors.items()).toEqual(["red"]);
   });
 
@@ -657,7 +222,6 @@ describe("plugins and resources", () => {
     class A extends Plugin {
       colors = new Resource({ name: "colors", validation: t.string() });
     }
-
     class B extends Plugin {
       setup() {
         usePlugin(A).colors.use("red");
@@ -668,61 +232,31 @@ describe("plugins and resources", () => {
         usePlugin(A).colors.use("green").use("blue");
       }
     }
-
-    const app = new App();
-    const manager = new PluginManager(app);
-    manager.startPlugins([A, B]);
-    const a = manager.getPlugin(A)!;
-
+    const set = new PluginSet().add(A).add(B);
+    const host = new PluginHost(new App(), set);
+    host.start();
+    const a = host.getPlugin(A);
     const steps: string[] = [];
     effect(() => {
       steps.push(a.colors.items().join(","));
     });
     expect(steps.splice(0)).toEqual(["red"]);
-
-    const subManager = new PluginManager(app, { parent: manager });
-    subManager.startPlugins([C]);
+    const childHost = host.createChild(set.createChild().add(C));
+    childHost.start();
     expect(steps.splice(0)).toEqual([]);
-
     await waitScheduler();
     expect(steps.splice(0)).toEqual(["red,green,blue"]);
-
-    subManager.destroy();
+    childHost.destroy();
     expect(steps.splice(0)).toEqual([]);
-
     await waitScheduler();
     expect(steps.splice(0)).toEqual(["red"]);
   });
 });
 
-test("destroying a plugin with computed cleans up signal observers", () => {
-  const selectedId = signal(0);
-  const selectedIdAtom: Atom = (selectedId as any)[atomSymbol];
-
-  class A extends Plugin {
-    isSelected = computed(() => selectedId() === 42);
-  }
-
-  const manager = new PluginManager(new App());
-  manager.startPlugins([A]);
-  const a = manager.getPlugin(A)!;
-
-  // Evaluate the computed to establish subscriptions
-  a.isSelected();
-  expect(selectedIdAtom.observers.size).toBe(1);
-
-  manager.destroy();
-
-  // After destruction, the computed should be cleaned up from selectedId's observers
-  expect(selectedIdAtom.observers.size).toBe(0);
-});
-
 describe("onWillStart in plugins", () => {
   test("plugin onWillStart delays app mount", async () => {
     const rpc = makeDeferred<string>();
-
     class AsyncPlugin extends Plugin {
-      static id = "async";
       data: string | null = null;
       setup() {
         onWillStart(async () => {
@@ -730,18 +264,15 @@ describe("onWillStart in plugins", () => {
         });
       }
     }
-
     class Root extends Component {
       static template = xml`<span>ok</span>`;
       p = usePlugin(AsyncPlugin);
     }
-
     const fixture = makeTestFixture();
-    const app = new App({ plugins: [AsyncPlugin] });
+    const app = new App({ plugins: new PluginSet().add(AsyncPlugin) });
     const mounted = app.createRoot(Root).mount(fixture);
     await nextTick();
     expect(fixture.innerHTML).toBe("");
-
     rpc.resolve("hello");
     const instance = await mounted;
     expect(instance.p.data).toBe("hello");
@@ -749,38 +280,25 @@ describe("onWillStart in plugins", () => {
     app.destroy();
   });
 
-  test("mount waits for a plugin that only starts in a later sequence batch", async () => {
-    // The root reads state from a plugin (OtherPlugin) that only starts after
-    // an async foundational plugin (DataPlugin, lower sequence). mount() must
-    // wait for every configured plugin before building the root, otherwise
-    // `usePlugin(OtherPlugin)` in the root's field initializer throws.
+  test("mount waits for the plugins before building the root", async () => {
+    // The root reads, in its field initializer, state loaded by an async plugin
     const rpc = makeDeferred<void>();
-
     class DataPlugin extends Plugin {
-      static sequence = 10;
       state = signal<string | null>(null);
       setup() {
         onWillStart(() => rpc.then(() => this.state.set("some state")));
       }
     }
-
-    class OtherPlugin extends Plugin {
-      data = usePlugin(DataPlugin);
-    }
-
     class Root extends Component {
-      static template = xml`<t t-out="this.other.data.state().length"/>`;
-      other = usePlugin(OtherPlugin);
+      static template = xml`<t t-out="this.length"/>`;
+      length = usePlugin(DataPlugin).state()!.length;
     }
-
     const fixture = makeTestFixture();
-    const mounted = mount(Root, fixture, { plugins: [DataPlugin, OtherPlugin] });
+    const mounted = mount(Root, fixture, { plugins: new PluginSet().add(DataPlugin) });
     await nextTick();
     expect(fixture.innerHTML).toBe("");
-
     rpc.resolve();
-    const instance = await mounted;
-    expect(instance.other.data.state()).toBe("some state");
+    await mounted;
     expect(fixture.innerHTML).toBe("10");
   });
 
@@ -788,9 +306,7 @@ describe("onWillStart in plugins", () => {
     const rpc1 = makeDeferred<number>();
     const rpc2 = makeDeferred<number>();
     const started: string[] = [];
-
     class A extends Plugin {
-      static id = "a";
       setup() {
         onWillStart(async () => {
           started.push("a:start");
@@ -799,7 +315,6 @@ describe("onWillStart in plugins", () => {
       }
     }
     class B extends Plugin {
-      static id = "b";
       setup() {
         onWillStart(async () => {
           started.push("b:start");
@@ -807,14 +322,13 @@ describe("onWillStart in plugins", () => {
         });
       }
     }
-
-    const app = new App({ plugins: [A, B] });
+    const app = new App({ plugins: new PluginSet().add(A).add(B) });
     expect(started).toEqual(["a:start", "b:start"]);
-
+    expect(app.pluginHost.isReady()).toBe(false);
     rpc1.resolve(1);
     rpc2.resolve(2);
-    await app.pluginManager.ready;
-    expect(app.pluginManager.status).toBe(STATUS.MOUNTED);
+    await app.pluginHost.ready;
+    expect(app.pluginHost.isReady()).toBe(true);
     app.destroy();
   });
 
@@ -826,13 +340,11 @@ describe("onWillStart in plugins", () => {
         });
       }
     }
-
     class Root extends Component {
       static template = xml``;
     }
-
     const fixture = makeTestFixture();
-    const app = new App({ plugins: [Broken] });
+    const app = new App({ plugins: new PluginSet().add(Broken) });
     await expect(app.createRoot(Root).mount(fixture)).rejects.toMatchObject({
       message: "boom",
     });
@@ -842,7 +354,6 @@ describe("onWillStart in plugins", () => {
   test("abortSignal passed to plugin willStart aborts on destroy", async () => {
     let captured: AbortSignal | undefined;
     const rpc = makeDeferred<number>();
-
     class SlowPlugin extends Plugin {
       setup() {
         onWillStart(async ({ abortSignal }) => {
@@ -851,10 +362,8 @@ describe("onWillStart in plugins", () => {
         });
       }
     }
-
-    const app = new App({ plugins: [SlowPlugin] });
+    const app = new App({ plugins: new PluginSet().add(SlowPlugin) });
     expect(captured!.aborted).toBe(false);
-
     app.destroy();
     expect(captured!.aborted).toBe(true);
     // Let the pending willStart resolve to avoid leaking its promise.
@@ -864,9 +373,7 @@ describe("onWillStart in plugins", () => {
   test("providePlugins defers owning component render", async () => {
     const rpc = makeDeferred<number>();
     let valueAtChildSetup = -1;
-
     class AsyncPlugin extends Plugin {
-      static id = "async";
       value = 0;
       setup() {
         onWillStart(async () => {
@@ -874,7 +381,6 @@ describe("onWillStart in plugins", () => {
         });
       }
     }
-
     class Child extends Component {
       static template = xml`<span>child</span>`;
       p = usePlugin(AsyncPlugin);
@@ -882,342 +388,23 @@ describe("onWillStart in plugins", () => {
         valueAtChildSetup = this.p.value;
       }
     }
-
     class Parent extends Component {
       static template = xml`<Child/>`;
       static components = { Child };
       setup() {
-        providePlugins([AsyncPlugin]);
+        providePlugins((set) => set.add(AsyncPlugin));
       }
     }
-
     const fixture = makeTestFixture();
     const app = new App();
     const mounted = app.createRoot(Parent).mount(fixture);
     await nextTick();
     expect(valueAtChildSetup).toBe(-1);
     expect(fixture.innerHTML).toBe("");
-
     rpc.resolve(42);
     await mounted;
     expect(valueAtChildSetup).toBe(42);
     expect(fixture.innerHTML).toBe("<span>child</span>");
     app.destroy();
   });
-});
-
-describe("plugin sequence", () => {
-  test("default sequence is 50 and can be overridden", () => {
-    class P extends Plugin {}
-    class Q extends Plugin {
-      static sequence = 10;
-    }
-    expect(P.sequence).toBe(50);
-    expect(Q.sequence).toBe(10);
-  });
-
-  test("plugins start in ascending sequence order, array order within a batch", () => {
-    const steps: string[] = [];
-
-    class A extends Plugin {
-      static sequence = 10;
-      setup() {
-        steps.push("A");
-      }
-    }
-    class B extends Plugin {
-      setup() {
-        steps.push("B");
-      }
-    }
-    class C extends Plugin {
-      setup() {
-        steps.push("C");
-      }
-    }
-    class D extends Plugin {
-      static sequence = 100;
-      setup() {
-        steps.push("D");
-      }
-    }
-
-    const manager = new PluginManager(new App());
-    manager.startPlugins([D, C, B, A]);
-    expect(steps).toEqual(["A", "C", "B", "D"]);
-  });
-
-  test("all-synchronous batches start synchronously and mount immediately", () => {
-    const steps: string[] = [];
-
-    class A extends Plugin {
-      static sequence = 10;
-      setup() {
-        steps.push("A");
-      }
-    }
-    class B extends Plugin {
-      setup() {
-        steps.push("B");
-      }
-    }
-
-    const manager = new PluginManager(new App());
-    manager.startPlugins([B, A]);
-    // no async init: both batches start synchronously, fast path preserved
-    expect(steps).toEqual(["A", "B"]);
-    expect(manager.status).toBe(STATUS.MOUNTED);
-  });
-
-  test("lower-sequence batch fully resolves before next batch starts", async () => {
-    const rpc = makeDeferred<string>();
-    const steps: string[] = [];
-
-    class Foundation extends Plugin {
-      static id = "foundation";
-      static sequence = 10;
-      data: string | null = null;
-      setup() {
-        steps.push("foundation:setup");
-        onWillStart(async () => {
-          steps.push("foundation:willStart");
-          this.data = await rpc;
-        });
-      }
-    }
-
-    class Feature extends Plugin {
-      foundation = usePlugin(Foundation);
-      setup() {
-        steps.push(`feature:setup (data=${this.foundation.data})`);
-      }
-    }
-
-    const manager = new PluginManager(new App());
-    manager.startPlugins([Feature, Foundation]);
-    expect(steps.splice(0)).toEqual(["foundation:setup", "foundation:willStart"]);
-    expect(manager.getPlugin(Feature)).toBe(null);
-
-    rpc.resolve("hello");
-    await manager.ready;
-    // Feature's setup only ran once Foundation was fully loaded
-    expect(steps.splice(0)).toEqual(["feature:setup (data=hello)"]);
-    expect(manager.status).toBe(STATUS.MOUNTED);
-    manager.destroy();
-  });
-
-  test("same-sequence plugins run their willStarts in parallel", async () => {
-    const rpc1 = makeDeferred<number>();
-    const rpc2 = makeDeferred<number>();
-    const started: string[] = [];
-
-    class A extends Plugin {
-      setup() {
-        onWillStart(async () => {
-          started.push("a:start");
-          await rpc1;
-        });
-      }
-    }
-    class B extends Plugin {
-      setup() {
-        onWillStart(async () => {
-          started.push("b:start");
-          await rpc2;
-        });
-      }
-    }
-
-    const manager = new PluginManager(new App());
-    manager.startPlugins([A, B]);
-    expect(started).toEqual(["a:start", "b:start"]);
-
-    rpc1.resolve(1);
-    rpc2.resolve(2);
-    await manager.ready;
-    expect(manager.status).toBe(STATUS.MOUNTED);
-    manager.destroy();
-  });
-
-  test("explicit usePlugin() dependency starts immediately regardless of sequence", () => {
-    const steps: string[] = [];
-
-    class Z extends Plugin {
-      static sequence = 99;
-      setup() {
-        steps.push("Z");
-      }
-    }
-    class A extends Plugin {
-      static sequence = 10;
-      z = usePlugin(Z);
-      setup() {
-        steps.push("A");
-      }
-    }
-
-    const manager = new PluginManager(new App());
-    manager.startPlugins([A, Z]);
-    expect(steps).toEqual(["Z", "A"]);
-    expect(manager.status).toBe(STATUS.MOUNTED);
-  });
-
-  test("rejection in an early batch skips later batches", async () => {
-    const steps: string[] = [];
-
-    class Broken extends Plugin {
-      static sequence = 10;
-      setup() {
-        onWillStart(async () => {
-          throw new Error("boom");
-        });
-      }
-    }
-    class Feature extends Plugin {
-      setup() {
-        steps.push("feature:setup");
-      }
-    }
-
-    const manager = new PluginManager(new App());
-    manager.startPlugins([Broken, Feature]);
-    await expect(manager.ready).rejects.toMatchObject({ message: "boom" });
-    expect(steps).toEqual([]);
-    expect(manager.getPlugin(Feature)).toBe(null);
-    expect(manager.status).not.toBe(STATUS.MOUNTED);
-    manager.destroy();
-  });
-
-  test("status flips to MOUNTED only after the last batch", async () => {
-    const rpc = makeDeferred<number>();
-
-    class A extends Plugin {
-      static sequence = 10;
-      setup() {
-        onWillStart(() => rpc);
-      }
-    }
-    class B extends Plugin {}
-
-    const manager = new PluginManager(new App());
-    manager.startPlugins([A, B]);
-    expect(manager.status).toBe(STATUS.NEW);
-
-    rpc.resolve(1);
-    await manager.ready;
-    expect(manager.status).toBe(STATUS.MOUNTED);
-    manager.destroy();
-  });
-
-  test("destroy order is reverse of sequence order", () => {
-    const steps: string[] = [];
-
-    class A extends Plugin {
-      static sequence = 10;
-      setup() {
-        onWillDestroy(() => steps.push("destroy A"));
-      }
-    }
-    class B extends Plugin {
-      setup() {
-        onWillDestroy(() => steps.push("destroy B"));
-      }
-    }
-
-    const manager = new PluginManager(new App());
-    manager.startPlugins([B, A]);
-    manager.destroy();
-    expect(steps).toEqual(["destroy B", "destroy A"]);
-  });
-
-  test("plugin added to resource while startup is pending waits for previous batches", async () => {
-    const rpc = makeDeferred<string>();
-    const steps: string[] = [];
-
-    class A extends Plugin {
-      setup() {
-        steps.push("A:setup");
-        onWillStart(() => rpc);
-      }
-    }
-    class B extends Plugin {
-      setup() {
-        steps.push("B:setup");
-      }
-    }
-
-    const plugins = new Resource({ validation: t.constructor(Plugin) }).add(A);
-    const app = new App({ plugins });
-    expect(steps.splice(0)).toEqual(["A:setup"]);
-
-    plugins.add(B);
-    await nextMicroTick();
-    // A's willStart is still pending: B must wait for it
-    expect(steps.splice(0)).toEqual([]);
-
-    rpc.resolve("done");
-    await app.pluginManager.ready;
-    expect(steps.splice(0)).toEqual(["B:setup"]);
-    expect(app.pluginManager.status).toBe(STATUS.MOUNTED);
-    app.destroy();
-  });
-
-  test("sequence works with plugins given to the App", async () => {
-    const rpc = makeDeferred<string>();
-    const steps: string[] = [];
-
-    class Foundation extends Plugin {
-      static sequence = 10;
-      setup() {
-        onWillStart(() => rpc);
-      }
-    }
-    class Feature extends Plugin {
-      setup() {
-        steps.push("feature:setup");
-      }
-    }
-
-    class Root extends Component {
-      static template = xml`<span>ok</span>`;
-    }
-
-    const fixture = makeTestFixture();
-    const app = new App({ plugins: [Feature, Foundation] });
-    const mounted = app.createRoot(Root).mount(fixture);
-    await nextTick();
-    expect(steps.splice(0)).toEqual([]);
-    expect(fixture.innerHTML).toBe("");
-
-    rpc.resolve("ok");
-    await mounted;
-    expect(steps.splice(0)).toEqual(["feature:setup"]);
-    expect(fixture.innerHTML).toBe("<span>ok</span>");
-    app.destroy();
-  });
-});
-
-test("can use useListener in a plugin", () => {
-  let n: number = 0;
-  const bus = new EventTarget();
-
-  class A extends Plugin {
-    setup() {
-      useListener(bus, "blip", () => n++);
-      expect(n).toBe(0);
-      bus.dispatchEvent(new Event("blip"));
-      expect(n).toBe(1);
-    }
-  }
-
-  const manager = new PluginManager(new App());
-  manager.startPlugins([A]);
-  expect(n).toBe(1);
-
-  bus.dispatchEvent(new Event("blip"));
-  expect(n).toBe(2);
-  manager.destroy();
-  expect(n).toBe(2);
-  bus.dispatchEvent(new Event("blip"));
-  expect(n).toBe(2);
 });

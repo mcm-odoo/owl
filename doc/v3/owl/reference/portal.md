@@ -174,7 +174,7 @@ Details worth knowing:
 `<Portal>` uses `app.createRoot` plus the
 [two-phase `prepare`/`mount` API](app.md#two-phase-mounting-prepare-and-mount).
 On every effect run with a valid target, it builds a fresh sub-root,
-chains its scope and plugin manager onto the Portal's, installs an
+chains its scope and plugin host onto the Portal's, installs an
 error handler that walks up the source-tree chain, then commits into
 the target. The cleanup tears the sub-root down before the next run.
 

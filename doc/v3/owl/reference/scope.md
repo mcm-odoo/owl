@@ -3,8 +3,8 @@
 ## Overview
 
 A `Scope` is the lifetime handle of a component or a plugin. Every component
-and every plugin manager owns exactly one scope, created when it is
-instantiated and destroyed when it dies.
+and every plugin owns exactly one scope, created when it is instantiated and
+destroyed when it dies.
 
 Scopes serve three purposes:
 

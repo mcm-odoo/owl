@@ -58,9 +58,9 @@ export class Portal extends Component {
       root = app.createRoot(PortalContent, {
         props: { slots },
         // Forward the plugin chain from this Portal (createRoot defaults
-        // sub-roots to the app-level plugin manager) so `providePlugins`
+        // sub-roots to the app-level plugin host) so `providePlugins`
         // contributions from ancestors are visible inside the portaled content.
-        pluginManager: portalNode.pluginManager,
+        pluginHost: portalNode.pluginHost,
         // Route errors from the portaled subtree back through Portal's parent
         // chain so consumer `onError` handlers still catch them. Without this,
         // sub-root errors would propagate to app._handleError and tear down

@@ -92,10 +92,40 @@ export type {
   WithDefault,
 } from "@odoo/owl-core";
 export { OwlError } from "@odoo/owl-core";
-export { useConfig, usePlugin, providePlugins } from "./plugin_hooks";
-export type { PluginInstance } from "./plugin_hooks";
-export { Plugin } from "@odoo/owl-core";
-export type { PluginConstructor } from "@odoo/owl-core";
+export {
+  providePlugins,
+  resolvers,
+  useConfig,
+  useCreateRoot,
+  usePlugin,
+  usePluginHost,
+} from "./plugin_hooks";
+export type { CreateRoot, CreateRootOptions, ProvidePluginsOptions } from "./plugin_hooks";
+export type { PluginHostInputOptions, PluginsInput } from "@odoo/owl-core";
+export {
+  createPluginKey,
+  Plugin,
+  PluginHost,
+  PluginKey,
+  PluginScope,
+  PluginSet,
+  registrations,
+} from "@odoo/owl-core";
+export type {
+  AnyPluginKey,
+  PluginAddOptions,
+  PluginClass,
+  PluginDefinition,
+  PluginFactory,
+  PluginFactoryContext,
+  PluginInstance,
+  PluginLifetime,
+  PluginResolver,
+  PluginContext,
+  PluginCreateOptions,
+  PluginValue,
+  UsePluginOptions,
+} from "@odoo/owl-core";
 export { getScope, Scope, useScope } from "@odoo/owl-core";
 export { STATUS } from "@odoo/owl-core";
 

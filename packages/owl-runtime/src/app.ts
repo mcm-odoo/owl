@@ -2,15 +2,7 @@ import { version } from "./version";
 import { ComponentConstructor } from "./component";
 import { ComponentNode } from "./component_node";
 import { GetProps } from "./props";
-import {
-  PluginConstructor,
-  PluginManager,
-  proxy,
-  Resource,
-  startPlugins,
-  STATUS,
-  toRaw,
-} from "@odoo/owl-core";
+import { OwlError, PluginHost, PluginSet, proxy, toRaw, type PluginClass } from "@odoo/owl-core";
 import { nodeErrorHandlers } from "./rendering/error_handling";
 import { Fiber, MountFiber, MountOptions, RootFiber, subRootHosts } from "./rendering/fibers";
 import { Scheduler } from "./rendering/scheduler";
@@ -19,21 +11,25 @@ import { validateTarget } from "./utils";
 
 // reimplement dev mode stuff see last change in 0f7a8289a6fb8387c3c1af41c6664b2a8448758f
 
-type ComponentInstance<C extends ComponentConstructor> = C extends new (...args: any) => infer T
+export type ComponentInstance<C extends ComponentConstructor> = C extends new (
+  ...args: any
+) => infer T
   ? T
   : never;
 
-interface RootConfig<P> {
+export interface RootConfig<P> {
   props?: P;
+  // the plugin host of the root (`usePlugin` resolves from it): a host of this
+  // app, e.g. a child of app.pluginHost. Defaults to app.pluginHost.
+  pluginHost?: PluginHost;
 }
 
 // Internal-only options threaded into createRoot by Portal/Suspense sub-roots.
 // Not part of the public RootConfig — passed via `as any` at those call sites
 // and read through a cast inside createRoot.
+// Their `pluginHost` (public) is the host of the hosting component, so that
+// ancestor `providePlugins` contributions are visible in the subtree.
 interface SubRootConfig<P> extends RootConfig<P> {
-  // overrides the root node's plugin manager so ancestor `providePlugins`
-  // contributions are visible in the subtree. Defaults to app.pluginManager.
-  pluginManager?: PluginManager;
   // error handler seeded on the root node so descendant errors route back into
   // the host's parent chain instead of tearing down the whole app.
   onError?: (error: any, finalize: Function) => void;
@@ -44,7 +40,10 @@ interface SubRootConfig<P> extends RootConfig<P> {
 
 export interface AppConfig extends TemplateSetConfig {
   name?: string;
-  plugins?: PluginConstructor[] | Resource<PluginConstructor>;
+  // plugins started by the app's root host: a set, or a list of plugin classes
+  // (added with their default definition to a new set)
+  plugins?: PluginSet | PluginClass[];
+  // config of the app's root host (see useConfig)
   config?: Record<string, any>;
   test?: boolean;
 }
@@ -67,7 +66,7 @@ declare global {
 
 import type { MountTarget } from "./blockdom";
 
-interface Root<T extends ComponentConstructor> {
+export interface Root<T extends ComponentConstructor> {
   promise: Promise<ComponentInstance<T>>;
   // true once the render phase has finished. Read synchronously right after
   // prepare() to detect a fully-synchronous subtree (Suspense's no-flash fast
@@ -102,24 +101,31 @@ export class App extends TemplateSet {
   name: string;
   scheduler = new Scheduler();
   roots: Set<Root<any>> = new Set();
-  pluginManager: PluginManager;
+  // root plugin host (always created, with an empty set by default)
+  pluginHost: PluginHost;
   destroyed = false;
 
   constructor(config: AppConfig = {}) {
     super(config);
-    this.name = config.name || "";
-    apps.add(this);
-    this.pluginManager = new PluginManager(this, { config: config.config });
-    if (config.plugins) {
-      startPlugins(this.pluginManager, config.plugins);
-    } else {
-      // No plugins provided: nothing to await, mark as MOUNTED so mount()
-      // takes the sync fast path.
-      this.pluginManager.status = STATUS.MOUNTED;
-    }
+    // before starting plugins, so that they run in dev mode too
     if (config.test) {
       this.dev = true;
     }
+    this.name = config.name || "";
+    apps.add(this);
+    // assigned before starting: plugins may mount components (from the app)
+    let plugins = config.plugins ?? new PluginSet();
+    if (Array.isArray(plugins)) {
+      const set = new PluginSet();
+      for (const P of plugins) {
+        set.add(P);
+      }
+      plugins = set;
+    }
+    this.pluginHost = new PluginHost(this, plugins, {
+      config: config.config,
+    });
+    this.pluginHost.start();
     if (this.dev && !config.test && !hasBeenLogged) {
       console.info(`Owl is running in 'dev' mode.`);
       hasBeenLogged = true;
@@ -131,6 +137,10 @@ export class App extends TemplateSet {
     config: RootConfig<GetProps<ComponentInstance<T>>> = {}
   ): Root<T> {
     const props = config.props || ({} as any);
+    const pluginHost = config.pluginHost ?? this.pluginHost;
+    if (pluginHost.app !== this) {
+      throw new OwlError("The plugin host of a root must belong to its app");
+    }
     let resolve!: (value: any) => void;
     let reject!: (reason?: any) => void;
     const promise = new Promise<any>((res, rej) => {
@@ -143,11 +153,7 @@ export class App extends TemplateSet {
       // Sub-roots (Portal/Suspense) thread their host's scope and error routing
       // in through internal config, applied before the render phase begins.
       const subConfig = config as SubRootConfig<any>;
-      let pluginManager = this.pluginManager;
-      if (subConfig.pluginManager) {
-        pluginManager = subConfig.pluginManager;
-      }
-      node = new ComponentNode(Root, props, this, pluginManager, null, null);
+      node = new ComponentNode(Root, props, this, pluginHost, null, null);
       if (subConfig.onError) {
         nodeErrorHandlers.set(node, [subConfig.onError]);
       }
@@ -207,10 +213,11 @@ export class App extends TemplateSet {
       });
 
       this.scheduler.addFiber(fiber);
-      if (this.pluginManager.status < STATUS.MOUNTED) {
+      const pluginHost = node.pluginHost;
+      if (!pluginHost.isReady()) {
         // Plugins have pending onWillStart callbacks — await them before the
         // root renders, so plugin state is populated during first render.
-        node.willStart.unshift(() => this.pluginManager.ready);
+        node.willStart.unshift(() => pluginHost.whenReady());
       }
       if (node.willStart.length) {
         node.initiateRender(fiber);
@@ -278,7 +285,7 @@ export class App extends TemplateSet {
     for (let root of this.roots) {
       root.destroy();
     }
-    this.pluginManager.destroy();
+    this.pluginHost.destroy();
     this.scheduler.tasks.clear();
     this.scheduler.delayedRenders = [];
     apps.delete(this);
@@ -296,11 +303,10 @@ export async function mount<T extends ComponentConstructor>(
   config: AppConfig & RootConfig<GetProps<ComponentInstance<T>>> & MountOptions = {}
 ): Promise<ComponentInstance<T>> {
   const app = new App(config);
-  if (app.pluginManager.status < STATUS.MOUNTED) {
+  if (!app.pluginHost.isReady()) {
     // Plugins are still starting: wait for them before building the root, so
-    // the root's setup/field initializers can safely call usePlugin() — including
-    // plugins that only start in a later sequence batch.
-    await app.pluginManager.ready;
+    // that the root's setup/field initializers see them ready.
+    await app.pluginHost.whenReady();
   }
   const root = app.createRoot(C, config);
   return root.mount(target, config) as any;

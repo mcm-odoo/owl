@@ -99,10 +99,24 @@ export { Resource, type ResourceAddOptions } from "./resource";
 
 // Plugin system
 export {
+  createPluginKey,
   Plugin,
-  PluginManager,
-  startPlugins,
-  type PluginConstructor,
+  PluginHost,
+  PluginKey,
+  PluginScope,
+  PluginSet,
+  registrations,
+  type AnyPluginKey,
+  type PluginAddOptions,
+  type PluginClass,
+  type PluginContext,
+  type PluginCreateOptions,
+  type PluginDefinition,
+  type PluginFactory,
+  type PluginFactoryContext,
+  type PluginInstance,
+  type PluginLifetime,
+  type PluginValue,
 } from "./plugin_manager";
 
 // Hooks
@@ -122,9 +136,15 @@ export {
 } from "./lifecycle_hooks";
 
 export {
+  createPluginHost,
+  resolvers,
   useConfig,
   usePlugin,
-  type PluginInstance,
+  usePluginHost,
+  type PluginHostInputOptions,
+  type PluginsInput,
+  type PluginResolver,
+  type UsePluginOptions,
 } from "./plugin_hooks";
 
 export {

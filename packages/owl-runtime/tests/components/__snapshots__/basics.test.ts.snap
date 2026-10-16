@@ -642,7 +642,7 @@ exports[`basics > props value are own property of props object, even with defaul
 }"
 `;
 
-exports[`basics > providePlugins in a root with a custom plugin manager extends it 1`] = `
+exports[`basics > providePlugins in a root with a custom plugin host extends it 1`] = `
 "function anonymous(app, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
@@ -655,7 +655,7 @@ exports[`basics > providePlugins in a root with a custom plugin manager extends 
 }"
 `;
 
-exports[`basics > providePlugins in a root with a custom plugin manager extends it 2`] = `
+exports[`basics > providePlugins in a root with a custom plugin host extends it 2`] = `
 "function anonymous(app, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;

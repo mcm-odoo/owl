@@ -134,10 +134,8 @@ export function registerOwlSnippets(monaco) {
 
 					insertText: [
 						"class ${1:MyPlugin} extends Plugin {",
-						'  static id = "${2:myPlugin}";',
-						"",
 						"  setup() {",
-						"    ${3}",
+						"    ${2}",
 						"  }",
 						"}",
 					].join("\n"),

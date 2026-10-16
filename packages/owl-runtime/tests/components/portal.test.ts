@@ -201,7 +201,7 @@ test("forwards plugin chain: providePlugins ancestor is visible to portaled cont
     `;
     target = target;
     setup() {
-      providePlugins([FooPlugin]);
+      providePlugins((set) => set.add(FooPlugin));
     }
   }
 

@@ -1,5 +1,5 @@
 import { compile } from "@odoo/owl-compiler";
-import { App, Component, onMounted, onWillPatch, onWillStart, proxy, STATUS, useProps, xml } from "../../src";
+import { App, Component, onMounted, onWillPatch, onWillStart, proxy, useProps, xml } from "../../src";
 import { useApp } from "../../src/hooks";
 import {
   elem,
@@ -279,11 +279,11 @@ describe("app", () => {
     expect(steps).toEqual(["click"]);
   });
 
-  test("app creates and destroys a plugin manager", () => {
+  test("app creates and destroys a plugin host", () => {
     const app = new App();
-    expect(app.pluginManager.status).toBe(STATUS.MOUNTED);
+    expect(app.pluginHost.isReady()).toBe(true);
     app.destroy();
-    expect(app.pluginManager.status).toBe(STATUS.DESTROYED);
+    expect(app.pluginHost.isDestroyed()).toBe(true);
   });
 });
 

@@ -1,4 +1,4 @@
-import { effect, Plugin, PluginManager, Registry, types as t } from "../src";
+import { effect, Plugin, PluginHost, PluginSet, Registry, types as t } from "../src";
 import { waitScheduler } from "./helpers";
 
 describe("registry", () => {
@@ -256,8 +256,8 @@ describe("registry", () => {
         }
       }
 
-      const manager = new PluginManager({});
-      manager.startPlugins([A]);
+      const manager = new PluginHost({}, new PluginSet().add(A));
+      manager.start();
       expect(shared.get("k")).toBe("v");
 
       manager.destroy();
@@ -274,8 +274,8 @@ describe("registry", () => {
         }
       }
 
-      const manager = new PluginManager({});
-      expect(() => manager.startPlugins([A])).toThrow(
+      const manager = new PluginHost({}, new PluginSet().add(A));
+      expect(() => manager.start()).toThrow(
         `Key "k" is already registered (registry 'shared'). Use { force: true } to overwrite.`
       );
       // value untouched
@@ -292,8 +292,8 @@ describe("registry", () => {
         }
       }
 
-      const manager = new PluginManager({});
-      manager.startPlugins([A]);
+      const manager = new PluginHost({}, new PluginSet().add(A));
+      manager.start();
       expect(shared.get("k")).toBe("from-A");
 
       // On destroy the key is removed entirely (no restore of the previous value).
@@ -311,8 +311,8 @@ describe("registry", () => {
         }
       }
 
-      const manager = new PluginManager({});
-      manager.startPlugins([A]);
+      const manager = new PluginHost({}, new PluginSet().add(A));
+      manager.start();
       expect(shared.get("x").v).toBe(2);
 
       manager.destroy();
@@ -328,8 +328,8 @@ describe("registry", () => {
         }
       }
 
-      const manager = new PluginManager({});
-      manager.startPlugins([A]);
+      const manager = new PluginHost({}, new PluginSet().add(A));
+      manager.start();
       expect(shared.items()).toEqual(["1", "2"]);
     });
 
@@ -344,8 +344,8 @@ describe("registry", () => {
         }
       }
 
-      const manager = new PluginManager({});
-      manager.startPlugins([A]);
+      const manager = new PluginHost({}, new PluginSet().add(A));
+      manager.start();
       expect(shared.items()).toEqual(["b", "c", "a"]);
     });
 
@@ -366,12 +366,12 @@ describe("registry", () => {
       }
 
       const app = {};
-      const mA = new PluginManager(app);
-      mA.startPlugins([A]);
+      const mA = new PluginHost(app, new PluginSet().add(A));
+      mA.start();
       expect(shared.get("k")).toBe("from-A");
 
-      const mB = new PluginManager(app);
-      mB.startPlugins([B]);
+      const mB = new PluginHost(app, new PluginSet().add(B));
+      mB.start();
       expect(shared.get("k")).toBe("from-B");
 
       mA.destroy();
@@ -391,8 +391,8 @@ describe("registry", () => {
         }
       }
 
-      const manager = new PluginManager({});
-      manager.startPlugins([A]);
+      const manager = new PluginHost({}, new PluginSet().add(A));
+      manager.start();
       expect(shared.get("x")).toEqual({ id: "x", value: 42 });
 
       manager.destroy();
@@ -408,8 +408,8 @@ describe("registry", () => {
         }
       }
 
-      const manager = new PluginManager({});
-      expect(() => manager.startPlugins([A])).toThrow("Item should have an id key");
+      const manager = new PluginHost({}, new PluginSet().add(A));
+      expect(() => manager.start()).toThrow("Item should have an id key");
     });
   });
 });
