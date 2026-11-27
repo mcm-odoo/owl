@@ -5,13 +5,14 @@ exports[`components in t-out > simple list 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, LazyValue, createComponent, withDefault, safeOutput, withKey } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, []);
   
   function value1(ctx, node, key = "") {
     return comp1({}, key + \`__1\`, node, this, null);
   }
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const ctx1 = ctx;
     const [k_block1, v_block1, l_block1, c_block1] = prepareList([1,2]);;
     for (let i1 = 0; i1 < l_block1; i1++) {
@@ -30,8 +31,9 @@ exports[`components in t-out > simple list 2`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return text(\`child\`);
   }
 }"

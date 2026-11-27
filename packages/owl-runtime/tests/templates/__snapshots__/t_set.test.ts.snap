@@ -204,11 +204,12 @@ exports[`t-set > t-set after a dom element is executed before event handlers 1`]
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   const hdlr_fn1 = (ctx)=>ctx['this'].logValue(ctx['val']);
   
   let block1 = createBlock(\`<button block-handler-0="click">log</button>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     ctx = Object.create(ctx);
     ctx["val"] = 1;
     let hdlr1 = [hdlr_fn1, ctx];
@@ -268,10 +269,11 @@ exports[`t-set > t-set can't alter from within callee 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, callTemplate } = helpers;
+  // Template name: "main"
   
   let block1 = createBlock(\`<div><p><block-child-0/></p><block-child-1/><p><block-child-2/></p></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_main(ctx, node, key = "") {
     ctx = Object.create(ctx);
     ctx["iter"] = 'source';
     const b2 = safeOutput(ctx['iter']);
@@ -287,10 +289,11 @@ exports[`t-set > t-set can't alter from within callee 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "sub"
   
   let block1 = createBlock(\`<div><block-child-0/><block-child-1/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_sub(ctx, node, key = "") {
     ctx = Object.create(ctx);
     const b2 = safeOutput(ctx['iter']);
     ctx["iter"] = 'called';
@@ -305,6 +308,7 @@ exports[`t-set > t-set can't alter in t-call body 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, zero, callTemplate } = helpers;
+  // Template name: "main"
   
   let block1 = createBlock(\`<div><p><block-child-0/></p><block-child-1/><p><block-child-2/></p></div>\`);
   
@@ -314,7 +318,7 @@ exports[`t-set > t-set can't alter in t-call body 1`] = `
   return text('');
   }
   
-  return function template(ctx, node, key = "") {
+  return function template_main(ctx, node, key = "") {
     ctx = Object.create(ctx);
     ctx["iter"] = 'source';
     const b2 = safeOutput(ctx['iter']);
@@ -331,10 +335,11 @@ exports[`t-set > t-set can't alter in t-call body 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "sub"
   
   let block1 = createBlock(\`<div><block-child-0/><block-child-1/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_sub(ctx, node, key = "") {
     ctx = Object.create(ctx);
     const b2 = safeOutput(ctx['iter']);
     ctx["iter"] = 'called';

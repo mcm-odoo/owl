@@ -4,10 +4,11 @@ exports[`lifecycle hooks > basic checks for a component 1`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<span>test</span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -18,12 +19,13 @@ exports[`lifecycle hooks > component semantics 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1004"
   const comp1 = createComponent(\`B\`, true, false, false, []);
   const comp2 = createComponent(\`C\`, true, false, false, []);
   
   let block1 = createBlock(\`<div>A<block-child-0/><block-child-1/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1004(ctx, node, key = "") {
     const b2 = comp1({}, key + \`__1\`, node, this, null);
     const b3 = comp2({}, key + \`__2\`, node, this, null);
     return block1([], [b2, b3]);
@@ -35,10 +37,11 @@ exports[`lifecycle hooks > component semantics 2`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div>B</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -49,13 +52,14 @@ exports[`lifecycle hooks > component semantics 3`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1003"
   const comp1 = createComponent(\`D\`, true, false, false, []);
   const comp2 = createComponent(\`E\`, true, false, false, []);
   const comp3 = createComponent(\`F\`, true, false, false, []);
   
   let block1 = createBlock(\`<div>C<block-child-0/><block-child-1/><block-child-2/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1003(ctx, node, key = "") {
     let b2, b3, b4;
     b2 = comp1({}, key + \`__1\`, node, this, null);
     if (ctx['this'].state.flag) {
@@ -72,10 +76,11 @@ exports[`lifecycle hooks > component semantics 4`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__1000"
   
   let block1 = createBlock(\`<div>D</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -85,10 +90,11 @@ exports[`lifecycle hooks > component semantics 5`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__1001"
   
   let block1 = createBlock(\`<div>E</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -98,10 +104,11 @@ exports[`lifecycle hooks > component semantics 7`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__1002"
   
   let block1 = createBlock(\`<div>F</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1002(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -112,11 +119,12 @@ exports[`lifecycle hooks > components are unmounted and destroyed if no longer i
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, ["n"]);
   
   let block2 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     let b2;
     if (ctx['this'].state.flag) {
       const b3 = comp1({n: ctx['this'].state.n}, key + \`__1\`, node, this, null);
@@ -132,10 +140,11 @@ exports[`lifecycle hooks > components are unmounted and destroyed if no longer i
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<span><block-child-0/></span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].props.n);
     return block1([], [b2]);
   }
@@ -147,9 +156,10 @@ exports[`lifecycle hooks > components are unmounted destroyed if no longer in DO
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     let b2;
     if (ctx['this'].state.ok) {
       b2 = comp1({}, key + \`__1\`, node, this, null);
@@ -163,10 +173,11 @@ exports[`lifecycle hooks > components are unmounted destroyed if no longer in DO
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div/>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -177,9 +188,10 @@ exports[`lifecycle hooks > destroy new children before being mountged 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     ctx = Object.create(ctx);
     let b2, b3, b4;
     b2 = text(\`before\`);
@@ -197,8 +209,9 @@ exports[`lifecycle hooks > destroy new children before being mountged 3`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return text(\`child\`);
   }
 }"
@@ -209,11 +222,12 @@ exports[`lifecycle hooks > hooks are called in proper order in widget creation/d
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, []);
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = comp1({}, key + \`__1\`, node, this, null);
     return block1([], [b2]);
   }
@@ -224,10 +238,11 @@ exports[`lifecycle hooks > hooks are called in proper order in widget creation/d
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div/>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -238,9 +253,10 @@ exports[`lifecycle hooks > lifecycle callbacks are bound to component 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Test\`, true, false, false, ["rev"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return comp1({rev: ctx['this'].rev}, key + \`__1\`, node, this, null);
   }
 }"
@@ -251,8 +267,9 @@ exports[`lifecycle hooks > lifecycle callbacks are bound to component 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return safeOutput(ctx['this'].props.rev);
   }
 }"
@@ -263,11 +280,12 @@ exports[`lifecycle hooks > lifecycle semantics 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, ["a"]);
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = comp1({a: ctx['this'].state.a}, key + \`__1\`, node, this, null);
     return block1([], [b2]);
   }
@@ -278,10 +296,11 @@ exports[`lifecycle hooks > lifecycle semantics 2`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div/>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -292,9 +311,10 @@ exports[`lifecycle hooks > lifecycle semantics, part 2 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`Child\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     let b2;
     if (ctx['this'].state.hasChild) {
       b2 = comp1({}, key + \`__1\`, node, this, null);
@@ -309,9 +329,10 @@ exports[`lifecycle hooks > lifecycle semantics, part 2 3`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`GrandChild\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return comp1({}, key + \`__1\`, node, this, null);
   }
 }"
@@ -321,10 +342,11 @@ exports[`lifecycle hooks > lifecycle semantics, part 2 4`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div/>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -335,9 +357,10 @@ exports[`lifecycle hooks > lifecycle semantics, part 3 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`Child\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     let b2;
     if (ctx['this'].state.hasChild) {
       b2 = comp1({}, key + \`__1\`, node, this, null);
@@ -352,9 +375,10 @@ exports[`lifecycle hooks > lifecycle semantics, part 4 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`Child\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     let b2;
     if (ctx['this'].state.hasChild) {
       b2 = comp1({}, key + \`__1\`, node, this, null);
@@ -369,9 +393,10 @@ exports[`lifecycle hooks > lifecycle semantics, part 4 3`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`GrandChild\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return comp1({}, key + \`__1\`, node, this, null);
   }
 }"
@@ -381,10 +406,11 @@ exports[`lifecycle hooks > lifecycle semantics, part 4 4`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div/>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -395,9 +421,10 @@ exports[`lifecycle hooks > lifecycle semantics, part 5 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     let b2;
     if (ctx['this'].state.hasChild) {
       b2 = comp1({}, key + \`__1\`, node, this, null);
@@ -411,10 +438,11 @@ exports[`lifecycle hooks > lifecycle semantics, part 5 2`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div/>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -425,9 +453,10 @@ exports[`lifecycle hooks > lifecycle semantics, part 6 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, ["value"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return comp1({value: ctx['this'].state.value}, key + \`__1\`, node, this, null);
   }
 }"
@@ -437,10 +466,11 @@ exports[`lifecycle hooks > lifecycle semantics, part 6 2`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div/>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -450,10 +480,11 @@ exports[`lifecycle hooks > mounted hook is called if mounted in DOM 1`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div/>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -464,9 +495,10 @@ exports[`lifecycle hooks > mounted hook is called on every mount, not just the f
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     let b2;
     if (ctx['this'].state.hasChild) {
       b2 = comp1({}, key + \`__1\`, node, this, null);
@@ -480,10 +512,11 @@ exports[`lifecycle hooks > mounted hook is called on every mount, not just the f
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div>child</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -494,11 +527,12 @@ exports[`lifecycle hooks > mounted hook is called on subcomponents, in proper or
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, []);
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = comp1({}, key + \`__1\`, node, this, null);
     return block1([], [b2]);
   }
@@ -509,10 +543,11 @@ exports[`lifecycle hooks > mounted hook is called on subcomponents, in proper or
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div/>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -522,10 +557,11 @@ exports[`lifecycle hooks > mounted, willunmount, willdestroy hook, same componen
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div/>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -536,11 +572,12 @@ exports[`lifecycle hooks > patched hook is called after updateProps 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, ["a"]);
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = comp1({a: ctx['this'].state.a}, key + \`__1\`, node, this, null);
     return block1([], [b2]);
   }
@@ -551,10 +588,11 @@ exports[`lifecycle hooks > patched hook is called after updateProps 2`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div/>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -565,10 +603,11 @@ exports[`lifecycle hooks > patched hook is called after updating State 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].state.a);
     return block1([], [b2]);
   }
@@ -580,10 +619,11 @@ exports[`lifecycle hooks > render in mounted 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<span><block-child-0/></span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].patched);
     return block1([], [b2]);
   }
@@ -595,10 +635,11 @@ exports[`lifecycle hooks > render in patched 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<span><block-child-0/></span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].patched);
     return block1([], [b2]);
   }
@@ -610,10 +651,11 @@ exports[`lifecycle hooks > render in willPatch 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<span><block-child-0/></span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].patched);
     return block1([], [b2]);
   }
@@ -625,9 +667,10 @@ exports[`lifecycle hooks > sub widget (inside sub node): hooks are correctly cal
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     let b2;
     if (ctx['this'].state.flag) {
       b2 = comp1({}, key + \`__1\`, node, this, null);
@@ -641,10 +684,11 @@ exports[`lifecycle hooks > sub widget (inside sub node): hooks are correctly cal
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div/>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -654,10 +698,11 @@ exports[`lifecycle hooks > timeout in onWillStart doesn't emit a console log if 
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<span/>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -668,11 +713,12 @@ exports[`lifecycle hooks > various hooks are called on subsubcomponents, in prop
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`Child\`, true, false, false, []);
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     let b2;
     if (ctx['this'].state.flag) {
       b2 = comp1({}, key + \`__1\`, node, this, null);
@@ -687,11 +733,12 @@ exports[`lifecycle hooks > various hooks are called on subsubcomponents, in prop
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`ChildChild\`, true, false, false, []);
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = comp1({}, key + \`__1\`, node, this, null);
     return block1([], [b2]);
   }
@@ -702,10 +749,11 @@ exports[`lifecycle hooks > various hooks are called on subsubcomponents, in prop
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div/>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -716,11 +764,12 @@ exports[`lifecycle hooks > willPatch, patched hook are called on subsubcomponent
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`Child\`, true, false, false, ["n"]);
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     const b2 = comp1({n: ctx['this'].state.n}, key + \`__1\`, node, this, null);
     return block1([], [b2]);
   }
@@ -732,11 +781,12 @@ exports[`lifecycle hooks > willPatch, patched hook are called on subsubcomponent
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`ChildChild\`, true, false, false, ["n"]);
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = comp1({n: ctx['this'].props.n}, key + \`__1\`, node, this, null);
     return block1([], [b2]);
   }
@@ -748,10 +798,11 @@ exports[`lifecycle hooks > willPatch, patched hook are called on subsubcomponent
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].props.n);
     return block1([], [b2]);
   }
@@ -763,9 +814,10 @@ exports[`lifecycle hooks > willStart hook is called on sub component 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return comp1({}, key + \`__1\`, node, this, null);
   }
 }"
@@ -775,10 +827,11 @@ exports[`lifecycle hooks > willStart hook is called on sub component 2`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div/>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -788,10 +841,11 @@ exports[`lifecycle hooks > willStart is called 1`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<span>simple vnode</span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -801,10 +855,11 @@ exports[`lifecycle hooks > willStart is called with component as this 1`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<span>simple vnode</span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -815,12 +870,13 @@ exports[`lifecycle hooks > willStart, mounted on subwidget rendered after main i
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, []);
   
   let block1 = createBlock(\`<div><block-child-0/><block-child-1/></div>\`);
   let block3 = createBlock(\`<div/>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     let b2, b3;
     if (ctx['this'].state.ok) {
       b2 = comp1({}, key + \`__1\`, node, this, null);
@@ -836,10 +892,11 @@ exports[`lifecycle hooks > willStart, mounted on subwidget rendered after main i
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div/>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -850,9 +907,10 @@ exports[`lifecycle hooks > willUpdateProps hook is called 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, ["n"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return comp1({n: ctx['this'].state.n}, key + \`__1\`, node, this, null);
   }
 }"
@@ -863,10 +921,11 @@ exports[`lifecycle hooks > willUpdateProps hook is called 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<span><block-child-0/></span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].props.n);
     return block1([], [b2]);
   }

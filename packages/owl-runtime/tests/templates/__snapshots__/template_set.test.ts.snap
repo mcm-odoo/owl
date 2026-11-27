@@ -5,10 +5,11 @@ exports[`loading templates > addTemplates does not modify its xml document in pl
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "hey"
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_hey(ctx, node, key = "") {
     const b2 = safeOutput(ctx['value']);
     return block1([], [b2]);
   }
@@ -19,10 +20,11 @@ exports[`loading templates > can initialize qweb with a string 1`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "hey"
   
   let block1 = createBlock(\`<div>jupiler</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_hey(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -32,10 +34,11 @@ exports[`loading templates > can initialize qweb with an XMLDocument 1`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "hey"
   
   let block1 = createBlock(\`<div>jupiler</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_hey(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -46,10 +49,11 @@ exports[`loading templates > can load a few templates from a xml string 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callTemplate } = helpers;
+  // Template name: "main"
   
   let block1 = createBlock(\`<ul><block-child-0/></ul>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_main(ctx, node, key = "") {
     const b2 = callTemplate(\`items\`, this, templates, ctx, node, key + \`__1\`);
     return block1([], [b2]);
   }
@@ -60,11 +64,12 @@ exports[`loading templates > can load a few templates from a xml string 2`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "items"
   
   let block2 = createBlock(\`<li>ok</li>\`);
   let block3 = createBlock(\`<li>foo</li>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_items(ctx, node, key = "") {
     const b2 = block2();
     const b3 = block3();
     return multi([b2, b3]);
@@ -77,10 +82,11 @@ exports[`loading templates > can load a few templates from an XMLDocument 1`] = 
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callTemplate } = helpers;
+  // Template name: "main"
   
   let block1 = createBlock(\`<ul><block-child-0/></ul>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_main(ctx, node, key = "") {
     const b2 = callTemplate(\`items\`, this, templates, ctx, node, key + \`__1\`);
     return block1([], [b2]);
   }
@@ -91,11 +97,12 @@ exports[`loading templates > can load a few templates from an XMLDocument 2`] = 
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "items"
   
   let block2 = createBlock(\`<li>ok</li>\`);
   let block3 = createBlock(\`<li>foo</li>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_items(ctx, node, key = "") {
     const b2 = block2();
     const b3 = block3();
     return multi([b2, b3]);
@@ -107,10 +114,11 @@ exports[`loading templates > getTemplate: element returned (2) 1`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "main"
   
   let block1 = createBlock(\`<div>Hello World!</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_main(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -120,10 +128,11 @@ exports[`loading templates > getTemplate: element returned 1`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "main"
   
   let block1 = createBlock(\`<div>Hello World!</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_main(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -133,10 +142,11 @@ exports[`loading templates > getTemplate: template string returned 1`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "main"
   
   let block1 = createBlock(\`<div>Hello World!</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_main(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -146,10 +156,11 @@ exports[`loading templates > getTemplate: undefined returned 1`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "main"
   
   let block1 = createBlock(\`<div>Hello World!</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_main(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -160,11 +171,12 @@ exports[`template set without components > renders a template whose components a
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "main"
   const comp1 = createComponent(\`Child\`, true, false, false, []);
   
   let block1 = createBlock(\`<div><block-child-0/>ok</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_main(ctx, node, key = "") {
     let b2;
     if (false) {
       b2 = comp1({}, key + \`__1\`, node, this, null);
@@ -179,11 +191,12 @@ exports[`template set without components > throws a clear error when rendering a
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "main"
   const comp1 = createComponent(\`Child\`, true, false, false, []);
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_main(ctx, node, key = "") {
     const b2 = comp1({}, key + \`__1\`, node, this, null);
     return block1([], [b2]);
   }
@@ -195,11 +208,12 @@ exports[`template set without components > throws a clear error when rendering a
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { toSignal, createComponent } = helpers;
+  // Template name: "main"
   const comp1 = createComponent(\`Child\`, true, false, false, []);
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_main(ctx, node, key = "") {
     const b2 = comp1({value: toSignal(node, \`__sig_1\`, 1)}, key + \`__1\`, node, this, null);
     return block1([], [b2]);
   }
@@ -211,10 +225,11 @@ exports[`template set without components > throws a clear error when rendering a
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callSlot } = helpers;
+  // Template name: "main"
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_main(ctx, node, key = "") {
     const b2 = callSlot(ctx, node, key, 'default', false, {});
     return block1([], [b2]);
   }

@@ -5,6 +5,7 @@ exports[`t-set > slot setted value (with t-set) not accessible with t-out 1`] = 
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, markRaw, createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Childcomp\`, true, true, false, []);
   
   let block1 = createBlock(\`<div><p><block-child-0/></p><block-child-1/><p><block-child-2/></p></div>\`);
@@ -15,7 +16,7 @@ exports[`t-set > slot setted value (with t-set) not accessible with t-out 1`] = 
   return text('');
   }
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     ctx = Object.create(ctx);
     ctx["iter"] = 'source';
     const b2 = safeOutput(ctx['iter']);
@@ -31,10 +32,11 @@ exports[`t-set > slot setted value (with t-set) not accessible with t-out 2`] = 
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div><block-child-0/><block-child-1/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     ctx = Object.create(ctx);
     const b2 = safeOutput(ctx['iter']);
     ctx["iter"] = 'called';
@@ -49,6 +51,7 @@ exports[`t-set > slots with a t-set with a component in body 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { LazyValue, createComponent, withDefault, safeOutput, markRaw } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`C\`, true, false, false, []);
   const comp2 = createComponent(\`Child\`, true, true, false, []);
   
@@ -64,7 +67,7 @@ exports[`t-set > slots with a t-set with a component in body 1`] = `
     return comp1({}, key + \`__1\`, node, this, null);
   }
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     return comp2({slots: markRaw({'default': {__render: slot1.bind(this), __ctx: ctx}})}, key + \`__2\`, node, this, null);
   }
 }"
@@ -75,8 +78,9 @@ exports[`t-set > slots with a t-set with a component in body 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callSlot } = helpers;
+  // Template name: "__template__1000"
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = text(\`Child \`);
     const b3 = callSlot(ctx, node, key, 'default', false, {});
     return multi([b2, b3]);
@@ -88,8 +92,9 @@ exports[`t-set > slots with a t-set with a component in body 3`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return text(\`C\`);
   }
 }"
@@ -100,6 +105,7 @@ exports[`t-set > slots with an t-set with a component in body 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { LazyValue, createComponent, withDefault, safeOutput, markRaw } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`Child\`, true, false, false, []);
   const comp2 = createComponent(\`Blorg\`, true, true, false, []);
   
@@ -119,7 +125,7 @@ exports[`t-set > slots with an t-set with a component in body 1`] = `
     return multi([b3, b4]);
   }
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     return comp2({slots: markRaw({'default': {__render: slot1.bind(this), __ctx: ctx}})}, key + \`__2\`, node, this, null);
   }
 }"
@@ -130,8 +136,9 @@ exports[`t-set > slots with an t-set with a component in body 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callSlot } = helpers;
+  // Template name: "__template__1000"
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = text(\`Blorg \`);
     const b3 = callSlot(ctx, node, key, 'default', false, {});
     return multi([b2, b3]);
@@ -143,8 +150,9 @@ exports[`t-set > slots with an t-set with a component in body 3`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return text(\`Child\`);
   }
 }"
@@ -155,6 +163,7 @@ exports[`t-set > slots with an unused t-set with a component in body 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { LazyValue, createComponent, withDefault, markRaw } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, []);
   const comp2 = createComponent(\`Child\`, true, true, false, []);
   
@@ -168,7 +177,7 @@ exports[`t-set > slots with an unused t-set with a component in body 1`] = `
     return comp1({}, key + \`__1\`, node, this, null);
   }
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return comp2({slots: markRaw({'default': {__render: slot1.bind(this), __ctx: ctx}})}, key + \`__2\`, node, this, null);
   }
 }"
@@ -179,8 +188,9 @@ exports[`t-set > slots with an unused t-set with a component in body 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callSlot } = helpers;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = text(\`Child \`);
     const b3 = callSlot(ctx, node, key, 'default', false, {});
     return multi([b2, b3]);
@@ -193,10 +203,11 @@ exports[`t-set > t-set can't alter component even if key in component 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div><p><block-child-0/></p><p><block-child-1/></p><p><block-child-2/></p></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     ctx = Object.create(ctx);
     const b2 = safeOutput(ctx['this'].iter);
     ctx["iter"] = 5;
@@ -212,10 +223,11 @@ exports[`t-set > t-set can't alter component if key not in component 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div><p><block-child-0/></p><p><block-child-1/></p><p><block-child-2/></p></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     ctx = Object.create(ctx);
     const b2 = safeOutput(ctx['this'].iter);
     ctx["iter"] = 5;
@@ -231,10 +243,11 @@ exports[`t-set > t-set in t-if 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div><p><block-child-0/></p></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     ctx = Object.create(ctx);
     let b2;
     ctx["flag"] = ctx['this'].state.flag;
@@ -256,11 +269,12 @@ exports[`t-set > t-set not altered by child comp 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Childcomp\`, true, false, false, []);
   
   let block1 = createBlock(\`<div><p><block-child-0/></p><block-child-1/><p><block-child-2/></p></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     ctx = Object.create(ctx);
     ctx["iter"] = 'source';
     const b2 = safeOutput(ctx['iter']);
@@ -276,10 +290,11 @@ exports[`t-set > t-set not altered by child comp 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div><block-child-0/><block-child-1/><block-child-2/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     ctx = Object.create(ctx);
     const b2 = safeOutput(ctx['this'].iter);
     ctx["iter"] = 'called';
@@ -295,10 +310,11 @@ exports[`t-set > t-set outside modified in t-if 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div><p><block-child-0/></p></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     ctx = Object.create(ctx);
     let b2;
     ctx["iter"] = 0;
@@ -321,6 +337,7 @@ exports[`t-set > t-set with a component in body 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { LazyValue, createComponent, withDefault, safeOutput } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, []);
   
   let block1 = createBlock(\`<div><div><block-child-0/></div></div>\`);
@@ -329,7 +346,7 @@ exports[`t-set > t-set with a component in body 1`] = `
     return comp1({}, key + \`__1\`, node, this, null);
   }
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     ctx = Object.create(ctx);
     ctx[\`v\`] = new LazyValue(value1, ctx, this, node, key);
     const b3 = safeOutput(ctx['v']);
@@ -342,8 +359,9 @@ exports[`t-set > t-set with a component in body 2`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return text(\`Child\`);
   }
 }"
@@ -354,6 +372,7 @@ exports[`t-set > t-set with something in body 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { LazyValue, withDefault, safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div><div><block-child-0/></div></div>\`);
   let block2 = createBlock(\`<p>coucou</p>\`);
@@ -362,7 +381,7 @@ exports[`t-set > t-set with something in body 1`] = `
     return block2();
   }
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     ctx = Object.create(ctx);
     ctx[\`v\`] = new LazyValue(value1, ctx, this, node, key);
     const b3 = safeOutput(ctx['v']);

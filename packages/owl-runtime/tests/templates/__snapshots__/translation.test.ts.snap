@@ -5,8 +5,9 @@ exports[`translation context > body of t-sets are translated in context 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     ctx = Object.create(ctx);
     ctx["label"] = \`traduit\`;
     return safeOutput(ctx['label']);
@@ -19,6 +20,7 @@ exports[`translation context > default slot params and content translated in con
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callSlot } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
@@ -26,7 +28,7 @@ exports[`translation context > default slot params and content translated in con
     return text(\` foo \`);
   }
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b3 = callSlot(ctx, node, key, 'default', false, {param: \`param\`,title: \`título\`}, defaultContent1.bind(this));
     return block1([], [b3]);
   }
@@ -38,9 +40,10 @@ exports[`translation context > props with modifier .translate are translated in 
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`ChildComponent\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return comp1({text: \`jeu\`}, key + \`__1\`, node, this, null);
   }
 }"
@@ -51,10 +54,11 @@ exports[`translation context > props with modifier .translate are translated in 
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<span><block-child-0/></span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].props.text);
     return block1([], [b2]);
   }
@@ -66,13 +70,14 @@ exports[`translation context > slot attrs and text contents are translated in co
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { markRaw, createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`ChildComponent\`, true, true, false, []);
   
   function slot1(ctx, node, key = "") {
     return text(\`jeu\`);
   }
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return comp1({slots: markRaw({'a': {__render: slot1.bind(this), __ctx: ctx, title: \`título\`}})}, key + \`__1\`, node, this, null);
   }
 }"
@@ -83,10 +88,11 @@ exports[`translation context > slot attrs and text contents are translated in co
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callSlot } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = callSlot(ctx, node, key, 'a', false, {});
     return block1([], [b2]);
   }
@@ -97,10 +103,11 @@ exports[`translation context > t-translation-context with several children 1`] =
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div><div/><div/><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     let b2;
     if (true) {
       b2 = text(\`\`);
@@ -114,10 +121,11 @@ exports[`translation context > translation of attributes in context 1`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div title="titre" label="game"/>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -127,11 +135,12 @@ exports[`translation context > translation of text in context 1`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block2 = createBlock(\`<div>word</div>\`);
   let block3 = createBlock(\`<div>mot</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = block2();
     const b3 = block3();
     return multi([b2, b3]);
@@ -144,8 +153,9 @@ exports[`translation support > body of t-sets are translated 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     ctx = Object.create(ctx);
     ctx["label"] = \`translated\`;
     return safeOutput(ctx['label']);
@@ -158,8 +168,9 @@ exports[`translation support > body of t-sets inside translation=off are not tra
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     ctx = Object.create(ctx);
     ctx["label"] = \`untranslated\`;
     return safeOutput(ctx['label']);
@@ -172,8 +183,9 @@ exports[`translation support > body of t-sets inside translation=off are not tra
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     ctx = Object.create(ctx);
     ctx["label"] = \`untranslated\`;
     return safeOutput(ctx['label']);
@@ -186,6 +198,7 @@ exports[`translation support > body of t-sets with html content are translated 1
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { LazyValue, withDefault, safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div>translated</div>\`);
   
@@ -193,7 +206,7 @@ exports[`translation support > body of t-sets with html content are translated 1
     return block1();
   }
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     ctx = Object.create(ctx);
     ctx[\`label\`] = new LazyValue(value1, ctx, this, node, key);
     return safeOutput(ctx['label']);
@@ -206,6 +219,7 @@ exports[`translation support > body of t-sets with text and html content are tra
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { LazyValue, withDefault, safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block3 = createBlock(\`<div>translated</div>\`);
   
@@ -215,7 +229,7 @@ exports[`translation support > body of t-sets with text and html content are tra
     return multi([b2, b3]);
   }
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     ctx = Object.create(ctx);
     ctx[\`label\`] = new LazyValue(value1, ctx, this, node, key);
     return safeOutput(ctx['label']);
@@ -227,10 +241,11 @@ exports[`translation support > can set and remove translatable attributes 1`] = 
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div tomato="word" potato="mot" title="mot" label="word">text</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -240,10 +255,11 @@ exports[`translation support > can translate node content 1`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div>mot</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -253,10 +269,11 @@ exports[`translation support > does not translate node content if disabled 1`] =
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div><span>mot</span><span>word</span></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -266,10 +283,11 @@ exports[`translation support > some attributes are translated 1`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div><p label="mot">mot</p><p title="mot">mot</p><p placeholder="mot">mot</p><p alt="mot">mot</p><p something="word">mot</p></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -280,8 +298,9 @@ exports[`translation support > t-set and falsy t-value: t-body are translated 1`
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { withDefault, safeOutput } = helpers;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     ctx = Object.create(ctx);
     ctx["label"] = withDefault(false, \`translated\`);
     return safeOutput(ctx['label']);
@@ -293,10 +312,11 @@ exports[`translation support > t-translation with several children 1`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div><div/><div/><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     let b2;
     if (true) {
       b2 = text(\`\`);
@@ -310,10 +330,11 @@ exports[`translation support > translation is done on the trimmed text, with ext
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div> mot </div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -323,10 +344,11 @@ exports[`translation support > translation works, even if initial string has inn
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div>un mot</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"

@@ -5,10 +5,11 @@ exports[`destroy a subroot while another component is mounted in main app 1`] = 
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1002"
   const comp1 = createComponent(\`ChildB\`, true, false, false, []);
   const comp2 = createComponent(\`ChildA\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1002(ctx, node, key = "") {
     let b2, b3;
     if (ctx['this'].state.flag) {
       b2 = comp1({}, key + \`__1\`, node, this, null);
@@ -25,10 +26,11 @@ exports[`destroy a subroot while another component is mounted in main app 2`] = 
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createRef } = helpers;
+  // Template name: "__template__1000"
   
   let block3 = createBlock(\`<div block-ref="0"/>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = text(\`a\`);
     let ref1 = createRef(ctx['this'].ref, node);
     const b3 = block3([ref1]);
@@ -41,8 +43,9 @@ exports[`destroy a subroot while another component is mounted in main app 3`] = 
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return text(\`c\`);
   }
 }"
@@ -52,8 +55,9 @@ exports[`destroy a subroot while another component is mounted in main app 4`] = 
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__1001"
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     return text(\`b\`);
   }
 }"
@@ -63,8 +67,9 @@ exports[`subroot > can create a root in a setup function, then use a hook 1`] = 
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__1000"
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return text(\`a\`);
   }
 }"
@@ -74,8 +79,9 @@ exports[`subroot > can create a root in a setup function, then use a hook 2`] = 
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return text(\`c\`);
   }
 }"
@@ -85,10 +91,11 @@ exports[`subroot > can mount subroot 1`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__6"
   
   let block1 = createBlock(\`<div>main app</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__6(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -98,10 +105,11 @@ exports[`subroot > can mount subroot 2`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__7"
   
   let block1 = createBlock(\`<div>sub root</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__7(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -111,10 +119,11 @@ exports[`subroot > can mount subroot inside own dom 1`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__6"
   
   let block1 = createBlock(\`<div>main app</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__6(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -124,10 +133,11 @@ exports[`subroot > can mount subroot inside own dom 2`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__7"
   
   let block1 = createBlock(\`<div>sub root</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__7(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -137,10 +147,11 @@ exports[`subroot > subcomponents can be destroyed, and it properly cleanup the s
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__6"
   
   let block1 = createBlock(\`<div>main app</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__6(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -150,10 +161,11 @@ exports[`subroot > subcomponents can be destroyed, and it properly cleanup the s
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__7"
   
   let block1 = createBlock(\`<div>sub root</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__7(ctx, node, key = "") {
     return block1();
   }
 }"

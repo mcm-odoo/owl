@@ -5,9 +5,10 @@ exports[`children, default props and renderings 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].state.value);
     const b3 = comp1({}, key + \`__1\`, node, this, null);
     return multi([b2, b3]);
@@ -19,8 +20,9 @@ exports[`children, default props and renderings 2`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return text(\`child\`);
   }
 }"
@@ -31,9 +33,10 @@ exports[`force render in case of existing render 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`B\`, true, false, false, ["val"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     return comp1({val: ctx['this'].state.val}, key + \`__1\`, node, this, null);
   }
 }"
@@ -44,9 +47,10 @@ exports[`force render in case of existing render 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent, safeOutput } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`C\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = comp1({}, key + \`__1\`, node, this, null);
     const b3 = safeOutput(ctx['this'].props.val);
     return multi([b2, b3]);
@@ -58,8 +62,9 @@ exports[`force render in case of existing render 3`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return text(\`C\`);
   }
 }"
@@ -70,9 +75,10 @@ exports[`render loop detection > a render loop going through async code is still
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, ["value","inc"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return comp1({value: ctx['this'].value(),inc: ctx['this'].inc}, key + \`__1\`, node, this, null);
   }
 }"
@@ -83,8 +89,9 @@ exports[`render loop detection > a render loop going through async code is still
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return safeOutput(ctx['this'].props.value);
   }
 }"
@@ -95,9 +102,10 @@ exports[`render loop detection > throws a clear error instead of freezing on a r
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, ["value","inc"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return comp1({value: ctx['this'].value(),inc: ctx['this'].inc}, key + \`__1\`, node, this, null);
   }
 }"
@@ -108,8 +116,9 @@ exports[`render loop detection > throws a clear error instead of freezing on a r
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return safeOutput(ctx['this'].props.value);
   }
 }"
@@ -120,8 +129,9 @@ exports[`render loop detection > updates from separate tasks while commits are o
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return safeOutput(ctx['this'].n());
   }
 }"
@@ -132,10 +142,11 @@ exports[`render loop detection > wide re-render under an uncommitted root is not
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, OwlError, createComponent, withKey } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`Child\`, true, false, false, []);
   const comp2 = createComponent(\`AsyncChild\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     const ctx1 = ctx;
     const [k_block2, v_block2, l_block2, c_block2] = prepareList(ctx['this'].ids);;
     const keys2 = new Set();
@@ -159,8 +170,9 @@ exports[`render loop detection > wide re-render under an uncommitted root is not
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return safeOutput(ctx['this'].shared());
   }
 }"
@@ -170,8 +182,9 @@ exports[`render loop detection > wide re-render under an uncommitted root is not
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__1000"
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return text(\`async\`);
   }
 }"
@@ -182,9 +195,10 @@ exports[`rendering semantics > can force a render to update sub tree 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     ctx = Object.create(ctx);
     const b2 = safeOutput(ctx['this'].state.value);
     const b3 = comp1({}, key + \`__1\`, node, this, null);
@@ -198,8 +212,9 @@ exports[`rendering semantics > can force a render to update sub tree 2`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     ctx = Object.create(ctx);
     ctx["noop"] = ctx['this'].notify();
     return text(\`child\`);
@@ -212,9 +227,10 @@ exports[`rendering semantics > can render a parent without rendering child 1`] =
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].state.value);
     const b3 = comp1({}, key + \`__1\`, node, this, null);
     return multi([b2, b3]);
@@ -226,8 +242,9 @@ exports[`rendering semantics > can render a parent without rendering child 2`] =
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return text(\`child\`);
   }
 }"
@@ -238,9 +255,10 @@ exports[`rendering semantics > props are proxy (nested prop) 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, ["a"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return comp1({a: ctx['this'].state}, key + \`__1\`, node, this, null);
   }
 }"
@@ -251,8 +269,9 @@ exports[`rendering semantics > props are proxy (nested prop) 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return safeOutput(ctx['this'].props.a.b.c);
   }
 }"
@@ -263,9 +282,10 @@ exports[`rendering semantics > props are proxy 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, ["a"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return comp1({a: ctx['this'].state}, key + \`__1\`, node, this, null);
   }
 }"
@@ -276,8 +296,9 @@ exports[`rendering semantics > props are proxy 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return safeOutput(ctx['this'].props.a.b);
   }
 }"
@@ -288,9 +309,10 @@ exports[`rendering semantics > render with deep=true followed by render with dee
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = text(\`parent\`);
     const b3 = safeOutput(ctx['this'].state.value);
     const b4 = comp1({}, key + \`__1\`, node, this, null);
@@ -304,8 +326,9 @@ exports[`rendering semantics > render with deep=true followed by render with dee
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = text(\`child\`);
     const b3 = safeOutput(ctx['this'].state.getValue());
     return multi([b2, b3]);
@@ -318,9 +341,10 @@ exports[`rendering semantics > rendering is atomic (for one subtree) 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, createComponent } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`B\`, true, false, false, ["obj"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].state.obj.val);
     const b3 = comp1({obj: ctx['this'].state.obj}, key + \`__1\`, node, this, null);
     return multi([b2, b3]);
@@ -333,9 +357,10 @@ exports[`rendering semantics > rendering is atomic (for one subtree) 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`C\`, true, false, false, ["obj"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return comp1({obj: ctx['this'].props.obj}, key + \`__1\`, node, this, null);
   }
 }"
@@ -346,8 +371,9 @@ exports[`rendering semantics > rendering is atomic (for one subtree) 3`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return safeOutput(ctx['this'].props.obj.val);
   }
 }"
@@ -358,9 +384,10 @@ exports[`rendering semantics > works as expected for dynamic number of props 1`]
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, true, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return comp1(Object.assign({}, ctx['this'].state), key + \`__1\`, node, this, null);
   }
 }"
@@ -371,8 +398,9 @@ exports[`rendering semantics > works as expected for dynamic number of props 2`]
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return safeOutput(Object.keys(ctx['this'].props).length);
   }
 }"

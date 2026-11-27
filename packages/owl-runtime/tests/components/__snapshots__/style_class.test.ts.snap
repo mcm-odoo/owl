@@ -5,9 +5,10 @@ exports[`style and class handling > can set class on multi root component 1`] = 
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, ["class"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return comp1({class: 'fromparent'}, key + \`__1\`, node, this, null);
   }
 }"
@@ -17,11 +18,12 @@ exports[`style and class handling > can set class on multi root component 2`] = 
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block2 = createBlock(\`<div>a</div>\`);
   let block3 = createBlock(\`<span block-attribute-0="class">b</span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = block2();
     let attr1 = ctx['this'].props.class;
     const b3 = block3([attr1]);
@@ -35,9 +37,10 @@ exports[`style and class handling > can set class on sub component, as prop 1`] 
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, ["class"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return comp1({class: 'some-class'}, key + \`__1\`, node, this, null);
   }
 }"
@@ -47,10 +50,11 @@ exports[`style and class handling > can set class on sub component, as prop 2`] 
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div block-attribute-0="class">child</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     let attr1 = ctx['this'].props.class;
     return block1([attr1]);
   }
@@ -62,9 +66,10 @@ exports[`style and class handling > can set class on sub sub component 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`Child\`, true, false, false, ["class"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     return comp1({class: 'fromparent'}, key + \`__1\`, node, this, null);
   }
 }"
@@ -75,9 +80,10 @@ exports[`style and class handling > can set class on sub sub component 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`ChildChild\`, true, false, false, ["class"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return comp1({class: (ctx['this'].props.class||'')+' fromchild'}, key + \`__1\`, node, this, null);
   }
 }"
@@ -87,10 +93,11 @@ exports[`style and class handling > can set class on sub sub component 3`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div block-attribute-0="class">childchild</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     let attr1 = ctx['this'].props.class;
     return block1([attr1]);
   }
@@ -102,9 +109,10 @@ exports[`style and class handling > can set more than one class on sub component
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, ["class"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return comp1({class: 'a  b'}, key + \`__1\`, node, this, null);
   }
 }"
@@ -114,10 +122,11 @@ exports[`style and class handling > can set more than one class on sub component
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div block-attribute-0="class">child</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     let attr1 = ctx['this'].props.class;
     return block1([attr1]);
   }
@@ -128,10 +137,11 @@ exports[`style and class handling > can set style and class inside component 1`]
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div style="font-weight:bold;" class="some-class">world</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -141,10 +151,11 @@ exports[`style and class handling > class on components do not interfere with us
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div block-attribute-0="class"/>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     let attr1 = {c:ctx['this'].state.c};
     return block1([attr1]);
   }
@@ -156,9 +167,10 @@ exports[`style and class handling > class on sub component, which is switched to
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1002"
   const comp1 = createComponent(\`Child\`, true, false, false, ["class","child"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1002(ctx, node, key = "") {
     return comp1({class: 'someclass',child: ctx['this'].state.child}, key + \`__1\`, node, this, null);
   }
 }"
@@ -169,10 +181,11 @@ exports[`style and class handling > class on sub component, which is switched to
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`ChildA\`, true, false, false, ["class"]);
   const comp2 = createComponent(\`ChildB\`, true, false, false, ["class"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     let b2, b3;
     if (ctx['this'].props.child==='a') {
       b2 = comp1({class: ctx['this'].props.class}, key + \`__1\`, node, this, null);
@@ -188,10 +201,11 @@ exports[`style and class handling > class on sub component, which is switched to
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div block-attribute-0="class">a</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     let attr1 = ctx['this'].props.class;
     return block1([attr1]);
   }
@@ -202,10 +216,11 @@ exports[`style and class handling > class on sub component, which is switched to
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__1000"
   
   let block1 = createBlock(\`<span block-attribute-0="class">b</span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     let attr1 = ctx['this'].props.class;
     return block1([attr1]);
   }
@@ -217,11 +232,12 @@ exports[`style and class handling > class with extra whitespaces (variation) 1`]
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, ["class"]);
   
   let block1 = createBlock(\`<p><block-child-0/></p>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = comp1({class: 'a  b c   d'}, key + \`__1\`, node, this, null);
     return block1([], [b2]);
   }
@@ -232,10 +248,11 @@ exports[`style and class handling > class with extra whitespaces (variation) 2`]
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div block-attribute-0="class"/>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     let attr1 = ctx['this'].props.class;
     return block1([attr1]);
   }
@@ -247,9 +264,10 @@ exports[`style and class handling > class with extra whitespaces 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, ["class"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return comp1({class: 'a  b c   d'}, key + \`__1\`, node, this, null);
   }
 }"
@@ -259,10 +277,11 @@ exports[`style and class handling > class with extra whitespaces 2`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div block-attribute-0="class"/>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     let attr1 = ctx['this'].props.class;
     return block1([attr1]);
   }
@@ -274,9 +293,10 @@ exports[`style and class handling > component class and parent class combine tog
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, ["class"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return comp1({class: 'from parent'}, key + \`__1\`, node, this, null);
   }
 }"
@@ -286,10 +306,11 @@ exports[`style and class handling > component class and parent class combine tog
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div class="child" block-attribute-0="class">child</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     let attr1 = ctx['this'].props.class;
     return block1([attr1]);
   }
@@ -301,9 +322,10 @@ exports[`style and class handling > component static style and dynamic t-att-sty
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, ["style"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return comp1({style: 'font-weight: bold;'}, key + \`__1\`, node, this, null);
   }
 }"
@@ -313,10 +335,11 @@ exports[`style and class handling > component static style and dynamic t-att-sty
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div style="color: red;" block-attribute-0="style">child</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     let attr1 = ctx['this'].props.style;
     return block1([attr1]);
   }
@@ -328,9 +351,10 @@ exports[`style and class handling > dynamic t-att-style is properly added and up
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, ["style"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return comp1({style: ctx['this'].state.style}, key + \`__1\`, node, this, null);
   }
 }"
@@ -340,10 +364,11 @@ exports[`style and class handling > dynamic t-att-style is properly added and up
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div block-attribute-0="style"/>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     let attr1 = {'font-size':'20px',...ctx['this'].props.style};
     return block1([attr1]);
   }
@@ -355,11 +380,12 @@ exports[`style and class handling > empty class attribute is not added on widget
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, ["class"]);
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = comp1({class: undefined}, key + \`__1\`, node, this, null);
     return block1([], [b2]);
   }
@@ -370,10 +396,11 @@ exports[`style and class handling > empty class attribute is not added on widget
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<span block-attribute-0="class"/>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     let attr1 = ctx['this'].props.class;
     return block1([attr1]);
   }
@@ -385,9 +412,10 @@ exports[`style and class handling > error in subcomponent with class 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, ["class"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return comp1({class: 'a'}, key + \`__1\`, node, this, null);
   }
 }"
@@ -398,10 +426,11 @@ exports[`style and class handling > error in subcomponent with class 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div block-attribute-0="class"><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     let attr1 = ctx['this'].props.class;
     const b2 = safeOutput(ctx['this'].will.crash);
     return block1([attr1], [b2]);
@@ -413,10 +442,11 @@ exports[`style and class handling > longhand override is preserved when a preced
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div block-attribute-0="style"/>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     let attr1 = ctx['this'].getStyle();
     return block1([attr1]);
   }
@@ -428,9 +458,10 @@ exports[`style and class handling > no class is set is child ignores it 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, ["class"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return comp1({class: 'hey'}, key + \`__1\`, node, this, null);
   }
 }"
@@ -440,10 +471,11 @@ exports[`style and class handling > no class is set is child ignores it 2`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div>child</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -454,9 +486,10 @@ exports[`style and class handling > no class is set is parent does not give it a
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return comp1({}, key + \`__1\`, node, this, null);
   }
 }"
@@ -466,10 +499,11 @@ exports[`style and class handling > no class is set is parent does not give it a
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div block-attribute-0="class">child</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     let attr1 = ctx['this'].props.class;
     return block1([attr1]);
   }
@@ -481,9 +515,10 @@ exports[`style and class handling > static style and dynamic t-att-style with ob
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, ["style"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return comp1({style: {fontSize:ctx['this'].state.size}}, key + \`__1\`, node, this, null);
   }
 }"
@@ -493,10 +528,11 @@ exports[`style and class handling > static style and dynamic t-att-style with ob
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div style="color: red;" block-attribute-0="style">child</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     let attr1 = {fontWeight:'bold',...ctx['this'].props.style};
     return block1([attr1]);
   }
@@ -508,9 +544,10 @@ exports[`style and class handling > style is properly added on widget root el 1`
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, ["style"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return comp1({style: 'font-weight: bold;'}, key + \`__1\`, node, this, null);
   }
 }"
@@ -520,10 +557,11 @@ exports[`style and class handling > style is properly added on widget root el 2`
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div block-attribute-0="style"/>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     let attr1 = ctx['this'].props.style;
     return block1([attr1]);
   }
@@ -535,11 +573,12 @@ exports[`style and class handling > t-att-class is properly added/removed on wid
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, ["class"]);
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = comp1({class: {b:ctx['this'].state.b}}, key + \`__1\`, node, this, null);
     return block1([], [b2]);
   }
@@ -550,10 +589,11 @@ exports[`style and class handling > t-att-class is properly added/removed on wid
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<span class="c" block-attribute-0="class"/>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     let attr1 = {d:ctx['this'].state.d,...ctx['this'].props.class};
     return block1([attr1]);
   }
@@ -565,9 +605,10 @@ exports[`style and class handling > t-att-class is properly added/removed on wid
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, ["class"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return comp1({class: {a:true,b:ctx['this'].state.b}}, key + \`__1\`, node, this, null);
   }
 }"
@@ -577,10 +618,11 @@ exports[`style and class handling > t-att-class is properly added/removed on wid
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<span class="c" block-attribute-0="class"/>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     let attr1 = {d:ctx['this'].state.d,...ctx['this'].props.class};
     return block1([attr1]);
   }
@@ -591,10 +633,11 @@ exports[`style and class handling > t-att-style is cleared when interpolated pro
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<span block-attribute-0="style">text</span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     let attr1 = ctx['this'].getStyle();
     return block1([attr1]);
   }
@@ -605,10 +648,11 @@ exports[`style and class handling > t-att-style is cleared when value becomes un
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div block-attribute-0="style"/>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     let attr1 = ctx['this'].state.style;
     return block1([attr1]);
   }
@@ -619,10 +663,11 @@ exports[`style and class handling > t-att-style object value with !important app
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div block-attribute-0="style"/>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     let attr1 = ctx['this'].state.style;
     return block1([attr1]);
   }
@@ -633,10 +678,11 @@ exports[`style and class handling > t-att-style string value with !important app
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div block-attribute-0="style"/>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     let attr1 = ctx['this'].state.style;
     return block1([attr1]);
   }
@@ -647,10 +693,11 @@ exports[`style and class handling > t-att-style string with a data URI containin
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div block-attribute-0="style"/>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     let attr1 = ctx['this'].state.style;
     return block1([attr1]);
   }
@@ -661,10 +708,11 @@ exports[`style and class handling > t-att-style with object value 1`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div block-attribute-0="style"/>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     let attr1 = ctx['this'].state.style;
     return block1([attr1]);
   }
@@ -675,10 +723,11 @@ exports[`style and class handling > t-att-style with string value 1`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div block-attribute-0="style"/>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     let attr1 = ctx['this'].state.style;
     return block1([attr1]);
   }

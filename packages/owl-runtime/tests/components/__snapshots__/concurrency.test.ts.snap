@@ -5,9 +5,10 @@ exports[`Cascading renders after microtaskTick 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent, prepareList, safeOutput, withKey } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`Child\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     const b2 = comp1({}, key + \`__1\`, node, this, null);
     const b3 = text(\` _ \`);
     const ctx1 = ctx;
@@ -29,9 +30,10 @@ exports[`Cascading renders after microtaskTick 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, createComponent, withKey } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Element\`, true, false, false, ["id"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const ctx1 = ctx;
     const [k_block1, v_block1, l_block1, c_block1] = prepareList(ctx['this'].state);;
     for (let i1 = 0; i1 < l_block1; i1++) {
@@ -50,8 +52,9 @@ exports[`Cascading renders after microtaskTick 3`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return safeOutput(ctx['this'].props.id);
   }
 }"
@@ -62,8 +65,9 @@ exports[`Scheduler.processTasks can be patched after the app is created 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return safeOutput(ctx['this'].state.n);
   }
 }"
@@ -74,9 +78,10 @@ exports[`another scenario with delayed rendering 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`B\`, true, false, false, ["value"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     ctx = Object.create(ctx);
     let b2, b3;
     b2 = text(\`A\`);
@@ -94,9 +99,10 @@ exports[`another scenario with delayed rendering 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`C\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].props.value);
     const b3 = comp1({}, key + \`__1\`, node, this, null);
     return multi([b2, b3]);
@@ -109,11 +115,12 @@ exports[`another scenario with delayed rendering 3`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callHandler, safeOutput } = helpers;
+  // Template name: "__template__999"
   const hdlr_fn1 = (ctx, ev) => callHandler(ctx['this'].increment, ctx, ev);
   
   let block1 = createBlock(\`<button block-handler-0="click"><block-child-0/></button>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     let hdlr1 = [hdlr_fn1, ctx];
     const b2 = safeOutput(ctx['this'].state.val);
     return block1([hdlr1], [b2]);
@@ -125,10 +132,11 @@ exports[`async rendering > destroying a widget before start is over 1`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div/>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -139,9 +147,10 @@ exports[`calling render in destroy 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`B\`, true, false, false, ["fromA"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     const tKey_1 = ctx['key'];
     return toggler(tKey_1, comp1({fromA: ctx['this'].state}, tKey_1 + key + \`__1\`, node, this, null));
   }
@@ -153,9 +162,10 @@ exports[`calling render in destroy 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`C\`, true, false, false, ["fromA"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return comp1({fromA: ctx['this'].props.fromA}, key + \`__1\`, node, this, null);
   }
 }"
@@ -166,10 +176,11 @@ exports[`calling render in destroy 3`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].props.fromA);
     return block1([], [b2]);
   }
@@ -181,9 +192,10 @@ exports[`cancelled components are destroyed immediately 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`B\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     let b2, b3;
     b2 = text(\`A\`);
     if (ctx['this'].state.flag) {
@@ -199,9 +211,10 @@ exports[`cancelled components are destroyed immediately 3`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`C\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = text(\`B\`);
     const b3 = comp1({}, key + \`__1\`, node, this, null);
     return multi([b2, b3]);
@@ -213,8 +226,9 @@ exports[`cancelled components are destroyed immediately 5`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return text(\`C\`);
   }
 }"
@@ -225,10 +239,11 @@ exports[`change state and call manually render: no unnecessary rendering 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].value);
     return block1([], [b2]);
   }
@@ -240,11 +255,12 @@ exports[`changing state before first render does not trigger a render (with pare
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`TestW\`, true, false, false, []);
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     let b2;
     if (ctx['this'].state.flag) {
       b2 = comp1({}, key + \`__1\`, node, this, null);
@@ -259,10 +275,11 @@ exports[`changing state before first render does not trigger a render (with pare
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].value);
     return block1([], [b2]);
   }
@@ -274,10 +291,11 @@ exports[`changing state before first render does not trigger a render 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].value);
     return block1([], [b2]);
   }
@@ -289,9 +307,10 @@ exports[`component destroyed just after render 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`B\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return comp1({}, key + \`__1\`, node, this, null);
   }
 }"
@@ -302,8 +321,9 @@ exports[`component destroyed just after render 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = text(\`B\`);
     const b3 = safeOutput(ctx['this'].state.value);
     return multi([b2, b3]);
@@ -316,11 +336,12 @@ exports[`concurrent renderings scenario 1 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`ComponentB\`, true, false, false, ["fromA"]);
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     const b2 = comp1({fromA: ctx['this'].state.fromA}, key + \`__1\`, node, this, null);
     return block1([], [b2]);
   }
@@ -332,11 +353,12 @@ exports[`concurrent renderings scenario 1 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`ComponentC\`, true, false, false, ["fromA","fromB"]);
   
   let block1 = createBlock(\`<p><block-child-0/></p>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = comp1({fromA: ctx['this'].props.fromA,fromB: ctx['this'].state.fromB}, key + \`__1\`, node, this, null);
     return block1([], [b2]);
   }
@@ -348,10 +370,11 @@ exports[`concurrent renderings scenario 1 3`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<span><block-child-0/><block-child-1/></span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].props.fromA);
     const b3 = safeOutput(ctx['this'].someValue());
     return block1([], [b2, b3]);
@@ -364,11 +387,12 @@ exports[`concurrent renderings scenario 2 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, createComponent } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`ComponentB\`, true, false, false, ["fromA"]);
   
   let block1 = createBlock(\`<div><block-child-0/><block-child-1/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].state.fromA);
     const b3 = comp1({fromA: ctx['this'].state.fromA}, key + \`__1\`, node, this, null);
     return block1([], [b2, b3]);
@@ -381,11 +405,12 @@ exports[`concurrent renderings scenario 2 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`ComponentC\`, true, false, false, ["fromA","fromB"]);
   
   let block1 = createBlock(\`<p><block-child-0/></p>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = comp1({fromA: ctx['this'].props.fromA,fromB: ctx['this'].state.fromB}, key + \`__1\`, node, this, null);
     return block1([], [b2]);
   }
@@ -397,10 +422,11 @@ exports[`concurrent renderings scenario 2 3`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<span><block-child-0/><block-child-1/></span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].props.fromA);
     const b3 = safeOutput(ctx['this'].props.fromB);
     return block1([], [b2, b3]);
@@ -413,11 +439,12 @@ exports[`concurrent renderings scenario 2bis 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`ComponentB\`, true, false, false, ["fromA"]);
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     const b2 = comp1({fromA: ctx['this'].state.fromA}, key + \`__1\`, node, this, null);
     return block1([], [b2]);
   }
@@ -429,11 +456,12 @@ exports[`concurrent renderings scenario 2bis 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`ComponentC\`, true, false, false, ["fromA","fromB"]);
   
   let block1 = createBlock(\`<p><block-child-0/></p>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = comp1({fromA: ctx['this'].props.fromA,fromB: ctx['this'].state.fromB}, key + \`__1\`, node, this, null);
     return block1([], [b2]);
   }
@@ -445,10 +473,11 @@ exports[`concurrent renderings scenario 2bis 3`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<span><block-child-0/><block-child-1/></span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].props.fromA);
     const b3 = safeOutput(ctx['this'].props.fromB);
     return block1([], [b2, b3]);
@@ -461,11 +490,12 @@ exports[`concurrent renderings scenario 3 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1002"
   const comp1 = createComponent(\`ComponentB\`, true, false, false, ["fromA"]);
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1002(ctx, node, key = "") {
     const b2 = comp1({fromA: ctx['this'].state.fromA}, key + \`__1\`, node, this, null);
     return block1([], [b2]);
   }
@@ -477,11 +507,12 @@ exports[`concurrent renderings scenario 3 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`ComponentC\`, true, false, false, ["fromA"]);
   
   let block1 = createBlock(\`<p><block-child-0/></p>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     const b2 = comp1({fromA: ctx['this'].props.fromA}, key + \`__1\`, node, this, null);
     return block1([], [b2]);
   }
@@ -493,11 +524,12 @@ exports[`concurrent renderings scenario 3 3`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`ComponentD\`, true, false, false, ["fromA","fromC"]);
   
   let block1 = createBlock(\`<span><block-child-0/></span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = comp1({fromA: ctx['this'].props.fromA,fromC: ctx['this'].state.fromC}, key + \`__1\`, node, this, null);
     return block1([], [b2]);
   }
@@ -509,10 +541,11 @@ exports[`concurrent renderings scenario 3 4`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<i><block-child-0/><block-child-1/></i>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].props.fromA);
     const b3 = safeOutput(ctx['this'].someValue());
     return block1([], [b2, b3]);
@@ -525,11 +558,12 @@ exports[`concurrent renderings scenario 4 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1002"
   const comp1 = createComponent(\`ComponentB\`, true, false, false, ["fromA"]);
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1002(ctx, node, key = "") {
     const b2 = comp1({fromA: ctx['this'].state.fromA}, key + \`__1\`, node, this, null);
     return block1([], [b2]);
   }
@@ -541,11 +575,12 @@ exports[`concurrent renderings scenario 4 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`ComponentC\`, true, false, false, ["fromA"]);
   
   let block1 = createBlock(\`<p><block-child-0/></p>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     const b2 = comp1({fromA: ctx['this'].props.fromA}, key + \`__1\`, node, this, null);
     return block1([], [b2]);
   }
@@ -557,11 +592,12 @@ exports[`concurrent renderings scenario 4 3`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`ComponentD\`, true, false, false, ["fromA","fromC"]);
   
   let block1 = createBlock(\`<span><block-child-0/></span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = comp1({fromA: ctx['this'].props.fromA,fromC: ctx['this'].state.fromC}, key + \`__1\`, node, this, null);
     return block1([], [b2]);
   }
@@ -573,10 +609,11 @@ exports[`concurrent renderings scenario 4 4`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<i><block-child-0/><block-child-1/></i>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].props.fromA);
     const b3 = safeOutput(ctx['this'].someValue());
     return block1([], [b2, b3]);
@@ -589,11 +626,12 @@ exports[`concurrent renderings scenario 5 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`ComponentB\`, true, false, false, ["fromA"]);
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = comp1({fromA: ctx['this'].state.fromA}, key + \`__1\`, node, this, null);
     return block1([], [b2]);
   }
@@ -605,10 +643,11 @@ exports[`concurrent renderings scenario 5 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<p><block-child-0/></p>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].someValue());
     return block1([], [b2]);
   }
@@ -620,11 +659,12 @@ exports[`concurrent renderings scenario 6 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`ComponentB\`, true, false, false, ["fromA"]);
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = comp1({fromA: ctx['this'].state.fromA}, key + \`__1\`, node, this, null);
     return block1([], [b2]);
   }
@@ -636,10 +676,11 @@ exports[`concurrent renderings scenario 6 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<p><block-child-0/></p>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].someValue());
     return block1([], [b2]);
   }
@@ -651,11 +692,12 @@ exports[`concurrent renderings scenario 7 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`ComponentB\`, true, false, false, ["fromA"]);
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = comp1({fromA: ctx['this'].state.fromA}, key + \`__1\`, node, this, null);
     return block1([], [b2]);
   }
@@ -667,10 +709,11 @@ exports[`concurrent renderings scenario 7 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<p><block-child-0/><block-child-1/></p>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].props.fromA);
     const b3 = safeOutput(ctx['this'].someValue());
     return block1([], [b2, b3]);
@@ -683,11 +726,12 @@ exports[`concurrent renderings scenario 8 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`ComponentB\`, true, false, false, ["fromA"]);
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = comp1({fromA: ctx['this'].state.fromA}, key + \`__1\`, node, this, null);
     return block1([], [b2]);
   }
@@ -699,10 +743,11 @@ exports[`concurrent renderings scenario 8 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<p><block-child-0/><block-child-1/></p>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].props.fromA);
     const b3 = safeOutput(ctx['this'].state.fromB);
     return block1([], [b2, b3]);
@@ -715,12 +760,13 @@ exports[`concurrent renderings scenario 9 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, createComponent } = helpers;
+  // Template name: "__template__1002"
   const comp1 = createComponent(\`ComponentB\`, true, false, false, ["fromA"]);
   const comp2 = createComponent(\`ComponentC\`, true, false, false, ["fromA"]);
   
   let block1 = createBlock(\`<div><block-child-0/><block-child-1/><block-child-2/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1002(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].state.fromA);
     const b3 = comp1({fromA: ctx['this'].state.fromA}, key + \`__1\`, node, this, null);
     const b4 = comp2({fromA: ctx['this'].state.fromA}, key + \`__2\`, node, this, null);
@@ -734,10 +780,11 @@ exports[`concurrent renderings scenario 9 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__1001"
   
   let block1 = createBlock(\`<b><block-child-0/></b>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].props.fromA);
     return block1([], [b2]);
   }
@@ -749,11 +796,12 @@ exports[`concurrent renderings scenario 9 3`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`ComponentD\`, true, false, false, ["fromA","fromC"]);
   
   let block1 = createBlock(\`<p><block-child-0/></p>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = comp1({fromA: ctx['this'].props.fromA,fromC: ctx['this'].state.fromC}, key + \`__1\`, node, this, null);
     return block1([], [b2]);
   }
@@ -765,10 +813,11 @@ exports[`concurrent renderings scenario 9 4`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<span><block-child-0/><block-child-1/></span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].props.fromA);
     const b3 = safeOutput(ctx['this'].props.fromC);
     return block1([], [b2, b3]);
@@ -781,11 +830,12 @@ exports[`concurrent renderings scenario 10 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`ComponentB\`, true, false, false, ["value"]);
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     const b2 = comp1({value: ctx['this'].state.value}, key + \`__1\`, node, this, null);
     return block1([], [b2]);
   }
@@ -797,11 +847,12 @@ exports[`concurrent renderings scenario 10 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`ComponentC\`, true, false, false, ["value"]);
   
   let block1 = createBlock(\`<p><block-child-0/></p>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     let b2;
     if (ctx['this'].state.hasChild) {
       b2 = comp1({value: ctx['this'].props.value}, key + \`__1\`, node, this, null);
@@ -816,10 +867,11 @@ exports[`concurrent renderings scenario 10 4`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<span><block-child-0/></span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].value);
     return block1([], [b2]);
   }
@@ -831,11 +883,12 @@ exports[`concurrent renderings scenario 11 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, ["val"]);
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = comp1({val: ctx['this'].state.valA}, key + \`__1\`, node, this, null);
     return block1([], [b2]);
   }
@@ -847,10 +900,11 @@ exports[`concurrent renderings scenario 11 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<span><block-child-0/>|<block-child-1/></span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].props.val);
     const b3 = safeOutput(ctx['this'].val);
     return block1([], [b2, b3]);
@@ -863,11 +917,12 @@ exports[`concurrent renderings scenario 12 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, ["val"]);
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = comp1({val: ctx['this'].val}, key + \`__1\`, node, this, null);
     return block1([], [b2]);
   }
@@ -879,10 +934,11 @@ exports[`concurrent renderings scenario 12 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<span><block-child-0/></span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].props.val);
     return block1([], [b2]);
   }
@@ -894,12 +950,13 @@ exports[`concurrent renderings scenario 13 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, []);
   const comp2 = createComponent(\`Child\`, true, false, false, []);
   
   let block1 = createBlock(\`<div><block-child-0/><block-child-1/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     let b2, b3;
     b2 = comp1({}, key + \`__1\`, node, this, null);
     if (ctx['this'].state.bool) {
@@ -915,10 +972,11 @@ exports[`concurrent renderings scenario 13 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<span><block-child-0/></span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].state.val);
     return block1([], [b2]);
   }
@@ -930,11 +988,12 @@ exports[`concurrent renderings scenario 14 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`B\`, true, false, false, ["fromA"]);
   
   let block1 = createBlock(\`<p><block-child-0/></p>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     const b2 = comp1({fromA: ctx['this'].state.fromA}, key + \`__1\`, node, this, null);
     return block1([], [b2]);
   }
@@ -946,11 +1005,12 @@ exports[`concurrent renderings scenario 14 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`C\`, true, false, false, ["fromB","fromA"]);
   
   let block1 = createBlock(\`<p><block-child-0/></p>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = comp1({fromB: ctx['this'].state.fromB,fromA: ctx['this'].props.fromA}, key + \`__1\`, node, this, null);
     return block1([], [b2]);
   }
@@ -962,10 +1022,11 @@ exports[`concurrent renderings scenario 14 3`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<p><span><block-child-0/></span><span><block-child-1/></span><span><block-child-2/></span></p>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].props.fromA);
     const b3 = safeOutput(ctx['this'].props.fromB);
     const b4 = safeOutput(ctx['this'].state.fromC);
@@ -979,11 +1040,12 @@ exports[`concurrent renderings scenario 15 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`B\`, true, false, false, ["fromA"]);
   
   let block1 = createBlock(\`<p><block-child-0/></p>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     const b2 = comp1({fromA: ctx['this'].state.fromA}, key + \`__1\`, node, this, null);
     return block1([], [b2]);
   }
@@ -995,11 +1057,12 @@ exports[`concurrent renderings scenario 15 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`C\`, true, false, false, ["fromB","fromA"]);
   
   let block1 = createBlock(\`<p><block-child-0/></p>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = comp1({fromB: ctx['this'].state.fromB,fromA: ctx['this'].props.fromA}, key + \`__1\`, node, this, null);
     return block1([], [b2]);
   }
@@ -1011,10 +1074,11 @@ exports[`concurrent renderings scenario 15 3`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<p><span><block-child-0/></span><span><block-child-1/></span><span><block-child-2/></span></p>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].props.fromA);
     const b3 = safeOutput(ctx['this'].props.fromB);
     const b4 = safeOutput(ctx['this'].state.fromC);
@@ -1028,9 +1092,10 @@ exports[`concurrent renderings scenario 16 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1002"
   const comp1 = createComponent(\`B\`, true, false, false, ["fromA"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1002(ctx, node, key = "") {
     return comp1({fromA: ctx['this'].state.fromA}, key + \`__1\`, node, this, null);
   }
 }"
@@ -1041,9 +1106,10 @@ exports[`concurrent renderings scenario 16 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`C\`, true, false, false, ["fromB","fromA"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     return comp1({fromB: ctx['this'].state.fromB,fromA: ctx['this'].props.fromA}, key + \`__1\`, node, this, null);
   }
 }"
@@ -1054,9 +1120,10 @@ exports[`concurrent renderings scenario 16 3`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`D\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     let b2, b3, b4, b5, b6, b7, b8;
     b2 = safeOutput(ctx['this'].props.fromA);
     b3 = text(\`:\`);
@@ -1076,8 +1143,9 @@ exports[`concurrent renderings scenario 16 6`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return text(\`D\`);
   }
 }"
@@ -1088,10 +1156,11 @@ exports[`creating two async components, scenario 1 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`ChildA\`, true, false, false, []);
   const comp2 = createComponent(\`ChildB\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     let b2, b3;
     if (ctx['this'].state.flagA) {
       b2 = comp1({}, key + \`__1\`, node, this, null);
@@ -1109,10 +1178,11 @@ exports[`creating two async components, scenario 1 3`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<span><block-child-0/></span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].getValue());
     return block1([], [b2]);
   }
@@ -1123,10 +1193,11 @@ exports[`creating two async components, scenario 1 5`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__1000"
   
   let block1 = createBlock(\`<span>b</span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -1137,12 +1208,13 @@ exports[`creating two async components, scenario 2 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`ChildA\`, true, false, false, ["val"]);
   const comp2 = createComponent(\`ChildB\`, true, false, false, ["val"]);
   
   let block1 = createBlock(\`<div><block-child-0/><block-child-1/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     let b2, b3;
     b2 = comp1({val: ctx['this'].state.valA}, key + \`__1\`, node, this, null);
     if (ctx['this'].state.flagB) {
@@ -1158,10 +1230,11 @@ exports[`creating two async components, scenario 2 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<span>a<block-child-0/></span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].props.val);
     return block1([], [b2]);
   }
@@ -1173,10 +1246,11 @@ exports[`creating two async components, scenario 2 5`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__1000"
   
   let block1 = createBlock(\`<span>b<block-child-0/></span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].props.val);
     return block1([], [b2]);
   }
@@ -1188,12 +1262,13 @@ exports[`creating two async components, scenario 3 (patching in the same frame) 
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`ChildA\`, true, false, false, ["val"]);
   const comp2 = createComponent(\`ChildB\`, true, false, false, ["val"]);
   
   let block1 = createBlock(\`<div><block-child-0/><block-child-1/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     let b2, b3;
     b2 = comp1({val: ctx['this'].state.valA}, key + \`__1\`, node, this, null);
     if (ctx['this'].state.flagB) {
@@ -1209,10 +1284,11 @@ exports[`creating two async components, scenario 3 (patching in the same frame) 
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<span>a<block-child-0/></span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].props.val);
     return block1([], [b2]);
   }
@@ -1224,10 +1300,11 @@ exports[`creating two async components, scenario 3 (patching in the same frame) 
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__1000"
   
   let block1 = createBlock(\`<span>b<block-child-0/></span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].props.val);
     return block1([], [b2]);
   }
@@ -1239,9 +1316,10 @@ exports[`delay willUpdateProps 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, ["value"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return comp1({value: ctx['this'].state.value}, key + \`__1\`, node, this, null);
   }
 }"
@@ -1252,8 +1330,9 @@ exports[`delay willUpdateProps 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].props.value);
     const b3 = text(\`_\`);
     const b4 = safeOutput(ctx['this'].state.int);
@@ -1267,9 +1346,10 @@ exports[`delay willUpdateProps with rendering grandchild 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1002"
   const comp1 = createComponent(\`Parent\`, true, false, false, ["state"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1002(ctx, node, key = "") {
     return comp1({state: ctx['this'].state}, key + \`__1\`, node, this, null);
   }
 }"
@@ -1280,10 +1360,11 @@ exports[`delay willUpdateProps with rendering grandchild 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`DelayedChild\`, true, false, false, ["value"]);
   const comp2 = createComponent(\`ReactiveChild\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     const b2 = comp1({value: ctx['this'].props.state.value}, key + \`__1\`, node, this, null);
     const b3 = comp2({}, key + \`__2\`, node, this, null);
     return multi([b2, b3]);
@@ -1296,8 +1377,9 @@ exports[`delay willUpdateProps with rendering grandchild 3`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].props.value);
     const b3 = text(\`_\`);
     const b4 = safeOutput(ctx['this'].state.int);
@@ -1310,10 +1392,11 @@ exports[`delay willUpdateProps with rendering grandchild 4`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__1000"
   
   let block1 = createBlock(\`<div/>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -1324,9 +1407,10 @@ exports[`delayed fiber does not get rendered if it was cancelled 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1002"
   const comp1 = createComponent(\`B\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1002(ctx, node, key = "") {
     const b2 = text(\`A\`);
     const b3 = comp1({}, key + \`__1\`, node, this, null);
     return multi([b2, b3]);
@@ -1339,9 +1423,10 @@ exports[`delayed fiber does not get rendered if it was cancelled 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`C\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     const b2 = text(\`B\`);
     const b3 = comp1({}, key + \`__1\`, node, this, null);
     return multi([b2, b3]);
@@ -1354,9 +1439,10 @@ exports[`delayed fiber does not get rendered if it was cancelled 3`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`D\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = text(\`C\`);
     const b3 = comp1({}, key + \`__1\`, node, this, null);
     return multi([b2, b3]);
@@ -1368,8 +1454,9 @@ exports[`delayed fiber does not get rendered if it was cancelled 4`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return text(\`D\`);
   }
 }"
@@ -1380,9 +1467,10 @@ exports[`delayed render does not go through when t-component value changed 1`] =
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(null, false, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     const b2 = text(\`A\`);
     const Comp1 = ctx['this'].state.component;
     const b3 = toggler(Comp1, comp1({}, (Comp1).name + key + \`__1\`, node, this, Comp1));
@@ -1396,8 +1484,9 @@ exports[`delayed render does not go through when t-component value changed 2`] =
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__1000"
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = text(\`B\`);
     const b3 = safeOutput(ctx['this'].state.val);
     return multi([b2, b3]);
@@ -1409,8 +1498,9 @@ exports[`delayed render does not go through when t-component value changed 4`] =
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return text(\`C\`);
   }
 }"
@@ -1421,9 +1511,10 @@ exports[`delayed rendering, but then initial rendering is cancelled by yet anoth
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1002"
   const comp1 = createComponent(\`B\`, true, false, false, ["value"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1002(ctx, node, key = "") {
     return comp1({value: ctx['this'].state.value}, key + \`__1\`, node, this, null);
   }
 }"
@@ -1434,9 +1525,10 @@ exports[`delayed rendering, but then initial rendering is cancelled by yet anoth
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`C\`, true, false, false, ["value"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     return comp1({value: ctx['this'].state.someValue+ctx['this'].props.value}, key + \`__1\`, node, this, null);
   }
 }"
@@ -1447,11 +1539,12 @@ exports[`delayed rendering, but then initial rendering is cancelled by yet anoth
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent, safeOutput } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`D\`, true, false, false, []);
   
   let block3 = createBlock(\`<p><block-child-0/></p>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = comp1({}, key + \`__1\`, node, this, null);
     const b4 = safeOutput(ctx['this'].props.value);
     const b3 = block3([], [b4]);
@@ -1465,11 +1558,12 @@ exports[`delayed rendering, but then initial rendering is cancelled by yet anoth
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callHandler, safeOutput } = helpers;
+  // Template name: "__template__999"
   const hdlr_fn1 = (ctx, ev) => callHandler(ctx['this'].increment, ctx, ev);
   
   let block1 = createBlock(\`<button block-handler-0="click"><block-child-0/></button>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     let hdlr1 = [hdlr_fn1, ctx];
     const b2 = safeOutput(ctx['this'].state.val);
     return block1([hdlr1], [b2]);
@@ -1482,9 +1576,10 @@ exports[`delayed rendering, destruction, stuff happens 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1002"
   const comp1 = createComponent(\`B\`, true, false, false, ["value"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1002(ctx, node, key = "") {
     const b2 = text(\`A\`);
     const b3 = comp1({value: ctx['this'].state.value}, key + \`__1\`, node, this, null);
     return multi([b2, b3]);
@@ -1497,9 +1592,10 @@ exports[`delayed rendering, destruction, stuff happens 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`C\`, true, false, false, ["value"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     let b2, b3;
     b2 = text(\`B\`);
     if (ctx['this'].state.hasChild) {
@@ -1515,11 +1611,12 @@ exports[`delayed rendering, destruction, stuff happens 3`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent, safeOutput } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`D\`, true, false, false, []);
   
   let block4 = createBlock(\`<p><block-child-0/></p>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = text(\`C\`);
     const b3 = comp1({}, key + \`__1\`, node, this, null);
     const b5 = safeOutput(ctx['this'].props.value);
@@ -1534,11 +1631,12 @@ exports[`delayed rendering, destruction, stuff happens 4`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callHandler, safeOutput } = helpers;
+  // Template name: "__template__999"
   const hdlr_fn1 = (ctx, ev) => callHandler(ctx['this'].increment, ctx, ev);
   
   let block3 = createBlock(\`<button block-handler-0="click"><block-child-0/></button>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = text(\`D\`);
     let hdlr1 = [hdlr_fn1, ctx];
     const b4 = safeOutput(ctx['this'].state.val);
@@ -1553,9 +1651,10 @@ exports[`delayed rendering, reusing fiber and stuff 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`B\`, true, false, false, ["value"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     return comp1({value: ctx['this'].state.value}, key + \`__1\`, node, this, null);
   }
 }"
@@ -1566,9 +1665,10 @@ exports[`delayed rendering, reusing fiber and stuff 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`C\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     ctx = Object.create(ctx);
     const b2 = safeOutput(ctx['this'].props.value);
     const b3 = comp1({}, key + \`__1\`, node, this, null);
@@ -1583,11 +1683,12 @@ exports[`delayed rendering, reusing fiber and stuff 3`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callHandler, safeOutput } = helpers;
+  // Template name: "__template__999"
   const hdlr_fn1 = (ctx, ev) => callHandler(ctx['this'].increment, ctx, ev);
   
   let block1 = createBlock(\`<button block-handler-0="click"><block-child-0/></button>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     let hdlr1 = [hdlr_fn1, ctx];
     const b2 = safeOutput(ctx['this'].state.val);
     return block1([hdlr1], [b2]);
@@ -1600,9 +1701,10 @@ exports[`delayed rendering, reusing fiber then component is destroyed and  stuff
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`B\`, true, false, false, ["value"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     let b2, b3;
     b2 = text(\`A\`);
     if (ctx['this'].state.value<15) {
@@ -1618,9 +1720,10 @@ exports[`delayed rendering, reusing fiber then component is destroyed and  stuff
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`C\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].props.value);
     const b3 = comp1({}, key + \`__1\`, node, this, null);
     return multi([b2, b3]);
@@ -1633,11 +1736,12 @@ exports[`delayed rendering, reusing fiber then component is destroyed and  stuff
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callHandler, safeOutput } = helpers;
+  // Template name: "__template__999"
   const hdlr_fn1 = (ctx, ev) => callHandler(ctx['this'].increment, ctx, ev);
   
   let block1 = createBlock(\`<button block-handler-0="click"><block-child-0/></button>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     let hdlr1 = [hdlr_fn1, ctx];
     const b2 = safeOutput(ctx['this'].state.val);
     return block1([hdlr1], [b2]);
@@ -1650,9 +1754,10 @@ exports[`delayed rendering, then component is destroyed and  stuff 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`B\`, true, false, false, ["value"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     return comp1({value: ctx['this'].state.value}, key + \`__1\`, node, this, null);
   }
 }"
@@ -1663,9 +1768,10 @@ exports[`delayed rendering, then component is destroyed and  stuff 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`C\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     let b2, b3;
     b2 = safeOutput(ctx['this'].props.value);
     if (ctx['this'].props.value<10) {
@@ -1681,11 +1787,12 @@ exports[`delayed rendering, then component is destroyed and  stuff 3`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callHandler, safeOutput } = helpers;
+  // Template name: "__template__999"
   const hdlr_fn1 = (ctx, ev) => callHandler(ctx['this'].increment, ctx, ev);
   
   let block1 = createBlock(\`<button block-handler-0="click"><block-child-0/></button>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     let hdlr1 = [hdlr_fn1, ctx];
     const b2 = safeOutput(ctx['this'].state.val);
     return block1([hdlr1], [b2]);
@@ -1698,10 +1805,11 @@ exports[`destroyed component causes other soon to be destroyed component to rere
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`B\`, true, false, false, ["value"]);
   const comp2 = createComponent(\`C\`, true, false, false, ["value"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     let b2, b3;
     b2 = text(\` A \`);
     if (ctx['this'].state.flag) {
@@ -1719,8 +1827,9 @@ exports[`destroyed component causes other soon to be destroyed component to rere
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     ctx = Object.create(ctx);
     ctx["noop"] = ctx['this'].notify();
     return safeOutput(ctx['this'].props.value);
@@ -1733,8 +1842,9 @@ exports[`destroyed component causes other soon to be destroyed component to rere
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__1000"
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return safeOutput(ctx['this'].state.val+ctx['this'].props.value);
   }
 }"
@@ -1745,9 +1855,10 @@ exports[`destroying/recreating a subcomponent, other scenario 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     let b2, b3;
     b2 = text(\`parent\`);
     if (ctx['this'].state.hasChild) {
@@ -1762,8 +1873,9 @@ exports[`destroying/recreating a subcomponent, other scenario 3`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return text(\`child\`);
   }
 }"
@@ -1774,11 +1886,12 @@ exports[`destroying/recreating a subwidget with different props (if start is not
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, ["val"]);
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     let b2;
     if (ctx['this'].state.val>1) {
       b2 = comp1({val: ctx['this'].state.val}, key + \`__1\`, node, this, null);
@@ -1793,10 +1906,11 @@ exports[`destroying/recreating a subwidget with different props (if start is not
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<span>child:<block-child-0/></span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].props.val);
     return block1([], [b2]);
   }
@@ -1808,9 +1922,10 @@ exports[`parent and child rendered at exact same time 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, ["value"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return comp1({value: ctx['this'].state.value}, key + \`__1\`, node, this, null);
   }
 }"
@@ -1821,8 +1936,9 @@ exports[`parent and child rendered at exact same time 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return safeOutput(ctx['this'].props.value);
   }
 }"
@@ -1833,11 +1949,12 @@ exports[`properly behave when destroyed/unmounted while rendering  1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`Child\`, true, false, false, ["val"]);
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     let b2;
     if (ctx['this'].state.flag) {
       b2 = comp1({val: ctx['this'].state.val}, key + \`__1\`, node, this, null);
@@ -1852,11 +1969,12 @@ exports[`properly behave when destroyed/unmounted while rendering  2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`SubChild\`, true, false, false, ["val"]);
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = comp1({val: ctx['this'].props.val}, key + \`__1\`, node, this, null);
     return block1([], [b2]);
   }
@@ -1867,10 +1985,11 @@ exports[`properly behave when destroyed/unmounted while rendering  3`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div/>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -1881,12 +2000,13 @@ exports[`rendering component again in next microtick 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callHandler, createComponent } = helpers;
+  // Template name: "__template__1000"
   const hdlr_fn1 = (ctx, ev) => callHandler(ctx['this'].onClick, ctx, ev);
   const comp1 = createComponent(\`Child\`, true, false, false, []);
   
   let block1 = createBlock(\`<div><button block-handler-0="click">Click</button><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     let b2;
     let hdlr1 = [hdlr_fn1, ctx];
     if (ctx['this'].state.config.flag) {
@@ -1901,10 +2021,11 @@ exports[`rendering component again in next microtick 3`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div>Child</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -1915,9 +2036,10 @@ exports[`rendering parent twice, with different props on child and stuff 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, ["value"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return comp1({value: ctx['this'].state.value}, key + \`__1\`, node, this, null);
   }
 }"
@@ -1928,8 +2050,9 @@ exports[`rendering parent twice, with different props on child and stuff 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return safeOutput(ctx['this'].props.value);
   }
 }"
@@ -1940,10 +2063,11 @@ exports[`renderings, destruction, patch, stuff, ... yet another variation 1`] = 
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1002"
   const comp1 = createComponent(\`B\`, true, false, false, ["value"]);
   const comp2 = createComponent(\`D\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1002(ctx, node, key = "") {
     const b2 = text(\`A\`);
     const b3 = comp1({value: ctx['this'].state.value}, key + \`__1\`, node, this, null);
     const b4 = comp2({}, key + \`__2\`, node, this, null);
@@ -1957,9 +2081,10 @@ exports[`renderings, destruction, patch, stuff, ... yet another variation 2`] = 
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`C\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     let b2, b3;
     b2 = text(\`B\`);
     if (ctx['this'].props.value===33) {
@@ -1975,11 +2100,12 @@ exports[`renderings, destruction, patch, stuff, ... yet another variation 3`] = 
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callHandler, safeOutput } = helpers;
+  // Template name: "__template__999"
   const hdlr_fn1 = (ctx, ev) => callHandler(ctx['this'].increment, ctx, ev);
   
   let block3 = createBlock(\`<p block-handler-0="click"><block-child-0/></p>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = text(\`D\`);
     let hdlr1 = [hdlr_fn1, ctx];
     const b4 = safeOutput(ctx['this'].state.val);
@@ -1994,11 +2120,12 @@ exports[`renderings, destruction, patch, stuff, ... yet another variation 4`] = 
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callHandler, safeOutput } = helpers;
+  // Template name: "__template__1000"
   const hdlr_fn1 = (ctx, ev) => callHandler(ctx['this'].increment, ctx, ev);
   
   let block3 = createBlock(\`<span block-handler-0="click"><block-child-0/></span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = text(\`C\`);
     let hdlr1 = [hdlr_fn1, ctx];
     const b4 = safeOutput(ctx['this'].state.val);
@@ -2013,12 +2140,13 @@ exports[`sibling rendering: child without willStart renders before async sibling
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`ChildA\`, true, false, false, []);
   const comp2 = createComponent(\`ChildB\`, true, false, false, []);
   
   let block1 = createBlock(\`<div><block-child-0/><block-child-1/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     const b2 = comp1({}, key + \`__1\`, node, this, null);
     const b3 = comp2({}, key + \`__2\`, node, this, null);
     return block1([], [b2, b3]);
@@ -2031,10 +2159,11 @@ exports[`sibling rendering: child without willStart renders before async sibling
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<span><block-child-0/></span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].log());
     return block1([], [b2]);
   }
@@ -2046,10 +2175,11 @@ exports[`sibling rendering: child without willStart renders before async sibling
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__1000"
   
   let block1 = createBlock(\`<span><block-child-0/></span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].log());
     return block1([], [b2]);
   }
@@ -2061,6 +2191,7 @@ exports[`slot content renders after microtick when child has willStart 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, markRaw, createComponent } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`Child\`, true, true, false, []);
   const comp2 = createComponent(\`Sibling\`, true, false, false, []);
   
@@ -2072,7 +2203,7 @@ exports[`slot content renders after microtick when child has willStart 1`] = `
     return block2([], [b3]);
   }
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     const b4 = comp1({slots: markRaw({'default': {__render: slot1.bind(this), __ctx: ctx}})}, key + \`__1\`, node, this, null);
     const b5 = comp2({}, key + \`__2\`, node, this, null);
     return block1([], [b4, b5]);
@@ -2085,10 +2216,11 @@ exports[`slot content renders after microtick when child has willStart 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callSlot } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = callSlot(ctx, node, key, 'default', false, {});
     return block1([], [b2]);
   }
@@ -2100,10 +2232,11 @@ exports[`slot content renders after microtick when child has willStart 3`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__1000"
   
   let block1 = createBlock(\`<span><block-child-0/></span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].log());
     return block1([], [b2]);
   }
@@ -2115,6 +2248,7 @@ exports[`slot content renders synchronously when child has no willStart 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, markRaw, createComponent } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`Child\`, true, true, false, []);
   const comp2 = createComponent(\`Sibling\`, true, false, false, []);
   
@@ -2126,7 +2260,7 @@ exports[`slot content renders synchronously when child has no willStart 1`] = `
     return block2([], [b3]);
   }
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     const b4 = comp1({slots: markRaw({'default': {__render: slot1.bind(this), __ctx: ctx}})}, key + \`__1\`, node, this, null);
     const b5 = comp2({}, key + \`__2\`, node, this, null);
     return block1([], [b4, b5]);
@@ -2139,10 +2273,11 @@ exports[`slot content renders synchronously when child has no willStart 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callSlot } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = callSlot(ctx, node, key, 'default', false, {});
     return block1([], [b2]);
   }
@@ -2154,10 +2289,11 @@ exports[`slot content renders synchronously when child has no willStart 3`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__1000"
   
   let block1 = createBlock(\`<span><block-child-0/></span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].log());
     return block1([], [b2]);
   }
@@ -2169,9 +2305,10 @@ exports[`t-foreach with dynamic async component 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, createComponent, withKey } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(null, false, false, false, ["key"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const ctx1 = ctx;
     const [k_block1, v_block1, l_block1, c_block1] = prepareList(ctx['this'].list);;
     for (let i1 = 0; i1 < l_block1; i1++) {
@@ -2196,10 +2333,11 @@ exports[`t-foreach with dynamic async component 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].props.key);
     return block1([], [b2]);
   }
@@ -2211,11 +2349,12 @@ exports[`t-key on dom node having a component 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(null, false, false, false, ["key"]);
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const tKey_1 = ctx['this'].key;
     const Comp1 = ctx['this'].myComp;
     const b2 = toggler(tKey_1, toggler(Comp1, comp1({key: ctx['this'].key}, (Comp1).name + tKey_1 + key + \`__1\`, node, this, Comp1)));
@@ -2229,8 +2368,9 @@ exports[`t-key on dom node having a component 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return safeOutput(ctx['this'].props.key);
   }
 }"
@@ -2241,9 +2381,10 @@ exports[`t-key on dynamic async component (toggler is never patched) 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(null, false, false, false, ["key"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const tKey_1 = ctx['this'].key;
     const Comp1 = ctx['this'].myComp;
     return toggler(tKey_1, toggler(Comp1, comp1({key: ctx['this'].key}, (Comp1).name + tKey_1 + key + \`__1\`, node, this, Comp1)));
@@ -2256,10 +2397,11 @@ exports[`t-key on dynamic async component (toggler is never patched) 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].props.key);
     return block1([], [b2]);
   }
@@ -2271,11 +2413,12 @@ exports[`two renderings initiated between willPatch and patched 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Panel\`, true, false, false, ["val"]);
   
   let block1 = createBlock(\`<div><block-child-0/><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     let b2;
     if (ctx['this'].state.flag) {
       const tKey_1 = 'panel_'+ctx['this'].state.panel;
@@ -2291,10 +2434,11 @@ exports[`two renderings initiated between willPatch and patched 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<abc><block-child-0/><block-child-1/></abc>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].props.val);
     const b3 = safeOutput(ctx['this'].mounted);
     return block1([], [b2, b3]);
@@ -2307,9 +2451,10 @@ exports[`two sequential renderings before an animation frame 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, ["value"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return comp1({value: ctx['this'].state.value}, key + \`__1\`, node, this, null);
   }
 }"
@@ -2320,8 +2465,9 @@ exports[`two sequential renderings before an animation frame 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return safeOutput(ctx['this'].props.value);
   }
 }"
@@ -2332,11 +2478,12 @@ exports[`update a sub-component twice in the same frame 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`ChildA\`, true, false, false, ["val"]);
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = comp1({val: ctx['this'].state.valA}, key + \`__1\`, node, this, null);
     return block1([], [b2]);
   }
@@ -2348,10 +2495,11 @@ exports[`update a sub-component twice in the same frame 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<span><block-child-0/></span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].props.val);
     return block1([], [b2]);
   }
@@ -2363,11 +2511,12 @@ exports[`update a sub-component twice in the same frame, 2 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`ChildA\`, true, false, false, ["val"]);
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = comp1({val: ctx['this'].state.valA}, key + \`__1\`, node, this, null);
     return block1([], [b2]);
   }
@@ -2379,10 +2528,11 @@ exports[`update a sub-component twice in the same frame, 2 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<span><block-child-0/></span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].val());
     return block1([], [b2]);
   }

@@ -5,11 +5,12 @@ exports[`t-key > t-foreach with t-key switch component position 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, createComponent, withKey } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, ["key"]);
   
   let block1 = createBlock(\`<span><block-child-0/></span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const ctx1 = ctx;
     const [k_block2, v_block2, l_block2, c_block2] = prepareList(ctx['this'].clist);;
     for (let i1 = 0; i1 < l_block2; i1++) {
@@ -30,10 +31,11 @@ exports[`t-key > t-foreach with t-key switch component position 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].props.key);
     return block1([], [b2]);
   }
@@ -45,12 +47,13 @@ exports[`t-key > t-key change on a component rendering an empty list 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`List\`, true, false, false, ["items"]);
   
   let block2 = createBlock(\`<button>b</button>\`);
   let block4 = createBlock(\`<span>end</span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = block2();
     const tKey_1 = ctx['this'].key;
     const b3 = toggler(tKey_1, comp1({items: ctx['this'].items}, tKey_1 + key + \`__1\`, node, this, null));
@@ -65,8 +68,9 @@ exports[`t-key > t-key change on a component rendering an empty list 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, safeOutput, withKey } = helpers;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const ctx1 = ctx;
     const [k_block1, v_block1, l_block1, c_block1] = prepareList(ctx['this'].props.items);;
     for (let i1 = 0; i1 < l_block1; i1++) {
@@ -86,9 +90,10 @@ exports[`t-key > t-key on Component 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, ["key"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const tKey_1 = ctx['this'].key;
     return toggler(tKey_1, comp1({key: ctx['this'].key}, tKey_1 + key + \`__1\`, node, this, null));
   }
@@ -100,10 +105,11 @@ exports[`t-key > t-key on Component 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].props.key);
     return block1([], [b2]);
   }
@@ -115,11 +121,12 @@ exports[`t-key > t-key on Component as a function 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, ["key"]);
   
   let block1 = createBlock(\`<span><block-child-0/></span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const tKey_1 = ctx['this'].key;
     const b2 = toggler(tKey_1, comp1({key: ctx['this'].key}, tKey_1 + key + \`__1\`, node, this, null));
     return block1([], [b2]);
@@ -132,10 +139,11 @@ exports[`t-key > t-key on Component as a function 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].props.key);
     return block1([], [b2]);
   }
@@ -147,12 +155,13 @@ exports[`t-key > t-key on multiple Components 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, ["key"]);
   const comp2 = createComponent(\`Child\`, true, false, false, ["key"]);
   
   let block1 = createBlock(\`<span><block-child-0/><block-child-1/></span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const tKey_1 = ctx['this'].key1;
     const b2 = toggler(tKey_1, comp1({key: ctx['this'].key1}, tKey_1 + key + \`__1\`, node, this, null));
     const tKey_2 = ctx['this'].key2;
@@ -167,10 +176,11 @@ exports[`t-key > t-key on multiple Components 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].props.key);
     return block1([], [b2]);
   }
@@ -182,10 +192,11 @@ exports[`t-key > t-key on multiple Components with t-call 1 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callTemplate } = helpers;
+  // Template name: "__template__1000"
   
   let block1 = createBlock(\`<span><block-child-0/><block-child-1/></span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = callTemplate(\`calledTemplate\`, this, templates, Object.assign(Object.create(ctx), {key: ctx['this'].key1}), node, key + \`__1\`);
     const b3 = callTemplate(\`calledTemplate\`, this, templates, Object.assign(Object.create(ctx), {key: ctx['this'].key2}), node, key + \`__2\`);
     return block1([], [b2, b3]);
@@ -198,9 +209,10 @@ exports[`t-key > t-key on multiple Components with t-call 1 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "calledTemplate"
   const comp1 = createComponent(\`Child\`, true, false, false, ["key"]);
   
-  return function template(ctx, node, key = "") {
+  return function template_calledTemplate(ctx, node, key = "") {
     const tKey_1 = ctx['key'];
     return toggler(tKey_1, comp1({key: ctx['key']}, tKey_1 + key + \`__1\`, node, this, null));
   }
@@ -212,10 +224,11 @@ exports[`t-key > t-key on multiple Components with t-call 1 3`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].props.key);
     return block1([], [b2]);
   }
@@ -227,10 +240,11 @@ exports[`t-key > t-key on multiple Components with t-call 2 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callTemplate } = helpers;
+  // Template name: "__template__1000"
   
   let block1 = createBlock(\`<span><block-child-0/></span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = callTemplate(\`calledTemplate\`, this, templates, Object.assign(Object.create(ctx), {'key1': ctx['this'].key1, 'key2': ctx['this'].key2}), node, key + \`__1\`);
     return block1([], [b2]);
   }
@@ -242,10 +256,11 @@ exports[`t-key > t-key on multiple Components with t-call 2 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "calledTemplate"
   const comp1 = createComponent(\`Child\`, true, false, false, ["key"]);
   const comp2 = createComponent(\`Child\`, true, false, false, ["key"]);
   
-  return function template(ctx, node, key = "") {
+  return function template_calledTemplate(ctx, node, key = "") {
     const tKey_1 = ctx['key1'];
     const b2 = toggler(tKey_1, comp1({key: ctx['key1']}, tKey_1 + key + \`__1\`, node, this, null));
     const tKey_2 = ctx['key2'];
@@ -260,10 +275,11 @@ exports[`t-key > t-key on multiple Components with t-call 2 3`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].props.key);
     return block1([], [b2]);
   }

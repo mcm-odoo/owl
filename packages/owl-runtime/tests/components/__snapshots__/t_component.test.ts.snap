@@ -5,11 +5,12 @@ exports[`t-component > can switch between dynamic components without the need fo
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(null, false, false, false, []);
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     const Comp1 = ctx['this'].constructor.components[ctx['this'].state.child];
     const b2 = toggler(Comp1, comp1({}, (Comp1).name + key + \`__1\`, node, this, Comp1));
     return block1([], [b2]);
@@ -21,10 +22,11 @@ exports[`t-component > can switch between dynamic components without the need fo
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<span>child a</span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -34,10 +36,11 @@ exports[`t-component > can switch between dynamic components without the need fo
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__1000"
   
   let block1 = createBlock(\`<span>child b</span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -48,9 +51,10 @@ exports[`t-component > can use dynamic components (the class) if given (with dif
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(null, false, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     const tKey_1 = ctx['this'].state.child;
     const Comp1 = ctx['this'].myComponent;
     return toggler(tKey_1, toggler(Comp1, comp1({}, (Comp1).name + tKey_1 + key + \`__1\`, node, this, Comp1)));
@@ -62,10 +66,11 @@ exports[`t-component > can use dynamic components (the class) if given (with dif
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<span>child a</span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -75,10 +80,11 @@ exports[`t-component > can use dynamic components (the class) if given (with dif
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__1000"
   
   let block1 = createBlock(\`<div>child b</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -89,9 +95,10 @@ exports[`t-component > can use dynamic components (the class) if given 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(null, false, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     const tKey_1 = ctx['this'].state.child;
     const Comp1 = ctx['this'].myComponent;
     return toggler(tKey_1, toggler(Comp1, comp1({}, (Comp1).name + tKey_1 + key + \`__1\`, node, this, Comp1)));
@@ -103,10 +110,11 @@ exports[`t-component > can use dynamic components (the class) if given 2`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<span>child a</span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -116,10 +124,11 @@ exports[`t-component > can use dynamic components (the class) if given 3`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__1000"
   
   let block1 = createBlock(\`<span>child b</span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -130,11 +139,12 @@ exports[`t-component > modifying a sub widget 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(null, false, false, false, []);
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const Comp1 = ctx['this'].Counter;
     const b2 = toggler(Comp1, comp1({}, (Comp1).name + key + \`__1\`, node, this, Comp1));
     return block1([], [b2]);
@@ -147,11 +157,12 @@ exports[`t-component > modifying a sub widget 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   const hdlr_fn1 = (ctx)=>ctx['this'].state.counter++;
   
   let block1 = createBlock(\`<div><block-child-0/><button block-handler-0="click">Inc</button></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].state.counter);
     let hdlr1 = [hdlr_fn1, ctx];
     return block1([hdlr1], [b2]);
@@ -164,9 +175,10 @@ exports[`t-component > switching dynamic component 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(null, false, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     const Comp1 = ctx['this'].Child;
     return toggler(Comp1, comp1({}, (Comp1).name + key + \`__1\`, node, this, Comp1));
   }
@@ -177,10 +189,11 @@ exports[`t-component > switching dynamic component 2`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div>child a</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -190,8 +203,9 @@ exports[`t-component > switching dynamic component 4`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__1000"
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return text(\`child b\`);
   }
 }"
@@ -202,9 +216,10 @@ exports[`t-component > t-component works in simple case 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(null, false, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const Comp1 = ctx['this'].Child;
     return toggler(Comp1, comp1({}, (Comp1).name + key + \`__1\`, node, this, Comp1));
   }
@@ -215,10 +230,11 @@ exports[`t-component > t-component works in simple case 2`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div>child</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"

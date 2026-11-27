@@ -4,10 +4,11 @@ exports[`t-call-block > simple t-call-block with static text 1`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = ctx['this'].myBlock();
     return block1([], [b2]);
   }

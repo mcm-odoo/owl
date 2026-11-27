@@ -5,9 +5,10 @@ exports[`basics > a sync re-render error deep in the tree is only wrapped once 1
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`Parent\`, true, false, false, ["flag"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     return comp1({flag: ctx['this'].state.flag}, key + \`__1\`, node, this, null);
   }
 }"
@@ -18,9 +19,10 @@ exports[`basics > a sync re-render error deep in the tree is only wrapped once 2
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, ["flag"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return comp1({flag: ctx['this'].props.flag}, key + \`__1\`, node, this, null);
   }
 }"
@@ -31,10 +33,11 @@ exports[`basics > a sync re-render error deep in the tree is only wrapped once 3
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].props.flag&&ctx['this'].state.this.will.crash);
     return block1([], [b2]);
   }
@@ -46,9 +49,10 @@ exports[`basics > currentComputation does not leak when a willStart promise reje
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return comp1({}, key + \`__1\`, node, this, null);
   }
 }"
@@ -58,10 +62,11 @@ exports[`basics > currentComputation does not leak when a willStart promise reje
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div/>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -72,9 +77,10 @@ exports[`basics > currentComputation does not leak when an uncaught render error
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, ["flag"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return comp1({flag: ctx['this'].state.flag}, key + \`__1\`, node, this, null);
   }
 }"
@@ -85,10 +91,11 @@ exports[`basics > currentComputation does not leak when an uncaught render error
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].props.flag&&ctx['this'].state.this.will.crash);
     return block1([], [b2]);
   }
@@ -100,9 +107,10 @@ exports[`basics > display a nice error if a component is not a component 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__999"
   const comp1 = createComponent(\`SomeComponent\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return comp1({}, key + \`__1\`, node, this, null);
   }
 }"
@@ -113,9 +121,10 @@ exports[`basics > display a nice error if a non-root component template fails to
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return comp1({}, key + \`__1\`, node, this, null);
   }
 }"
@@ -126,9 +135,10 @@ exports[`basics > display a nice error if it cannot find component (in dev mode)
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__999"
   const comp1 = createComponent(\`SomeMispelledComponent\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return comp1({}, key + \`__1\`, node, this, null);
   }
 }"
@@ -139,9 +149,10 @@ exports[`basics > display a nice error if it cannot find component 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__999"
   const comp1 = createComponent(\`SomeMispelledComponent\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return comp1({}, key + \`__1\`, node, this, null);
   }
 }"
@@ -152,11 +163,12 @@ exports[`basics > display a nice error if the components key is missing with sub
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__999"
   const comp1 = createComponent(\`MissingChild\`, true, false, false, []);
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = comp1({}, key + \`__1\`, node, this, null);
     return block1([], [b2]);
   }
@@ -168,11 +180,12 @@ exports[`basics > no component catching error lead to full app destruction 1`] =
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`ErrorComponent\`, true, false, false, ["flag"]);
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = comp1({flag: ctx['this'].state.flag}, key + \`__1\`, node, this, null);
     return block1([], [b2]);
   }
@@ -184,10 +197,11 @@ exports[`basics > no component catching error lead to full app destruction 2`] =
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div>hey<block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].props.flag&&ctx['this'].state.this.will.crash);
     return block1([], [b2]);
   }
@@ -199,9 +213,10 @@ exports[`basics > render from above on error -- handler is not a Root or MountFi
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`Parent\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     return comp1({}, key + \`__1\`, node, this, null);
   }
 }"
@@ -212,11 +227,12 @@ exports[`basics > render from above on error -- handler is not a Root or MountFi
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Boom\`, true, false, false, []);
   
   let block1 = createBlock(\`<div><block-child-0/><block-child-1/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     let b2, b3;
     if (ctx['this'].error) {
       b2 = text(\`Error\`);
@@ -233,10 +249,11 @@ exports[`basics > render from above on error -- handler is not a Root or MountFi
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['a'].b.c);
     return block1([], [b2]);
   }
@@ -248,11 +265,12 @@ exports[`basics > simple catchError 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Boom\`, true, false, false, []);
   
   let block1 = createBlock(\`<div><block-child-0/><block-child-1/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     let b2, b3;
     if (ctx['this'].error) {
       b2 = text(\`Error\`);
@@ -269,10 +287,11 @@ exports[`basics > simple catchError 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['a'].b.c);
     return block1([], [b2]);
   }
@@ -284,8 +303,9 @@ exports[`can catch errors > Errors thrown from user hooks surface as-is (async) 
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return safeOutput(ctx['this'].state.value);
   }
 }"
@@ -296,8 +316,9 @@ exports[`can catch errors > Errors thrown from user hooks surface as-is (sync) 1
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return safeOutput(ctx['this'].state.value);
   }
 }"
@@ -308,8 +329,9 @@ exports[`can catch errors > Errors thrown outside dev mode also surface as-is (a
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return safeOutput(ctx['this'].state.value);
   }
 }"
@@ -320,8 +342,9 @@ exports[`can catch errors > Errors thrown outside dev mode also surface as-is (s
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return safeOutput(ctx['this'].state.value);
   }
 }"
@@ -332,8 +355,9 @@ exports[`can catch errors > Thrown non-error values surface as-is (dev mode) 1`]
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return safeOutput(ctx['this'].state.value);
   }
 }"
@@ -344,8 +368,9 @@ exports[`can catch errors > Thrown non-error values surface as-is (outside dev m
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return safeOutput(ctx['this'].state.value);
   }
 }"
@@ -356,9 +381,10 @@ exports[`can catch errors > an error in onWillDestroy 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     let b2, b3;
     b2 = safeOutput(ctx['this'].state.value);
     if (ctx['this'].state.hasChild) {
@@ -373,10 +399,11 @@ exports[`can catch errors > an error in onWillDestroy 2`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div>abc</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -387,9 +414,10 @@ exports[`can catch errors > an error in onWillDestroy, variation 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     let b2, b3;
     b2 = safeOutput(ctx['this'].state.value);
     if (ctx['this'].state.hasChild) {
@@ -404,10 +432,11 @@ exports[`can catch errors > an error in onWillDestroy, variation 3`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div>abc</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -418,8 +447,9 @@ exports[`can catch errors > calling a hook outside setup should crash 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return safeOutput(ctx['this'].state.value);
   }
 }"
@@ -430,6 +460,7 @@ exports[`can catch errors > can catch an error in a component render function 1`
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent, markRaw } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`ErrorComponent\`, true, false, false, ["flag"]);
   const comp2 = createComponent(\`ErrorBoundary\`, true, true, false, []);
   
@@ -439,7 +470,7 @@ exports[`can catch errors > can catch an error in a component render function 1`
     return comp1({flag: ctx['this'].state.flag}, key + \`__1\`, node, this, null);
   }
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     const b3 = comp2({slots: markRaw({'default': {__render: slot1.bind(this), __ctx: ctx}})}, key + \`__2\`, node, this, null);
     return block1([], [b3]);
   }
@@ -451,10 +482,11 @@ exports[`can catch errors > can catch an error in a component render function 2`
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callSlot } = helpers;
+  // Template name: "__template__1000"
   
   let block1 = createBlock(\`<div><block-child-0/><block-child-1/><block-child-1/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     let b2, b3;
     if (ctx['this'].state.error) {
       b2 = text(\`Error handled\`);
@@ -471,10 +503,11 @@ exports[`can catch errors > can catch an error in a component render function 3`
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div>hey<block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].props.flag&&ctx['this'].state.this.will.crash);
     return block1([], [b2]);
   }
@@ -486,9 +519,10 @@ exports[`can catch errors > can catch an error in onmounted 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(null, false, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     let b2, b3;
     b2 = text(\`Main\`);
     if (ctx['this'].state.ok) {
@@ -504,10 +538,11 @@ exports[`can catch errors > can catch an error in onmounted 3`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div>Error!!!</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -517,10 +552,11 @@ exports[`can catch errors > can catch an error in onmounted 4`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__1000"
   
   let block1 = createBlock(\`<div>perfect</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -531,6 +567,7 @@ exports[`can catch errors > can catch an error in the constructor call of a comp
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent, markRaw } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`ErrorComponent\`, true, false, false, []);
   const comp2 = createComponent(\`ErrorBoundary\`, true, true, false, []);
   
@@ -540,7 +577,7 @@ exports[`can catch errors > can catch an error in the constructor call of a comp
     return comp1({}, key + \`__1\`, node, this, null);
   }
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     const b3 = comp2({slots: markRaw({'default': {__render: slot1.bind(this), __ctx: ctx}})}, key + \`__2\`, node, this, null);
     return block1([], [b3]);
   }
@@ -552,10 +589,11 @@ exports[`can catch errors > can catch an error in the constructor call of a comp
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callSlot } = helpers;
+  // Template name: "__template__1000"
   
   let block1 = createBlock(\`<div><block-child-0/><block-child-1/><block-child-1/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     let b2, b3;
     if (ctx['this'].state.error) {
       b2 = text(\`Error handled\`);
@@ -572,6 +610,7 @@ exports[`can catch errors > can catch an error in the constructor call of a comp
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent, markRaw } = helpers;
+  // Template name: "__template__1002"
   const comp1 = createComponent(\`ClassicCompoent\`, true, false, false, []);
   const comp2 = createComponent(\`ErrorComponent\`, true, false, false, []);
   const comp3 = createComponent(\`ErrorBoundary\`, true, true, false, []);
@@ -584,7 +623,7 @@ exports[`can catch errors > can catch an error in the constructor call of a comp
     return multi([b3, b4]);
   }
   
-  return function template(ctx, node, key = "") {
+  return function __template__1002(ctx, node, key = "") {
     const b5 = comp3({slots: markRaw({'default': {__render: slot1.bind(this), __ctx: ctx}})}, key + \`__3\`, node, this, null);
     return block1([], [b5]);
   }
@@ -596,10 +635,11 @@ exports[`can catch errors > can catch an error in the constructor call of a comp
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callSlot } = helpers;
+  // Template name: "__template__1001"
   
   let block1 = createBlock(\`<div><block-child-0/><block-child-1/><block-child-1/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     let b2, b3;
     if (ctx['this'].state.error) {
       b2 = text(\`Error handled\`);
@@ -615,10 +655,11 @@ exports[`can catch errors > can catch an error in the constructor call of a comp
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div>classic</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -628,10 +669,11 @@ exports[`can catch errors > can catch an error in the constructor call of a comp
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__1000"
   
   let block1 = createBlock(\`<div>Some text</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -641,10 +683,11 @@ exports[`can catch errors > can catch an error in the constructor call of a comp
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div>Some text</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -655,6 +698,7 @@ exports[`can catch errors > can catch an error in the initial call of a componen
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent, markRaw } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`ErrorComponent\`, true, false, false, []);
   const comp2 = createComponent(\`ErrorBoundary\`, true, true, false, []);
   
@@ -664,7 +708,7 @@ exports[`can catch errors > can catch an error in the initial call of a componen
     return comp1({}, key + \`__1\`, node, this, null);
   }
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     const b3 = comp2({slots: markRaw({'default': {__render: slot1.bind(this), __ctx: ctx}})}, key + \`__2\`, node, this, null);
     return block1([], [b3]);
   }
@@ -676,10 +720,11 @@ exports[`can catch errors > can catch an error in the initial call of a componen
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callSlot } = helpers;
+  // Template name: "__template__1000"
   
   let block1 = createBlock(\`<div><block-child-0/><block-child-1/><block-child-1/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     let b2, b3;
     if (ctx['this'].state.error) {
       b2 = text(\`Error handled\`);
@@ -696,10 +741,11 @@ exports[`can catch errors > can catch an error in the initial call of a componen
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div>hey<block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].state.this.will.crash);
     return block1([], [b2]);
   }
@@ -711,6 +757,7 @@ exports[`can catch errors > can catch an error in the initial call of a componen
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent, markRaw } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`ErrorComponent\`, true, false, false, []);
   const comp2 = createComponent(\`ErrorBoundary\`, true, true, false, []);
   
@@ -720,7 +767,7 @@ exports[`can catch errors > can catch an error in the initial call of a componen
     return comp1({}, key + \`__1\`, node, this, null);
   }
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     let b3;
     if (ctx['this'].state.flag) {
       b3 = comp2({slots: markRaw({'default': {__render: slot1.bind(this), __ctx: ctx}})}, key + \`__2\`, node, this, null);
@@ -735,10 +782,11 @@ exports[`can catch errors > can catch an error in the initial call of a componen
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callSlot } = helpers;
+  // Template name: "__template__1000"
   
   let block1 = createBlock(\`<div><block-child-0/><block-child-1/><block-child-1/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     let b2, b3;
     if (ctx['this'].state.error) {
       b2 = text(\`Error handled\`);
@@ -755,10 +803,11 @@ exports[`can catch errors > can catch an error in the initial call of a componen
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div>hey<block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].state.this.will.crash);
     return block1([], [b2]);
   }
@@ -770,9 +819,10 @@ exports[`can catch errors > can catch an error in the mounted call (in child of 
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1002"
   const comp1 = createComponent(\`B\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1002(ctx, node, key = "") {
     return comp1({}, key + \`__1\`, node, this, null);
   }
 }"
@@ -783,11 +833,12 @@ exports[`can catch errors > can catch an error in the mounted call (in child of 
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`C\`, true, false, false, []);
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     const b2 = comp1({}, key + \`__1\`, node, this, null);
     return block1([], [b2]);
   }
@@ -799,11 +850,12 @@ exports[`can catch errors > can catch an error in the mounted call (in child of 
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Boom\`, true, false, false, []);
   
   let block1 = createBlock(\`<div><block-child-0/><block-child-1/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     let b2, b3;
     if (ctx['this'].state.error) {
       b2 = text(\`Error handled\`);
@@ -819,10 +871,11 @@ exports[`can catch errors > can catch an error in the mounted call (in child of 
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div>Some text</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -833,11 +886,12 @@ exports[`can catch errors > can catch an error in the mounted call (in root comp
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`ErrorComponent\`, true, false, false, []);
   
   let block1 = createBlock(\`<div><block-child-0/><block-child-1/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     let b2, b3;
     if (ctx['this'].state.error) {
       b2 = text(\`Error handled\`);
@@ -853,10 +907,11 @@ exports[`can catch errors > can catch an error in the mounted call (in root comp
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div>Some text</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -867,6 +922,7 @@ exports[`can catch errors > can catch an error in the mounted call 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent, markRaw } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`ErrorComponent\`, true, false, false, []);
   const comp2 = createComponent(\`ErrorBoundary\`, true, true, false, []);
   
@@ -876,7 +932,7 @@ exports[`can catch errors > can catch an error in the mounted call 1`] = `
     return comp1({}, key + \`__1\`, node, this, null);
   }
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     const b3 = comp2({slots: markRaw({'default': {__render: slot1.bind(this), __ctx: ctx}})}, key + \`__2\`, node, this, null);
     return block1([], [b3]);
   }
@@ -888,10 +944,11 @@ exports[`can catch errors > can catch an error in the mounted call 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callSlot } = helpers;
+  // Template name: "__template__1000"
   
   let block1 = createBlock(\`<div><block-child-0/><block-child-1/><block-child-1/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     let b2, b3;
     if (ctx['this'].state.error) {
       b2 = text(\`Error handled\`);
@@ -907,10 +964,11 @@ exports[`can catch errors > can catch an error in the mounted call 3`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div>Some text</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -921,6 +979,7 @@ exports[`can catch errors > can catch an error in the willPatch call 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, createComponent, markRaw } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`ErrorComponent\`, true, false, false, ["message"]);
   const comp2 = createComponent(\`ErrorBoundary\`, true, true, false, []);
   
@@ -930,7 +989,7 @@ exports[`can catch errors > can catch an error in the willPatch call 1`] = `
     return comp1({message: ctx['this'].state.message}, key + \`__1\`, node, this, null);
   }
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].state.message);
     const b4 = comp2({slots: markRaw({'default': {__render: slot1.bind(this), __ctx: ctx}})}, key + \`__2\`, node, this, null);
     return block1([], [b2, b4]);
@@ -943,10 +1002,11 @@ exports[`can catch errors > can catch an error in the willPatch call 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callSlot } = helpers;
+  // Template name: "__template__1000"
   
   let block1 = createBlock(\`<div><block-child-0/><block-child-1/><block-child-1/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     let b2, b3;
     if (ctx['this'].state.error) {
       b2 = text(\`Error handled\`);
@@ -963,10 +1023,11 @@ exports[`can catch errors > can catch an error in the willPatch call 3`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].props.message);
     return block1([], [b2]);
   }
@@ -978,6 +1039,7 @@ exports[`can catch errors > can catch an error in the willStart call 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent, markRaw } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`ErrorComponent\`, true, false, false, []);
   const comp2 = createComponent(\`ErrorBoundary\`, true, true, false, []);
   
@@ -987,7 +1049,7 @@ exports[`can catch errors > can catch an error in the willStart call 1`] = `
     return comp1({}, key + \`__1\`, node, this, null);
   }
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     const b3 = comp2({slots: markRaw({'default': {__render: slot1.bind(this), __ctx: ctx}})}, key + \`__2\`, node, this, null);
     return block1([], [b3]);
   }
@@ -999,10 +1061,11 @@ exports[`can catch errors > can catch an error in the willStart call 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callSlot } = helpers;
+  // Template name: "__template__1000"
   
   let block1 = createBlock(\`<div><block-child-0/><block-child-1/><block-child-1/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     let b2, b3;
     if (ctx['this'].state.error) {
       b2 = text(\`Error handled\`);
@@ -1018,10 +1081,11 @@ exports[`can catch errors > can catch an error in the willStart call 3`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div>Some text</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -1032,6 +1096,7 @@ exports[`can catch errors > can catch an error origination from a child's willSt
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent, markRaw } = helpers;
+  // Template name: "__template__1002"
   const comp1 = createComponent(\`ClassicCompoent\`, true, false, false, []);
   const comp2 = createComponent(\`ErrorComponent\`, true, false, false, []);
   const comp3 = createComponent(\`ErrorBoundary\`, true, true, false, []);
@@ -1044,7 +1109,7 @@ exports[`can catch errors > can catch an error origination from a child's willSt
     return multi([b3, b4]);
   }
   
-  return function template(ctx, node, key = "") {
+  return function __template__1002(ctx, node, key = "") {
     const b5 = comp3({slots: markRaw({'default': {__render: slot1.bind(this), __ctx: ctx}})}, key + \`__3\`, node, this, null);
     return block1([], [b5]);
   }
@@ -1056,10 +1121,11 @@ exports[`can catch errors > can catch an error origination from a child's willSt
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callSlot } = helpers;
+  // Template name: "__template__1001"
   
   let block1 = createBlock(\`<div><block-child-0/><block-child-1/><block-child-1/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     let b2, b3;
     if (ctx['this'].state.error) {
       b2 = text(\`Error handled\`);
@@ -1075,10 +1141,11 @@ exports[`can catch errors > can catch an error origination from a child's willSt
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div>classic</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -1088,10 +1155,11 @@ exports[`can catch errors > can catch an error origination from a child's willSt
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__1000"
   
   let block1 = createBlock(\`<div>Some text</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -1102,11 +1170,12 @@ exports[`can catch errors > catchError in catchError 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1001"
   const comp1 = createComponent(\`Child\`, true, false, false, []);
   
   let block1 = createBlock(\`<div><block-child-0/><block-child-1/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     let b2, b3;
     if (ctx['this'].error) {
       b2 = text(\`Error\`);
@@ -1123,11 +1192,12 @@ exports[`can catch errors > catchError in catchError 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Boom\`, true, false, false, []);
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = comp1({}, key + \`__1\`, node, this, null);
     return block1([], [b2]);
   }
@@ -1139,10 +1209,11 @@ exports[`can catch errors > catchError in catchError 3`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['a'].b.c);
     return block1([], [b2]);
   }
@@ -1154,6 +1225,7 @@ exports[`can catch errors > catching error, rethrow, render parent  -- a main co
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, createComponent, markRaw, withKey } = helpers;
+  // Template name: "__template__1003"
   const comp1 = createComponent(null, false, false, false, []);
   const comp2 = createComponent(\`ErrorHandler\`, true, true, false, ["onError.cp"]);
   
@@ -1162,7 +1234,7 @@ exports[`can catch errors > catching error, rethrow, render parent  -- a main co
     return toggler(Comp1, comp1({}, (Comp1).name + key + \`__1\`, node, this, Comp1));
   }
   
-  return function template(ctx, node, key = "") {
+  return function __template__1003(ctx, node, key = "") {
     const ctx1 = ctx;
     const [k_block1, v_block1, l_block1, c_block1] = prepareList(Object.values(ctx['this'].state.cps));;
     for (let i1 = 0; i1 < l_block1; i1++) {
@@ -1181,8 +1253,9 @@ exports[`can catch errors > catching error, rethrow, render parent  -- a main co
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callSlot } = helpers;
+  // Template name: "__template__1002"
   
-  return function template(ctx, node, key = "") {
+  return function __template__1002(ctx, node, key = "") {
     return callSlot(ctx, node, key, 'default', false, {});
   }
 }"
@@ -1193,9 +1266,10 @@ exports[`can catch errors > catching error, rethrow, render parent  -- a main co
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`ErrorComponent\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return comp1({}, key + \`__1\`, node, this, null);
   }
 }"
@@ -1205,10 +1279,11 @@ exports[`can catch errors > catching error, rethrow, render parent  -- a main co
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div/>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -1218,10 +1293,11 @@ exports[`can catch errors > catching error, rethrow, render parent  -- a main co
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__1001"
   
   let block1 = createBlock(\`<div>Sibling</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -1232,6 +1308,7 @@ exports[`can catch errors > catching in child makes parent render 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, createComponent, markRaw, withKey } = helpers;
+  // Template name: "__template__1002"
   const comp1 = createComponent(null, false, false, false, ["id"]);
   const comp2 = createComponent(\`Catch\`, true, true, false, ["onError.elem"]);
   
@@ -1240,7 +1317,7 @@ exports[`can catch errors > catching in child makes parent render 1`] = `
     return toggler(Comp1, comp1({id: ctx['elem'][0]}, (Comp1).name + key + \`__1\`, node, this, Comp1));
   }
   
-  return function template(ctx, node, key = "") {
+  return function __template__1002(ctx, node, key = "") {
     const ctx1 = ctx;
     const [k_block1, v_block1, l_block1, c_block1] = prepareList(Object.entries(ctx['this'].elements));;
     for (let i1 = 0; i1 < l_block1; i1++) {
@@ -1259,8 +1336,9 @@ exports[`can catch errors > catching in child makes parent render 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callSlot } = helpers;
+  // Template name: "__template__1001"
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     return callSlot(ctx, node, key, 'default', false, {});
   }
 }"
@@ -1270,10 +1348,11 @@ exports[`can catch errors > catching in child makes parent render 3`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__1000"
   
   let block1 = createBlock(\`<div/>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -1284,10 +1363,11 @@ exports[`can catch errors > catching in child makes parent render 4`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput('Child '+ctx['this'].props.id);
     return block1([], [b2]);
   }
@@ -1299,6 +1379,7 @@ exports[`can catch errors > error in mounted on a component with a sibling (prop
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent, markRaw } = helpers;
+  // Template name: "__template__1002"
   const comp1 = createComponent(\`OK\`, true, false, false, []);
   const comp2 = createComponent(\`ErrorComponent\`, true, false, false, []);
   const comp3 = createComponent(\`ErrorBoundary\`, true, true, false, []);
@@ -1309,7 +1390,7 @@ exports[`can catch errors > error in mounted on a component with a sibling (prop
     return comp2({}, key + \`__2\`, node, this, null);
   }
   
-  return function template(ctx, node, key = "") {
+  return function __template__1002(ctx, node, key = "") {
     const b2 = comp1({}, key + \`__1\`, node, this, null);
     const b4 = comp3({slots: markRaw({'default': {__render: slot1.bind(this), __ctx: ctx}})}, key + \`__3\`, node, this, null);
     return block1([], [b2, b4]);
@@ -1321,8 +1402,9 @@ exports[`can catch errors > error in mounted on a component with a sibling (prop
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__1001"
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     return text(\`OK\`);
   }
 }"
@@ -1333,10 +1415,11 @@ exports[`can catch errors > error in mounted on a component with a sibling (prop
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callSlot } = helpers;
+  // Template name: "__template__1000"
   
   let block1 = createBlock(\`<div><block-child-0/><block-child-1/><block-child-1/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     let b2, b3;
     if (ctx['this'].state.error) {
       b2 = text(\`Error handled\`);
@@ -1352,10 +1435,11 @@ exports[`can catch errors > error in mounted on a component with a sibling (prop
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div>Some text</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -1366,9 +1450,10 @@ exports[`can catch errors > error in onMounted, graceful recovery 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1003"
   const comp1 = createComponent(null, false, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1003(ctx, node, key = "") {
     const Comp1 = ctx['this'].component;
     return toggler(Comp1, comp1({}, (Comp1).name + key + \`__1\`, node, this, Comp1));
   }
@@ -1380,10 +1465,11 @@ exports[`can catch errors > error in onMounted, graceful recovery 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1002"
   const comp1 = createComponent(\`Child\`, true, false, false, []);
   const comp2 = createComponent(\`Boom\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1002(ctx, node, key = "") {
     const b2 = text(\`parent\`);
     const b3 = comp1({}, key + \`__1\`, node, this, null);
     const b4 = comp2({}, key + \`__2\`, node, this, null);
@@ -1396,8 +1482,9 @@ exports[`can catch errors > error in onMounted, graceful recovery 3`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return text(\`abc\`);
   }
 }"
@@ -1407,8 +1494,9 @@ exports[`can catch errors > error in onMounted, graceful recovery 4`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__1001"
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     return text(\`boom\`);
   }
 }"
@@ -1418,8 +1506,9 @@ exports[`can catch errors > error in onMounted, graceful recovery 5`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__1000"
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return text(\`def\`);
   }
 }"
@@ -1430,9 +1519,10 @@ exports[`can catch errors > error in onMounted, graceful recovery, variation 1`]
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1003"
   const comp1 = createComponent(null, false, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1003(ctx, node, key = "") {
     let b2, b3;
     b2 = text(\`R\`);
     if (ctx['this'].state.gogogo) {
@@ -1449,10 +1539,11 @@ exports[`can catch errors > error in onMounted, graceful recovery, variation 3`]
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1002"
   const comp1 = createComponent(\`Child\`, true, false, false, []);
   const comp2 = createComponent(\`Boom\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1002(ctx, node, key = "") {
     const b2 = text(\`parent\`);
     const b3 = comp1({}, key + \`__1\`, node, this, null);
     const b4 = comp2({}, key + \`__2\`, node, this, null);
@@ -1465,8 +1556,9 @@ exports[`can catch errors > error in onMounted, graceful recovery, variation 4`]
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return text(\`abc\`);
   }
 }"
@@ -1476,8 +1568,9 @@ exports[`can catch errors > error in onMounted, graceful recovery, variation 5`]
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__1001"
   
-  return function template(ctx, node, key = "") {
+  return function __template__1001(ctx, node, key = "") {
     return text(\`boom\`);
   }
 }"
@@ -1487,8 +1580,9 @@ exports[`can catch errors > error in onMounted, graceful recovery, variation 6`]
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__1000"
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return text(\`def\`);
   }
 }"
@@ -1499,9 +1593,10 @@ exports[`can catch errors > onError in class inheritance is called if rethrown 1
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Concrete\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return comp1({}, key + \`__1\`, node, this, null);
   }
 }"
@@ -1512,10 +1607,11 @@ exports[`can catch errors > onError in class inheritance is called if rethrown 2
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div><block-child-0/><block-child-0/><block-child-1/><block-child-1/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     let b2, b3;
     if (!ctx['this'].state.error) {
       b2 = safeOutput(ctx['this'].will.crash);
@@ -1532,9 +1628,10 @@ exports[`can catch errors > onError in class inheritance is not called if no ret
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Concrete\`, true, false, false, []);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return comp1({}, key + \`__1\`, node, this, null);
   }
 }"
@@ -1545,10 +1642,11 @@ exports[`can catch errors > onError in class inheritance is not called if no ret
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div><block-child-0/><block-child-0/><block-child-1/><block-child-1/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     let b2, b3;
     if (!ctx['this'].state.error) {
       b2 = safeOutput(ctx['this'].will.crash);
@@ -1565,11 +1663,12 @@ exports[`errors and promises > a rendering error in a sub component will reject 
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, []);
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = comp1({}, key + \`__1\`, node, this, null);
     return block1([], [b2]);
   }
@@ -1581,10 +1680,11 @@ exports[`errors and promises > a rendering error in a sub component will reject 
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].will.crash);
     return block1([], [b2]);
   }
@@ -1596,10 +1696,11 @@ exports[`errors and promises > a rendering error will reject the mount promise 1
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].will.crash);
     return block1([], [b2]);
   }
@@ -1611,11 +1712,12 @@ exports[`errors and promises > a rendering error will reject the render promise 
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent, safeOutput } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, []);
   
   let block1 = createBlock(\`<div><block-child-0/><block-child-1/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     const b2 = comp1({}, key + \`__1\`, node, this, null);
     const b3 = safeOutput(ctx['x'].y);
     return block1([], [b2, b3]);
@@ -1627,10 +1729,11 @@ exports[`errors and promises > a rendering error will reject the render promise 
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<span/>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -1641,10 +1744,11 @@ exports[`errors and promises > a rendering error will reject the render promise 
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div><block-child-0/><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     let b2;
     if (ctx['this'].flag) {
       b2 = safeOutput(ctx['this'].will.crash);
@@ -1658,10 +1762,11 @@ exports[`errors and promises > an error in mounted call will reject the mount pr
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div>abc</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -1671,10 +1776,11 @@ exports[`errors and promises > an error in onMounted callback will have the comp
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div>abc</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -1685,10 +1791,11 @@ exports[`errors and promises > an error in patched call will reject the render p
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].val);
     return block1([], [b2]);
   }
@@ -1700,10 +1807,11 @@ exports[`errors and promises > an error in willPatch call will reject the render
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].val);
     return block1([], [b2]);
   }
@@ -1714,10 +1822,11 @@ exports[`errors and promises > errors in mounted and in willUnmount 1`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div/>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -1728,10 +1837,11 @@ exports[`errors and promises > errors in rerender 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].state.a.b);
     return block1([], [b2]);
   }
@@ -1742,10 +1852,11 @@ exports[`errors and promises > errors thrown from async hooks propagate through 
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div>abc</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -1756,9 +1867,10 @@ exports[`errors in onWillUpdateProps > async error in onWillUpdateProps is caugh
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, ["val"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return comp1({val: ctx['this'].state.val}, key + \`__1\`, node, this, null);
   }
 }"
@@ -1768,10 +1880,11 @@ exports[`errors in onWillUpdateProps > async error in onWillUpdateProps is caugh
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div/>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -1782,9 +1895,10 @@ exports[`errors in onWillUpdateProps > async error in onWillUpdateProps is caugh
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, ["val"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return comp1({val: ctx['this'].state.val}, key + \`__1\`, node, this, null);
   }
 }"
@@ -1794,10 +1908,11 @@ exports[`errors in onWillUpdateProps > async error in onWillUpdateProps is caugh
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div/>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -1808,9 +1923,10 @@ exports[`errors in onWillUpdateProps > sync error in onWillUpdateProps is caught
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
+  // Template name: "__template__1000"
   const comp1 = createComponent(\`Child\`, true, false, false, ["val"]);
   
-  return function template(ctx, node, key = "") {
+  return function __template__1000(ctx, node, key = "") {
     return comp1({val: ctx['this'].state.val}, key + \`__1\`, node, this, null);
   }
 }"
@@ -1820,10 +1936,11 @@ exports[`errors in onWillUpdateProps > sync error in onWillUpdateProps is caught
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div/>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     return block1();
   }
 }"

@@ -5,10 +5,11 @@ exports[`t-call (template calling) > basic caller 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callTemplate } = helpers;
+  // Template name: "caller"
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_caller(ctx, node, key = "") {
     const b2 = callTemplate(\`_basic-callee\`, this, templates, ctx, node, key + \`__1\`);
     return block1([], [b2]);
   }
@@ -19,10 +20,11 @@ exports[`t-call (template calling) > basic caller 2`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "_basic-callee"
   
   let block1 = createBlock(\`<span>ok</span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template__basic_callee(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -33,8 +35,9 @@ exports[`t-call (template calling) > basic caller, no parent node 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callTemplate } = helpers;
+  // Template name: "caller"
   
-  return function template(ctx, node, key = "") {
+  return function template_caller(ctx, node, key = "") {
     return callTemplate(\`_basic-callee\`, this, templates, ctx, node, key + \`__1\`);
   }
 }"
@@ -44,10 +47,11 @@ exports[`t-call (template calling) > basic caller, no parent node 2`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "_basic-callee"
   
   let block1 = createBlock(\`<span>ok</span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template__basic_callee(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -58,6 +62,7 @@ exports[`t-call (template calling) > call with several sub nodes on same line 1`
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { zero, callTemplate } = helpers;
+  // Template name: "main"
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   let block4 = createBlock(\`<span>hey</span>\`);
@@ -70,7 +75,7 @@ exports[`t-call (template calling) > call with several sub nodes on same line 1`
     return multi([b4, b5, b6]);
   }
   
-  return function template(ctx, node, key = "") {
+  return function template_main(ctx, node, key = "") {
     const lazyBlock1 = callBody1.bind(this, ctx);
     const b2 = callTemplate(\`sub\`, this, templates, Object.assign(Object.create(ctx), {[zero]: lazyBlock1}), node, key + \`__1\`);
     return block1([], [b2]);
@@ -83,10 +88,11 @@ exports[`t-call (template calling) > call with several sub nodes on same line 2`
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { zero } = helpers;
+  // Template name: "sub"
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_sub(ctx, node, key = "") {
     const b2 = ctx[zero]?.(node, key) || text("");
     return block1([], [b2]);
   }
@@ -98,6 +104,7 @@ exports[`t-call (template calling) > cascading t-call t-out='0' 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { zero, callTemplate } = helpers;
+  // Template name: "main"
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   let block4 = createBlock(\`<span>hey</span>\`);
@@ -110,7 +117,7 @@ exports[`t-call (template calling) > cascading t-call t-out='0' 1`] = `
     return multi([b4, b5, b6]);
   }
   
-  return function template(ctx, node, key = "") {
+  return function template_main(ctx, node, key = "") {
     const lazyBlock1 = callBody1.bind(this, ctx);
     const b2 = callTemplate(\`subTemplate\`, this, templates, Object.assign(Object.create(ctx), {[zero]: lazyBlock1}), node, key + \`__1\`);
     return block1([], [b2]);
@@ -123,6 +130,7 @@ exports[`t-call (template calling) > cascading t-call t-out='0' 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { zero, callTemplate } = helpers;
+  // Template name: "subTemplate"
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   let block4 = createBlock(\`<span>cascade 0</span>\`);
@@ -133,7 +141,7 @@ exports[`t-call (template calling) > cascading t-call t-out='0' 2`] = `
     return multi([b4, b5]);
   }
   
-  return function template(ctx, node, key = "") {
+  return function template_subTemplate(ctx, node, key = "") {
     const lazyBlock1 = callBody1.bind(this, ctx);
     const b2 = callTemplate(\`subSubTemplate\`, this, templates, Object.assign(Object.create(ctx), {[zero]: lazyBlock1}), node, key + \`__1\`);
     return block1([], [b2]);
@@ -146,6 +154,7 @@ exports[`t-call (template calling) > cascading t-call t-out='0' 3`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { zero, callTemplate } = helpers;
+  // Template name: "subSubTemplate"
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   let block4 = createBlock(\`<span>cascade 1</span>\`);
@@ -156,7 +165,7 @@ exports[`t-call (template calling) > cascading t-call t-out='0' 3`] = `
     return multi([b4, b5]);
   }
   
-  return function template(ctx, node, key = "") {
+  return function template_subSubTemplate(ctx, node, key = "") {
     const lazyBlock1 = callBody1.bind(this, ctx);
     const b2 = callTemplate(\`finalTemplate\`, this, templates, Object.assign(Object.create(ctx), {[zero]: lazyBlock1}), node, key + \`__1\`);
     return block1([], [b2]);
@@ -169,10 +178,11 @@ exports[`t-call (template calling) > cascading t-call t-out='0' 4`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { zero } = helpers;
+  // Template name: "finalTemplate"
   
   let block1 = createBlock(\`<div><span>cascade 2</span><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_finalTemplate(ctx, node, key = "") {
     const b2 = ctx[zero]?.(node, key) || text("");
     return block1([], [b2]);
   }
@@ -184,6 +194,7 @@ exports[`t-call (template calling) > cascading t-call t-out='0', without externa
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { zero, callTemplate } = helpers;
+  // Template name: "main"
   
   let block3 = createBlock(\`<span>hey</span>\`);
   let block5 = createBlock(\`<span>yay</span>\`);
@@ -195,7 +206,7 @@ exports[`t-call (template calling) > cascading t-call t-out='0', without externa
     return multi([b3, b4, b5]);
   }
   
-  return function template(ctx, node, key = "") {
+  return function template_main(ctx, node, key = "") {
     const lazyBlock1 = callBody1.bind(this, ctx);
     return callTemplate(\`subTemplate\`, this, templates, Object.assign(Object.create(ctx), {[zero]: lazyBlock1}), node, key + \`__1\`);
   }
@@ -207,6 +218,7 @@ exports[`t-call (template calling) > cascading t-call t-out='0', without externa
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { zero, callTemplate } = helpers;
+  // Template name: "subTemplate"
   
   let block3 = createBlock(\`<span>cascade 0</span>\`);
   
@@ -216,7 +228,7 @@ exports[`t-call (template calling) > cascading t-call t-out='0', without externa
     return multi([b3, b4]);
   }
   
-  return function template(ctx, node, key = "") {
+  return function template_subTemplate(ctx, node, key = "") {
     const lazyBlock1 = callBody1.bind(this, ctx);
     return callTemplate(\`subSubTemplate\`, this, templates, Object.assign(Object.create(ctx), {[zero]: lazyBlock1}), node, key + \`__1\`);
   }
@@ -228,6 +240,7 @@ exports[`t-call (template calling) > cascading t-call t-out='0', without externa
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { zero, callTemplate } = helpers;
+  // Template name: "subSubTemplate"
   
   let block3 = createBlock(\`<span>cascade 1</span>\`);
   
@@ -237,7 +250,7 @@ exports[`t-call (template calling) > cascading t-call t-out='0', without externa
     return multi([b3, b4]);
   }
   
-  return function template(ctx, node, key = "") {
+  return function template_subSubTemplate(ctx, node, key = "") {
     const lazyBlock1 = callBody1.bind(this, ctx);
     return callTemplate(\`finalTemplate\`, this, templates, Object.assign(Object.create(ctx), {[zero]: lazyBlock1}), node, key + \`__1\`);
   }
@@ -249,10 +262,11 @@ exports[`t-call (template calling) > cascading t-call t-out='0', without externa
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { zero } = helpers;
+  // Template name: "finalTemplate"
   
   let block2 = createBlock(\`<span>cascade 2</span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_finalTemplate(ctx, node, key = "") {
     const b2 = block2();
     const b3 = ctx[zero]?.(node, key) || text("");
     return multi([b2, b3]);
@@ -265,10 +279,11 @@ exports[`t-call (template calling) > dynamic t-call 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callTemplate } = helpers;
+  // Template name: "main"
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_main(ctx, node, key = "") {
     const b2 = callTemplate((ctx['template']), this, templates, Object.assign(Object.create(ctx), {val: ctx['val']}), node, key + \`__1\`);
     return block1([], [b2]);
   }
@@ -280,10 +295,11 @@ exports[`t-call (template calling) > dynamic t-call 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "foo"
   
   let block1 = createBlock(\`<foo><block-child-0/></foo>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_foo(ctx, node, key = "") {
     const b2 = safeOutput(ctx['val']);
     return block1([], [b2]);
   }
@@ -295,10 +311,11 @@ exports[`t-call (template calling) > dynamic t-call 3`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "bar"
   
   let block1 = createBlock(\`<bar><block-child-0/></bar>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_bar(ctx, node, key = "") {
     const b2 = safeOutput(ctx['val']);
     return block1([], [b2]);
   }
@@ -310,10 +327,11 @@ exports[`t-call (template calling) > inherit context 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callTemplate } = helpers;
+  // Template name: "main"
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_main(ctx, node, key = "") {
     ctx = Object.create(ctx);
     ctx["foo"] = 1;
     ctx["bar"] = 2;
@@ -328,8 +346,9 @@ exports[`t-call (template calling) > inherit context 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "sub"
   
-  return function template(ctx, node, key = "") {
+  return function template_sub(ctx, node, key = "") {
     const b2 = safeOutput(ctx['foo']);
     const b3 = safeOutput(ctx['bar']);
     return multi([b2, b3]);
@@ -342,6 +361,7 @@ exports[`t-call (template calling) > nested t-calls with magic variable 0 1`] = 
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { zero, callTemplate } = helpers;
+  // Template name: "main"
   
   let block3 = createBlock(\`<p>Some content...</p>\`);
   
@@ -354,7 +374,7 @@ exports[`t-call (template calling) > nested t-calls with magic variable 0 1`] = 
     return block3();
   }
   
-  return function template(ctx, node, key = "") {
+  return function template_main(ctx, node, key = "") {
     const lazyBlock2 = callBody1.bind(this, ctx);
     return callTemplate(\`child\`, this, templates, Object.assign(Object.create(ctx), {[zero]: lazyBlock2}), node, key + \`__2\`);
   }
@@ -366,8 +386,9 @@ exports[`t-call (template calling) > nested t-calls with magic variable 0 2`] = 
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { zero } = helpers;
+  // Template name: "child"
   
-  return function template(ctx, node, key = "") {
+  return function template_child(ctx, node, key = "") {
     return ctx[zero]?.(node, key) || text("");
   }
 }"
@@ -378,8 +399,9 @@ exports[`t-call (template calling) > nested t-calls with magic variable 0 3`] = 
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { zero } = helpers;
+  // Template name: "grandchild"
   
-  return function template(ctx, node, key = "") {
+  return function template_grandchild(ctx, node, key = "") {
     const b2 = text(\`grandchild\`);
     const b3 = ctx[zero]?.(node, key) || text("");
     return multi([b2, b3]);
@@ -392,10 +414,11 @@ exports[`t-call (template calling) > recursive template, part 1 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callTemplate } = helpers;
+  // Template name: "recursive"
   
   let block1 = createBlock(\`<div><span>hey</span><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_recursive(ctx, node, key = "") {
     let b2;
     if (false) {
       b2 = callTemplate(\`recursive\`, this, templates, ctx, node, key + \`__1\`);
@@ -410,10 +433,11 @@ exports[`t-call (template calling) > recursive template, part 2 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callTemplate } = helpers;
+  // Template name: "Parent"
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_Parent(ctx, node, key = "") {
     const b2 = callTemplate(\`nodeTemplate\`, this, templates, Object.assign(Object.create(ctx), {node: ctx['root']}), node, key + \`__1\`);
     return block1([], [b2]);
   }
@@ -425,10 +449,11 @@ exports[`t-call (template calling) > recursive template, part 2 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, prepareList, callTemplate, withKey } = helpers;
+  // Template name: "nodeTemplate"
   
   let block1 = createBlock(\`<div><p><block-child-0/></p><block-child-1/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_nodeTemplate(ctx, node, key = "") {
     const b2 = safeOutput(ctx['node'].val);
     const ctx1 = ctx;
     const [k_block3, v_block3, l_block3, c_block3] = prepareList(ctx['node'].children||[]);;
@@ -453,10 +478,11 @@ exports[`t-call (template calling) > recursive template, part 3 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callTemplate } = helpers;
+  // Template name: "Parent"
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_Parent(ctx, node, key = "") {
     const b2 = callTemplate(\`nodeTemplate\`, this, templates, Object.assign(Object.create(ctx), {node: ctx['root']}), node, key + \`__1\`);
     return block1([], [b2]);
   }
@@ -468,10 +494,11 @@ exports[`t-call (template calling) > recursive template, part 3 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, prepareList, callTemplate, withKey } = helpers;
+  // Template name: "nodeTemplate"
   
   let block1 = createBlock(\`<div><p><block-child-0/></p><block-child-1/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_nodeTemplate(ctx, node, key = "") {
     const b2 = safeOutput(ctx['node'].val);
     const ctx1 = ctx;
     const [k_block3, v_block3, l_block3, c_block3] = prepareList(ctx['node'].children||[]);;
@@ -496,10 +523,11 @@ exports[`t-call (template calling) > recursive template, part 4: with t-set recu
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callTemplate } = helpers;
+  // Template name: "Parent"
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_Parent(ctx, node, key = "") {
     const b2 = callTemplate(\`nodeTemplate\`, this, templates, Object.assign(Object.create(ctx), {recursive_idx: 1, node: ctx['root']}), node, key + \`__1\`);
     return block1([], [b2]);
   }
@@ -511,10 +539,11 @@ exports[`t-call (template calling) > recursive template, part 4: with t-set recu
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, prepareList, callTemplate, withKey } = helpers;
+  // Template name: "nodeTemplate"
   
   let block1 = createBlock(\`<div><p><block-child-0/> <block-child-1/></p><block-child-2/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_nodeTemplate(ctx, node, key = "") {
     ctx = Object.create(ctx);
     ctx["recursive_idx"] = ctx['recursive_idx']+1;
     const b2 = safeOutput(ctx['node'].val);
@@ -542,6 +571,7 @@ exports[`t-call (template calling) > root t-call with body: t-foreach 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, withKey, zero, callTemplate } = helpers;
+  // Template name: "main"
   
   function callBody1(ctx, node, key = "") {
     const ctx1 = ctx;
@@ -555,7 +585,7 @@ exports[`t-call (template calling) > root t-call with body: t-foreach 1`] = `
     return list(c_block2);
   }
   
-  return function template(ctx, node, key = "") {
+  return function template_main(ctx, node, key = "") {
     const lazyBlock1 = callBody1.bind(this, ctx);
     return callTemplate(\`subTemplate\`, this, templates, Object.assign(Object.create(ctx), {[zero]: lazyBlock1}), node, key + \`__1\`);
   }
@@ -566,8 +596,9 @@ exports[`t-call (template calling) > root t-call with body: t-foreach 2`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "subTemplate"
   
-  return function template(ctx, node, key = "") {
+  return function template_subTemplate(ctx, node, key = "") {
     return text(\`sub\`);
   }
 }"
@@ -578,6 +609,7 @@ exports[`t-call (template calling) > root t-call with body: t-if false 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { zero, callTemplate } = helpers;
+  // Template name: "main"
   
   function callBody1(ctx, node, key = "") {
     let b3;
@@ -587,7 +619,7 @@ exports[`t-call (template calling) > root t-call with body: t-if false 1`] = `
     return multi([b3]);
   }
   
-  return function template(ctx, node, key = "") {
+  return function template_main(ctx, node, key = "") {
     const lazyBlock1 = callBody1.bind(this, ctx);
     return callTemplate(\`subTemplate\`, this, templates, Object.assign(Object.create(ctx), {[zero]: lazyBlock1}), node, key + \`__1\`);
   }
@@ -598,8 +630,9 @@ exports[`t-call (template calling) > root t-call with body: t-if false 2`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "subTemplate"
   
-  return function template(ctx, node, key = "") {
+  return function template_subTemplate(ctx, node, key = "") {
     return text(\`sub\`);
   }
 }"
@@ -610,6 +643,7 @@ exports[`t-call (template calling) > root t-call with body: t-if true 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { zero, callTemplate } = helpers;
+  // Template name: "main"
   
   function callBody1(ctx, node, key = "") {
     let b3;
@@ -619,7 +653,7 @@ exports[`t-call (template calling) > root t-call with body: t-if true 1`] = `
     return multi([b3]);
   }
   
-  return function template(ctx, node, key = "") {
+  return function template_main(ctx, node, key = "") {
     const lazyBlock1 = callBody1.bind(this, ctx);
     return callTemplate(\`subTemplate\`, this, templates, Object.assign(Object.create(ctx), {[zero]: lazyBlock1}), node, key + \`__1\`);
   }
@@ -630,8 +664,9 @@ exports[`t-call (template calling) > root t-call with body: t-if true 2`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "subTemplate"
   
-  return function template(ctx, node, key = "") {
+  return function template_subTemplate(ctx, node, key = "") {
     return text(\`sub\`);
   }
 }"
@@ -642,12 +677,13 @@ exports[`t-call (template calling) > root t-call with body: t-out with default 1
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, zero, callTemplate } = helpers;
+  // Template name: "main"
   
   function callBody1(ctx, node, key = "") {
     return safeOutput(ctx['nothing']);
   }
   
-  return function template(ctx, node, key = "") {
+  return function template_main(ctx, node, key = "") {
     const lazyBlock1 = callBody1.bind(this, ctx);
     return callTemplate(\`subTemplate\`, this, templates, Object.assign(Object.create(ctx), {[zero]: lazyBlock1}), node, key + \`__1\`);
   }
@@ -658,8 +694,9 @@ exports[`t-call (template calling) > root t-call with body: t-out with default 2
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "subTemplate"
   
-  return function template(ctx, node, key = "") {
+  return function template_subTemplate(ctx, node, key = "") {
     return text(\`sub\`);
   }
 }"
@@ -670,6 +707,7 @@ exports[`t-call (template calling) > scoped parameters 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { zero, callTemplate, safeOutput } = helpers;
+  // Template name: "main"
   
   let block1 = createBlock(\`<div><block-child-0/><block-child-1/></div>\`);
   
@@ -679,7 +717,7 @@ exports[`t-call (template calling) > scoped parameters 1`] = `
   return text('');
   }
   
-  return function template(ctx, node, key = "") {
+  return function template_main(ctx, node, key = "") {
     const lazyBlock1 = callBody1.bind(this, ctx);
     const b2 = callTemplate(\`sub\`, this, templates, Object.assign(Object.create(ctx), {[zero]: lazyBlock1}), node, key + \`__1\`);
     const b3 = safeOutput(ctx['foo']);
@@ -692,8 +730,9 @@ exports[`t-call (template calling) > scoped parameters 2`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "sub"
   
-  return function template(ctx, node, key = "") {
+  return function template_sub(ctx, node, key = "") {
     return text(\`ok\`);
   }
 }"
@@ -704,6 +743,7 @@ exports[`t-call (template calling) > scoped parameters, part 2 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, zero, callTemplate } = helpers;
+  // Template name: "main"
   
   let block1 = createBlock(\`<div><block-child-0/><block-child-1/></div>\`);
   
@@ -713,7 +753,7 @@ exports[`t-call (template calling) > scoped parameters, part 2 1`] = `
     return safeOutput(ctx['foo']);
   }
   
-  return function template(ctx, node, key = "") {
+  return function template_main(ctx, node, key = "") {
     ctx = Object.create(ctx);
     ctx["foo"] = 11;
     const lazyBlock1 = callBody1.bind(this, ctx);
@@ -729,8 +769,9 @@ exports[`t-call (template calling) > scoped parameters, part 2 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, zero } = helpers;
+  // Template name: "sub"
   
-  return function template(ctx, node, key = "") {
+  return function template_sub(ctx, node, key = "") {
     const b2 = safeOutput(ctx['foo']);
     const b3 = ctx[zero]?.(node, key) || text("");
     return multi([b2, b3]);
@@ -743,12 +784,13 @@ exports[`t-call (template calling) > t-call and translation contexts 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { zero, callTemplate } = helpers;
+  // Template name: "main"
   
   function callBody1(ctx, node, key = "") {
     return text(\`jeu\`);
   }
   
-  return function template(ctx, node, key = "") {
+  return function template_main(ctx, node, key = "") {
     const lazyBlock1 = callBody1.bind(this, ctx);
     return callTemplate(\`sub\`, this, templates, Object.assign(Object.create(ctx), {title: 'title', [zero]: lazyBlock1}), node, key + \`__1\`);
   }
@@ -760,10 +802,11 @@ exports[`t-call (template calling) > t-call and translation contexts 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, zero } = helpers;
+  // Template name: "sub"
   
   let block1 = createBlock(\`<span title="title"><block-child-0/><block-child-1/></span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_sub(ctx, node, key = "") {
     const b2 = safeOutput(ctx['title']);
     const b3 = ctx[zero]?.(node, key) || text("");
     return block1([], [b2, b3]);
@@ -776,12 +819,13 @@ exports[`t-call (template calling) > t-call and translation contexts, variation 
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { zero, callTemplate } = helpers;
+  // Template name: "main"
   
   function callBody1(ctx, node, key = "") {
     return text(\`jeu\`);
   }
   
-  return function template(ctx, node, key = "") {
+  return function template_main(ctx, node, key = "") {
     const lazyBlock1 = callBody1.bind(this, ctx);
     return callTemplate(\`sub\`, this, templates, Object.assign(Object.create(ctx), {title: \`titulo\`, [zero]: lazyBlock1}), node, key + \`__1\`);
   }
@@ -793,10 +837,11 @@ exports[`t-call (template calling) > t-call and translation contexts, variation 
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, zero } = helpers;
+  // Template name: "sub"
   
   let block1 = createBlock(\`<span title="title"><block-child-0/><block-child-1/></span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_sub(ctx, node, key = "") {
     const b2 = safeOutput(ctx['title']);
     const b3 = ctx[zero]?.(node, key) || text("");
     return block1([], [b2, b3]);
@@ -809,8 +854,9 @@ exports[`t-call (template calling) > t-call with attributes 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callTemplate } = helpers;
+  // Template name: "main"
   
-  return function template(ctx, node, key = "") {
+  return function template_main(ctx, node, key = "") {
     return callTemplate(\`sub\`, this, templates, Object.assign(Object.create(ctx), {'v1': ctx['val1'], 'v2': ctx['val2']}), node, key + \`__1\`);
   }
 }"
@@ -821,10 +867,11 @@ exports[`t-call (template calling) > t-call with attributes 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "sub"
   
   let block1 = createBlock(\`<span><block-child-0/><block-child-1/></span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_sub(ctx, node, key = "") {
     const b2 = safeOutput(ctx['v1']);
     const b3 = safeOutput(ctx['v2']);
     return block1([], [b2, b3]);
@@ -837,8 +884,9 @@ exports[`t-call (template calling) > t-call with attributes and t-call-context 1
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callTemplate } = helpers;
+  // Template name: "main"
   
-  return function template(ctx, node, key = "") {
+  return function template_main(ctx, node, key = "") {
     const ctx1 = ctx['obj'];
     return callTemplate(\`sub\`, this, templates, Object.assign({this: ctx1}, {'v1': ctx['val1'], 'v2': ctx['val2']}), node, key + \`__1\`);
   }
@@ -850,10 +898,11 @@ exports[`t-call (template calling) > t-call with attributes and t-call-context 2
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "sub"
   
   let block1 = createBlock(\`<span><block-child-0/><block-child-1/><block-child-2/><block-child-3/></span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_sub(ctx, node, key = "") {
     const b2 = safeOutput(ctx['v1']);
     const b3 = safeOutput(ctx['v2']);
     const b4 = safeOutput(ctx['this'].v3);
@@ -868,12 +917,13 @@ exports[`t-call (template calling) > t-call with attributes and t-out='0' 1`] = 
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { zero, callTemplate } = helpers;
+  // Template name: "main"
   
   function callBody1(ctx, node, key = "") {
     return text(\`Hello\`);
   }
   
-  return function template(ctx, node, key = "") {
+  return function template_main(ctx, node, key = "") {
     const lazyBlock1 = callBody1.bind(this, ctx);
     return callTemplate(\`sub\`, this, templates, Object.assign(Object.create(ctx), {'v_2': 1, [zero]: lazyBlock1}), node, key + \`__1\`);
   }
@@ -885,10 +935,11 @@ exports[`t-call (template calling) > t-call with attributes and t-out='0' 2`] = 
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, zero } = helpers;
+  // Template name: "sub"
   
   let block1 = createBlock(\`<span><block-child-0/><block-child-1/></span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_sub(ctx, node, key = "") {
     const b2 = safeOutput(ctx['v_2']);
     const b3 = ctx[zero]?.(node, key) || text("");
     return block1([], [b2, b3]);
@@ -901,6 +952,7 @@ exports[`t-call (template calling) > t-call with body content as root of a templ
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { zero, callTemplate } = helpers;
+  // Template name: "main"
   
   let block2 = createBlock(\`<p>antony</p>\`);
   
@@ -908,7 +960,7 @@ exports[`t-call (template calling) > t-call with body content as root of a templ
     return block2();
   }
   
-  return function template(ctx, node, key = "") {
+  return function template_main(ctx, node, key = "") {
     const lazyBlock1 = callBody1.bind(this, ctx);
     return callTemplate(\`antony\`, this, templates, Object.assign(Object.create(ctx), {[zero]: lazyBlock1}), node, key + \`__1\`);
   }
@@ -920,10 +972,11 @@ exports[`t-call (template calling) > t-call with body content as root of a templ
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { zero } = helpers;
+  // Template name: "antony"
   
   let block1 = createBlock(\`<foo><block-child-0/></foo>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_antony(ctx, node, key = "") {
     const b2 = ctx[zero]?.(node, key) || text("");
     return block1([], [b2]);
   }
@@ -935,10 +988,11 @@ exports[`t-call (template calling) > t-call with t-if 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callTemplate } = helpers;
+  // Template name: "main"
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_main(ctx, node, key = "") {
     let b2;
     if (ctx['flag']) {
       b2 = callTemplate(\`sub\`, this, templates, ctx, node, key + \`__1\`);
@@ -952,10 +1006,11 @@ exports[`t-call (template calling) > t-call with t-if 2`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "sub"
   
   let block1 = createBlock(\`<span>ok</span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_sub(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -966,10 +1021,11 @@ exports[`t-call (template calling) > t-call with t-set inside and body text cont
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callTemplate } = helpers;
+  // Template name: "main"
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_main(ctx, node, key = "") {
     ctx = Object.create(ctx);
     ctx["val"] = \`yip yip\`;
     const b2 = callTemplate(\`sub\`, this, templates, Object.assign(Object.create(ctx), {val: ctx['val']}), node, key + \`__1\`);
@@ -983,10 +1039,11 @@ exports[`t-call (template calling) > t-call with t-set inside and body text cont
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "sub"
   
   let block1 = createBlock(\`<p><block-child-0/></p>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_sub(ctx, node, key = "") {
     const b2 = safeOutput(ctx['val']);
     return block1([], [b2]);
   }
@@ -998,10 +1055,11 @@ exports[`t-call (template calling) > t-call with t-set inside and outside 1`] = 
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, callTemplate, withKey } = helpers;
+  // Template name: "main"
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_main(ctx, node, key = "") {
     const ctx1 = ctx;
     const [k_block2, v_block2, l_block2, c_block2] = prepareList(ctx['list']);;
     for (let i1 = 0; i1 < l_block2; i1++) {
@@ -1026,10 +1084,11 @@ exports[`t-call (template calling) > t-call with t-set inside and outside 2`] = 
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "sub"
   
   let block1 = createBlock(\`<span><block-child-0/></span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_sub(ctx, node, key = "") {
     const b2 = safeOutput(ctx['val3']);
     return block1([], [b2]);
   }
@@ -1041,10 +1100,11 @@ exports[`t-call (template calling) > t-call with t-set inside and outside. 2 1`]
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callTemplate } = helpers;
+  // Template name: "wrapper"
   
   let block1 = createBlock(\`<p><block-child-0/></p>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_wrapper(ctx, node, key = "") {
     ctx = Object.create(ctx);
     ctx["w"] = 'fromwrapper';
     const b2 = callTemplate(\`main\`, this, templates, Object.assign(Object.create(ctx), {w: ctx['w'], list: ctx['list']}), node, key + \`__1\`);
@@ -1058,10 +1118,11 @@ exports[`t-call (template calling) > t-call with t-set inside and outside. 2 2`]
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, callTemplate, withKey } = helpers;
+  // Template name: "main"
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_main(ctx, node, key = "") {
     const ctx1 = ctx;
     const [k_block2, v_block2, l_block2, c_block2] = prepareList(ctx['list']);;
     for (let i1 = 0; i1 < l_block2; i1++) {
@@ -1086,10 +1147,11 @@ exports[`t-call (template calling) > t-call with t-set inside and outside. 2 3`]
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "sub"
   
   let block2 = createBlock(\`<span><block-child-0/></span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_sub(ctx, node, key = "") {
     const b3 = safeOutput(ctx['val3']);
     const b2 = block2([], [b3]);
     const b4 = safeOutput(ctx['w']);
@@ -1103,6 +1165,7 @@ exports[`t-call (template calling) > t-call, conditional and t-set in t-call bod
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callTemplate, zero } = helpers;
+  // Template name: "caller"
   
   let block1 = createBlock(\`<div><block-child-0/><block-child-1/></div>\`);
   
@@ -1112,7 +1175,7 @@ exports[`t-call (template calling) > t-call, conditional and t-set in t-call bod
   return text('');
   }
   
-  return function template(ctx, node, key = "") {
+  return function template_caller(ctx, node, key = "") {
     ctx = Object.create(ctx);
     let b2, b3;
     ctx["v1"] = 'elif';
@@ -1132,10 +1195,11 @@ exports[`t-call (template calling) > t-call, conditional and t-set in t-call bod
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "callee2"
   
   let block1 = createBlock(\`<div>callee2 <block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_callee2(ctx, node, key = "") {
     const b2 = safeOutput(ctx['v']);
     return block1([], [b2]);
   }
@@ -1147,8 +1211,9 @@ exports[`t-call (template calling) > t-call-context 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callTemplate } = helpers;
+  // Template name: "main"
   
-  return function template(ctx, node, key = "") {
+  return function template_main(ctx, node, key = "") {
     const ctx1 = ctx['obj'];
     return callTemplate(\`sub\`, this, templates, {this: ctx1}, node, key + \`__1\`);
   }
@@ -1160,10 +1225,11 @@ exports[`t-call (template calling) > t-call-context 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "sub"
   
   let block1 = createBlock(\`<span><block-child-0/></span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_sub(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].value);
     return block1([], [b2]);
   }
@@ -1175,6 +1241,7 @@ exports[`t-call (template calling) > t-call-context and value in body 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { zero, callTemplate } = helpers;
+  // Template name: "main"
   
   function callBody1(ctx, node, key = "") {
     ctx = Object.create(ctx);
@@ -1182,7 +1249,7 @@ exports[`t-call (template calling) > t-call-context and value in body 1`] = `
   return text('');
   }
   
-  return function template(ctx, node, key = "") {
+  return function template_main(ctx, node, key = "") {
     const lazyBlock1 = callBody1.bind(this, ctx);
     const ctx1 = ctx['obj'];
     return callTemplate(\`sub\`, this, templates, Object.assign({this: ctx1}, {[zero]: lazyBlock1}), node, key + \`__1\`);
@@ -1195,10 +1262,11 @@ exports[`t-call (template calling) > t-call-context and value in body 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "sub"
   
   let block1 = createBlock(\`<span><block-child-0/><block-child-1/></span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_sub(ctx, node, key = "") {
     const b2 = safeOutput(ctx['this'].value1);
     const b3 = safeOutput(ctx['this'].value2);
     return block1([], [b2, b3]);
@@ -1211,10 +1279,11 @@ exports[`t-call (template calling) > t-out inside t-call, with t-set outside 1`]
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callTemplate } = helpers;
+  // Template name: "main"
   
   let block1 = createBlock(\`<div><block-child-0/></div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_main(ctx, node, key = "") {
     ctx = Object.create(ctx);
     ctx["v"] = \`Hi\`;
     const b2 = callTemplate(\`sub\`, this, templates, ctx, node, key + \`__1\`);
@@ -1228,10 +1297,11 @@ exports[`t-call (template calling) > t-out inside t-call, with t-set outside 2`]
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "sub"
   
   let block1 = createBlock(\`<span><block-child-0/></span>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_sub(ctx, node, key = "") {
     const b2 = safeOutput(ctx['v']);
     return block1([], [b2]);
   }
@@ -1243,6 +1313,7 @@ exports[`t-call (template calling) > values set in body are in call context 1`] 
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { zero, callTemplate } = helpers;
+  // Template name: "main"
   
   let block1 = createBlock(\`<span><block-child-0/></span>\`);
   
@@ -1252,7 +1323,7 @@ exports[`t-call (template calling) > values set in body are in call context 1`] 
   return text('');
   }
   
-  return function template(ctx, node, key = "") {
+  return function template_main(ctx, node, key = "") {
     const lazyBlock1 = callBody1.bind(this, ctx);
     const b2 = callTemplate(\`sub\`, this, templates, Object.assign(Object.create(ctx), {foo: 'ok', [zero]: lazyBlock1}), node, key + \`__1\`);
     return block1([], [b2]);
@@ -1265,8 +1336,9 @@ exports[`t-call (template calling) > values set in body are in call context 2`] 
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
+  // Template name: "sub"
   
-  return function template(ctx, node, key = "") {
+  return function template_sub(ctx, node, key = "") {
     return safeOutput(ctx['foo']);
   }
 }"
@@ -1277,12 +1349,13 @@ exports[`t-call (template calling) > with unused body 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { zero, callTemplate } = helpers;
+  // Template name: "main"
   
   function callBody1(ctx, node, key = "") {
     return text(\`WHEEE\`);
   }
   
-  return function template(ctx, node, key = "") {
+  return function template_main(ctx, node, key = "") {
     const lazyBlock1 = callBody1.bind(this, ctx);
     return callTemplate(\`sub\`, this, templates, Object.assign(Object.create(ctx), {[zero]: lazyBlock1}), node, key + \`__1\`);
   }
@@ -1293,10 +1366,11 @@ exports[`t-call (template calling) > with unused body 2`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "sub"
   
   let block1 = createBlock(\`<div>ok</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_sub(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -1307,6 +1381,7 @@ exports[`t-call (template calling) > with unused setbody 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { zero, callTemplate } = helpers;
+  // Template name: "main"
   
   function callBody1(ctx, node, key = "") {
     ctx = Object.create(ctx);
@@ -1314,7 +1389,7 @@ exports[`t-call (template calling) > with unused setbody 1`] = `
   return text('');
   }
   
-  return function template(ctx, node, key = "") {
+  return function template_main(ctx, node, key = "") {
     const lazyBlock1 = callBody1.bind(this, ctx);
     return callTemplate(\`sub\`, this, templates, Object.assign(Object.create(ctx), {[zero]: lazyBlock1}), node, key + \`__1\`);
   }
@@ -1325,10 +1400,11 @@ exports[`t-call (template calling) > with unused setbody 2`] = `
 "function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "sub"
   
   let block1 = createBlock(\`<div>ok</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_sub(ctx, node, key = "") {
     return block1();
   }
 }"
@@ -1339,12 +1415,13 @@ exports[`t-call (template calling) > with used body 1`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { zero, callTemplate } = helpers;
+  // Template name: "main"
   
   function callBody1(ctx, node, key = "") {
     return text(\`ok\`);
   }
   
-  return function template(ctx, node, key = "") {
+  return function template_main(ctx, node, key = "") {
     const lazyBlock1 = callBody1.bind(this, ctx);
     return callTemplate(\`sub\`, this, templates, Object.assign(Object.create(ctx), {[zero]: lazyBlock1}), node, key + \`__1\`);
   }
@@ -1356,10 +1433,11 @@ exports[`t-call (template calling) > with used body 2`] = `
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { zero } = helpers;
+  // Template name: "sub"
   
   let block1 = createBlock(\`<h1><block-child-0/></h1>\`);
   
-  return function template(ctx, node, key = "") {
+  return function template_sub(ctx, node, key = "") {
     const b2 = ctx[zero]?.(node, key) || text("");
     return block1([], [b2]);
   }

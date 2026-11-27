@@ -124,18 +124,6 @@ export function render(c: Component, deep: boolean = false) {
   return c.__owl__.render(deep);
 }
 
-/**
- * Removes the template name from generated code, so that the code of a named
- * template is snapshotted as the code of the same anonymous template (as in
- * the snapshots of owl-compiler).
- */
-function withoutTemplateName(code: string, name: string): string {
-  const fnName = name.startsWith("__") ? name : `template_${name.replace(/[^a-zA-Z0-9_$]/g, "_")}`;
-  return code
-    .replace(`\n  // Template name: "${name}"`, "")
-    .replace(`function ${fnName}(ctx, node, key = "")`, `function template(ctx, node, key = "")`);
-}
-
 export function snapshotEverything() {
   if (shouldSnapshot) {
     // this function has already been called
@@ -154,7 +142,7 @@ export function snapshotEverything() {
   ) {
     const fn = originalCompileTemplate.call(this, name, template);
     if (!globalTemplateNames.has(name)) {
-      expect(withoutTemplateName(fn.toString(), name)).toMatchSnapshot();
+      expect(fn.toString()).toMatchSnapshot();
     }
     return fn;
   };
