@@ -2,13 +2,13 @@
 // Template contract
 // -----------------------------------------------------------------------------
 //
-// A compiled template is a function of `(app, bdom, helpers)` returning the
+// A compiled template is a function of `(templates, bdom, helpers)` returning the
 // render function (see TemplateFunction). The generated code only calls what
 // these types describe: the code generator emits these names, and owl-runtime
 // provides objects that implement them.
 //
 // Values that the generated code only passes along (contexts, nodes, blocks,
-// the app, ...) are typed `any`: their shape belongs to the runtime, which
+// the template set, ...) are typed `any`: their shape belongs to the runtime, which
 // types them precisely on its side. What the compiler decides is typed here:
 // the names, the order of the arguments, and the static values it emits
 // (strings, booleans, lists).

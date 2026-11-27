@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`refs > a listener firing during the removal still sees its ref 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createRef } = helpers;
@@ -21,7 +21,7 @@ exports[`refs > a listener firing during the removal still sees its ref 1`] = `
 `;
 
 exports[`refs > basic use 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createRef } = helpers;
@@ -36,7 +36,7 @@ exports[`refs > basic use 1`] = `
 `;
 
 exports[`refs > basic use with signal.ref 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createRef } = helpers;
@@ -51,7 +51,7 @@ exports[`refs > basic use with signal.ref 1`] = `
 `;
 
 exports[`refs > ref in slot is unset across a t-if nested inside the slot content 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createRef, markRaw, createComponent } = helpers;
@@ -79,7 +79,7 @@ exports[`refs > ref in slot is unset across a t-if nested inside the slot conten
 `;
 
 exports[`refs > ref in slot is unset across a t-if nested inside the slot content 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callSlot } = helpers;
@@ -94,7 +94,7 @@ exports[`refs > ref in slot is unset across a t-if nested inside the slot conten
 `;
 
 exports[`refs > ref in slot is unset when an intermediate host is removed in place 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createRef, markRaw, createComponent } = helpers;
@@ -120,7 +120,7 @@ exports[`refs > ref in slot is unset when an intermediate host is removed in pla
 `;
 
 exports[`refs > ref in slot is unset when an intermediate host is removed in place 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callSlot } = helpers;
@@ -135,7 +135,7 @@ exports[`refs > ref in slot is unset when an intermediate host is removed in pla
 `;
 
 exports[`refs > ref in slot is unset when forwarded through a nested component 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createRef, markRaw, createComponent } = helpers;
@@ -159,7 +159,7 @@ exports[`refs > ref in slot is unset when forwarded through a nested component 1
 `;
 
 exports[`refs > ref in slot is unset when forwarded through a nested component 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callSlot, markRaw, createComponent } = helpers;
@@ -179,7 +179,7 @@ exports[`refs > ref in slot is unset when forwarded through a nested component 2
 `;
 
 exports[`refs > ref in slot is unset when forwarded through a nested component 3`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callSlot } = helpers;
@@ -194,7 +194,7 @@ exports[`refs > ref in slot is unset when forwarded through a nested component 3
 `;
 
 exports[`refs > ref in slot is unset when the host removes it in place (host survives) 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createRef, markRaw, createComponent } = helpers;
@@ -214,7 +214,7 @@ exports[`refs > ref in slot is unset when the host removes it in place (host sur
 `;
 
 exports[`refs > ref in slot is unset when the host removes it in place (host survives) 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callSlot } = helpers;
@@ -233,7 +233,7 @@ exports[`refs > ref in slot is unset when the host removes it in place (host sur
 `;
 
 exports[`refs > ref in slot is unset when the slot host is removed 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createRef, markRaw, createComponent } = helpers;
@@ -257,7 +257,7 @@ exports[`refs > ref in slot is unset when the slot host is removed 1`] = `
 `;
 
 exports[`refs > ref in slot is unset when the slot host is removed 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callSlot } = helpers;
@@ -272,7 +272,7 @@ exports[`refs > ref in slot is unset when the slot host is removed 2`] = `
 `;
 
 exports[`refs > ref is set by child component 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -285,7 +285,7 @@ exports[`refs > ref is set by child component 1`] = `
 `;
 
 exports[`refs > ref is set by child component 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createRef } = helpers;
@@ -300,7 +300,7 @@ exports[`refs > ref is set by child component 2`] = `
 `;
 
 exports[`refs > ref is unset even when a sub-root is destroyed re-entrantly mid-removal 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -313,7 +313,7 @@ exports[`refs > ref is unset even when a sub-root is destroyed re-entrantly mid-
 `;
 
 exports[`refs > ref is unset even when a sub-root is destroyed re-entrantly mid-removal 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createRef, markRaw, createComponent } = helpers;
@@ -337,7 +337,7 @@ exports[`refs > ref is unset even when a sub-root is destroyed re-entrantly mid-
 `;
 
 exports[`refs > ref is unset even when a sub-root is destroyed re-entrantly mid-removal 3`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callSlot } = helpers;
@@ -352,7 +352,7 @@ exports[`refs > ref is unset even when a sub-root is destroyed re-entrantly mid-
 `;
 
 exports[`refs > ref is unset only once its element is detached 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createRef } = helpers;
@@ -372,7 +372,7 @@ exports[`refs > ref is unset only once its element is detached 1`] = `
 `;
 
 exports[`refs > ref is unset when t-if goes to false after unrelated render 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createRef } = helpers;
@@ -392,7 +392,7 @@ exports[`refs > ref is unset when t-if goes to false after unrelated render 1`] 
 `;
 
 exports[`refs > ref shared between t-if and t-else, plain 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createRef } = helpers;
@@ -415,7 +415,7 @@ exports[`refs > ref shared between t-if and t-else, plain 1`] = `
 `;
 
 exports[`refs > ref shared between t-if and t-else, t-else has a slotted component 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createRef, markRaw, createComponent } = helpers;
@@ -443,7 +443,7 @@ exports[`refs > ref shared between t-if and t-else, t-else has a slotted compone
 `;
 
 exports[`refs > ref shared between t-if and t-else, t-else has a slotted component 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callSlot } = helpers;
@@ -455,7 +455,7 @@ exports[`refs > ref shared between t-if and t-else, t-else has a slotted compone
 `;
 
 exports[`refs > refs and recursive templates 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createRef, safeOutput, createComponent } = helpers;
@@ -476,7 +476,7 @@ exports[`refs > refs and recursive templates 1`] = `
 `;
 
 exports[`refs > refs and t-key 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createRef } = helpers;
@@ -497,7 +497,7 @@ exports[`refs > refs and t-key 1`] = `
 `;
 
 exports[`refs > refs are properly bound in slots 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, callHandler, createRef, markRaw, createComponent } = helpers;
@@ -522,7 +522,7 @@ exports[`refs > refs are properly bound in slots 1`] = `
 `;
 
 exports[`refs > refs are properly bound in slots 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callSlot } = helpers;
@@ -537,7 +537,7 @@ exports[`refs > refs are properly bound in slots 2`] = `
 `;
 
 exports[`refs > resource can be used for multi ref 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, createRef, withKey } = helpers;
@@ -561,7 +561,7 @@ exports[`refs > resource can be used for multi ref 1`] = `
 `;
 
 exports[`refs > use 2 refs in a t-if/t-else situation 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createRef } = helpers;

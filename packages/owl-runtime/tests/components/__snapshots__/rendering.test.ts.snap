@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`children, default props and renderings 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, createComponent } = helpers;
@@ -16,7 +16,7 @@ exports[`children, default props and renderings 1`] = `
 `;
 
 exports[`children, default props and renderings 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -27,7 +27,7 @@ exports[`children, default props and renderings 2`] = `
 `;
 
 exports[`force render in case of existing render 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -40,7 +40,7 @@ exports[`force render in case of existing render 1`] = `
 `;
 
 exports[`force render in case of existing render 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent, safeOutput } = helpers;
@@ -55,7 +55,7 @@ exports[`force render in case of existing render 2`] = `
 `;
 
 exports[`force render in case of existing render 3`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -66,7 +66,7 @@ exports[`force render in case of existing render 3`] = `
 `;
 
 exports[`render loop detection > a render loop going through async code is still detected 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -79,7 +79,7 @@ exports[`render loop detection > a render loop going through async code is still
 `;
 
 exports[`render loop detection > a render loop going through async code is still detected 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -91,7 +91,7 @@ exports[`render loop detection > a render loop going through async code is still
 `;
 
 exports[`render loop detection > throws a clear error instead of freezing on a render loop (#1968) 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -104,7 +104,7 @@ exports[`render loop detection > throws a clear error instead of freezing on a r
 `;
 
 exports[`render loop detection > throws a clear error instead of freezing on a render loop (#1968) 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -116,7 +116,7 @@ exports[`render loop detection > throws a clear error instead of freezing on a r
 `;
 
 exports[`render loop detection > updates from separate tasks while commits are on hold are not a render loop (#2062) 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -128,7 +128,7 @@ exports[`render loop detection > updates from separate tasks while commits are o
 `;
 
 exports[`render loop detection > wide re-render under an uncommitted root is not a render loop 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, OwlError, createComponent, withKey } = helpers;
@@ -155,7 +155,7 @@ exports[`render loop detection > wide re-render under an uncommitted root is not
 `;
 
 exports[`render loop detection > wide re-render under an uncommitted root is not a render loop 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -167,7 +167,7 @@ exports[`render loop detection > wide re-render under an uncommitted root is not
 `;
 
 exports[`render loop detection > wide re-render under an uncommitted root is not a render loop 3`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -178,7 +178,7 @@ exports[`render loop detection > wide re-render under an uncommitted root is not
 `;
 
 exports[`rendering semantics > can force a render to update sub tree 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, createComponent } = helpers;
@@ -195,7 +195,7 @@ exports[`rendering semantics > can force a render to update sub tree 1`] = `
 `;
 
 exports[`rendering semantics > can force a render to update sub tree 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -208,7 +208,7 @@ exports[`rendering semantics > can force a render to update sub tree 2`] = `
 `;
 
 exports[`rendering semantics > can render a parent without rendering child 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, createComponent } = helpers;
@@ -223,7 +223,7 @@ exports[`rendering semantics > can render a parent without rendering child 1`] =
 `;
 
 exports[`rendering semantics > can render a parent without rendering child 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -234,7 +234,7 @@ exports[`rendering semantics > can render a parent without rendering child 2`] =
 `;
 
 exports[`rendering semantics > props are proxy (nested prop) 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -247,7 +247,7 @@ exports[`rendering semantics > props are proxy (nested prop) 1`] = `
 `;
 
 exports[`rendering semantics > props are proxy (nested prop) 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -259,7 +259,7 @@ exports[`rendering semantics > props are proxy (nested prop) 2`] = `
 `;
 
 exports[`rendering semantics > props are proxy 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -272,7 +272,7 @@ exports[`rendering semantics > props are proxy 1`] = `
 `;
 
 exports[`rendering semantics > props are proxy 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -284,7 +284,7 @@ exports[`rendering semantics > props are proxy 2`] = `
 `;
 
 exports[`rendering semantics > render with deep=true followed by render with deep=false work as expected 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, createComponent } = helpers;
@@ -300,7 +300,7 @@ exports[`rendering semantics > render with deep=true followed by render with dee
 `;
 
 exports[`rendering semantics > render with deep=true followed by render with deep=false work as expected 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -314,7 +314,7 @@ exports[`rendering semantics > render with deep=true followed by render with dee
 `;
 
 exports[`rendering semantics > rendering is atomic (for one subtree) 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, createComponent } = helpers;
@@ -329,7 +329,7 @@ exports[`rendering semantics > rendering is atomic (for one subtree) 1`] = `
 `;
 
 exports[`rendering semantics > rendering is atomic (for one subtree) 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -342,7 +342,7 @@ exports[`rendering semantics > rendering is atomic (for one subtree) 2`] = `
 `;
 
 exports[`rendering semantics > rendering is atomic (for one subtree) 3`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -354,7 +354,7 @@ exports[`rendering semantics > rendering is atomic (for one subtree) 3`] = `
 `;
 
 exports[`rendering semantics > works as expected for dynamic number of props 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -367,7 +367,7 @@ exports[`rendering semantics > works as expected for dynamic number of props 1`]
 `;
 
 exports[`rendering semantics > works as expected for dynamic number of props 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;

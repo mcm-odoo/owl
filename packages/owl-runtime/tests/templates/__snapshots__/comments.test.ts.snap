@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`comments > comments are ignored 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -14,7 +14,7 @@ exports[`comments > comments are ignored 1`] = `
 `;
 
 exports[`comments > only a comment 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -25,7 +25,7 @@ exports[`comments > only a comment 1`] = `
 `;
 
 exports[`comments > properly handle comments between t-if/t-else 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   

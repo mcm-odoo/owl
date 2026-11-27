@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`app > app: clear scheduler tasks on destroy 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -19,7 +19,7 @@ exports[`app > app: clear scheduler tasks on destroy 1`] = `
 `;
 
 exports[`app > app: clear scheduler tasks on destroy 3`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -30,7 +30,7 @@ exports[`app > app: clear scheduler tasks on destroy 3`] = `
 `;
 
 exports[`app > can add functions to the bdom 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { __globals__ } = helpers;
@@ -46,7 +46,7 @@ exports[`app > can add functions to the bdom 1`] = `
 `;
 
 exports[`app > can call processTask twice in a row without crashing 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -61,7 +61,7 @@ exports[`app > can call processTask twice in a row without crashing 1`] = `
 `;
 
 exports[`app > can call processTask twice in a row without crashing 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -74,7 +74,7 @@ exports[`app > can call processTask twice in a row without crashing 2`] = `
 `;
 
 exports[`app > can configure an app with props 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -89,7 +89,7 @@ exports[`app > can configure an app with props 1`] = `
 `;
 
 exports[`app > can load templates from an object name-string 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -102,7 +102,7 @@ exports[`app > can load templates from an object name-string 1`] = `
 `;
 
 exports[`app > can mix string and precompiled templates in the templates config 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -115,7 +115,7 @@ exports[`app > can mix string and precompiled templates in the templates config 
 `;
 
 exports[`app > can mount app in an iframe 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -128,7 +128,7 @@ exports[`app > can mount app in an iframe 1`] = `
 `;
 
 exports[`app > deprecated template methods forward to the app's template set 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -141,7 +141,7 @@ exports[`app > deprecated template methods forward to the app's template set 1`]
 `;
 
 exports[`app > destroy remove the widget from the DOM 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -154,7 +154,7 @@ exports[`app > destroy remove the widget from the DOM 1`] = `
 `;
 
 exports[`app > destroying an app does not mount pending roots 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -167,7 +167,7 @@ exports[`app > destroying an app does not mount pending roots 1`] = `
 `;
 
 exports[`app > destroying an app does not mount pending roots 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -180,7 +180,7 @@ exports[`app > destroying an app does not mount pending roots 2`] = `
 `;
 
 exports[`app > destroying one root does not mount another pending root 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -193,7 +193,7 @@ exports[`app > destroying one root does not mount another pending root 1`] = `
 `;
 
 exports[`app > destroying one root does not mount another pending root 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -206,7 +206,7 @@ exports[`app > destroying one root does not mount another pending root 2`] = `
 `;
 
 exports[`useApp > destroy remove the widget from the DOM 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -219,7 +219,7 @@ exports[`useApp > destroy remove the widget from the DOM 1`] = `
 `;
 
 exports[`useApp > destroying app does not crash if root component crashed in setup 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   

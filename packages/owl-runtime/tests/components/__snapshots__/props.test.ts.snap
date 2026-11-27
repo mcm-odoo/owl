@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`.alike suffix in a list 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, createComponent, withKey } = helpers;
@@ -22,7 +22,7 @@ exports[`.alike suffix in a list 1`] = `
 `;
 
 exports[`.alike suffix in a list 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callHandler, safeOutput } = helpers;
@@ -43,7 +43,7 @@ exports[`.alike suffix in a list 2`] = `
 `;
 
 exports[`.alike suffix in a simple case 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, createComponent } = helpers;
@@ -58,7 +58,7 @@ exports[`.alike suffix in a simple case 1`] = `
 `;
 
 exports[`.alike suffix in a simple case 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -70,7 +70,7 @@ exports[`.alike suffix in a simple case 2`] = `
 `;
 
 exports[`.signal suffix accepts a signal-typed prop without validation error 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { toSignal, createComponent } = helpers;
@@ -83,7 +83,7 @@ exports[`.signal suffix accepts a signal-typed prop without validation error 1`]
 `;
 
 exports[`.signal suffix accepts a signal-typed prop without validation error 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -95,7 +95,7 @@ exports[`.signal suffix accepts a signal-typed prop without validation error 2`]
 `;
 
 exports[`.signal suffix promotes a plain value to a signal 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { toSignal, createComponent } = helpers;
@@ -108,7 +108,7 @@ exports[`.signal suffix promotes a plain value to a signal 1`] = `
 `;
 
 exports[`.signal suffix promotes a plain value to a signal 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -120,7 +120,7 @@ exports[`.signal suffix promotes a plain value to a signal 2`] = `
 `;
 
 exports[`.signal suffix works in a t-foreach loop 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, toSignal, createComponent, withKey } = helpers;
@@ -141,7 +141,7 @@ exports[`.signal suffix works in a t-foreach loop 1`] = `
 `;
 
 exports[`.signal suffix works in a t-foreach loop 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -156,7 +156,7 @@ exports[`.signal suffix works in a t-foreach loop 2`] = `
 `;
 
 exports[`.signal suffix: child re-reads updated value when parent state changes 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { toSignal, createComponent } = helpers;
@@ -169,7 +169,7 @@ exports[`.signal suffix: child re-reads updated value when parent state changes 
 `;
 
 exports[`.signal suffix: child re-reads updated value when parent state changes 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -181,7 +181,7 @@ exports[`.signal suffix: child re-reads updated value when parent state changes 
 `;
 
 exports[`.signal suffix: child receives a read-only reactive value 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { toSignal, createComponent } = helpers;
@@ -194,7 +194,7 @@ exports[`.signal suffix: child receives a read-only reactive value 1`] = `
 `;
 
 exports[`.signal suffix: child receives a read-only reactive value 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -206,7 +206,7 @@ exports[`.signal suffix: child receives a read-only reactive value 2`] = `
 `;
 
 exports[`.signal suffix: effects in child react to parent value changes 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { toSignal, createComponent } = helpers;
@@ -219,7 +219,7 @@ exports[`.signal suffix: effects in child react to parent value changes 1`] = `
 `;
 
 exports[`.signal suffix: effects in child react to parent value changes 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -231,7 +231,7 @@ exports[`.signal suffix: effects in child react to parent value changes 2`] = `
 `;
 
 exports[`.signal suffix: signal reference is stable across updates 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { toSignal, createComponent } = helpers;
@@ -244,7 +244,7 @@ exports[`.signal suffix: signal reference is stable across updates 1`] = `
 `;
 
 exports[`.signal suffix: signal reference is stable across updates 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -258,7 +258,7 @@ exports[`.signal suffix: signal reference is stable across updates 2`] = `
 `;
 
 exports[`.translate props are translated 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -271,7 +271,7 @@ exports[`.translate props are translated 1`] = `
 `;
 
 exports[`.translate props are translated 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -283,7 +283,7 @@ exports[`.translate props are translated 2`] = `
 `;
 
 exports[`arrow function props auto-skip re-render when captured variables don't change 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, createComponent } = helpers;
@@ -298,7 +298,7 @@ exports[`arrow function props auto-skip re-render when captured variables don't 
 `;
 
 exports[`arrow function props auto-skip re-render when captured variables don't change 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -310,7 +310,7 @@ exports[`arrow function props auto-skip re-render when captured variables don't 
 `;
 
 exports[`arrow function props re-render when captured variable changes 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, createComponent, withKey } = helpers;
@@ -331,7 +331,7 @@ exports[`arrow function props re-render when captured variable changes 1`] = `
 `;
 
 exports[`arrow function props re-render when captured variable changes 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callHandler, safeOutput } = helpers;
@@ -352,7 +352,7 @@ exports[`arrow function props re-render when captured variable changes 2`] = `
 `;
 
 exports[`basics > accept ES6-like syntax for props (with getters) 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -368,7 +368,7 @@ exports[`basics > accept ES6-like syntax for props (with getters) 1`] = `
 `;
 
 exports[`basics > accept ES6-like syntax for props (with getters) 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -383,7 +383,7 @@ exports[`basics > accept ES6-like syntax for props (with getters) 2`] = `
 `;
 
 exports[`basics > arrow function props do not leak synthetic keys into useProps() 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, createComponent, withKey } = helpers;
@@ -404,7 +404,7 @@ exports[`basics > arrow function props do not leak synthetic keys into useProps(
 `;
 
 exports[`basics > arrow function props do not leak synthetic keys into useProps() 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -419,7 +419,7 @@ exports[`basics > arrow function props do not leak synthetic keys into useProps(
 `;
 
 exports[`basics > arrow functions as prop correctly capture their scope 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, createComponent, withKey } = helpers;
@@ -440,7 +440,7 @@ exports[`basics > arrow functions as prop correctly capture their scope 1`] = `
 `;
 
 exports[`basics > arrow functions as prop correctly capture their scope 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callHandler } = helpers;
@@ -456,7 +456,7 @@ exports[`basics > arrow functions as prop correctly capture their scope 2`] = `
 `;
 
 exports[`basics > explicit object prop 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -472,7 +472,7 @@ exports[`basics > explicit object prop 1`] = `
 `;
 
 exports[`basics > explicit object prop 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -487,7 +487,7 @@ exports[`basics > explicit object prop 2`] = `
 `;
 
 exports[`basics > prop names can contain - 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -500,7 +500,7 @@ exports[`basics > prop names can contain - 1`] = `
 `;
 
 exports[`basics > prop names can contain - 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -515,7 +515,7 @@ exports[`basics > prop names can contain - 2`] = `
 `;
 
 exports[`basics > support prop names that aren't valid bare object property names 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -528,7 +528,7 @@ exports[`basics > support prop names that aren't valid bare object property name
 `;
 
 exports[`basics > support prop names that aren't valid bare object property names 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callHandler } = helpers;
@@ -544,7 +544,7 @@ exports[`basics > support prop names that aren't valid bare object property name
 `;
 
 exports[`basics > t-set with a body expression can be passed in props, and then t-out 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { LazyValue, withDefault, createComponent } = helpers;
@@ -567,7 +567,7 @@ exports[`basics > t-set with a body expression can be passed in props, and then 
 `;
 
 exports[`basics > t-set with a body expression can be passed in props, and then t-out 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -582,7 +582,7 @@ exports[`basics > t-set with a body expression can be passed in props, and then 
 `;
 
 exports[`basics > t-set with a body expression can be used as textual prop 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -600,7 +600,7 @@ exports[`basics > t-set with a body expression can be used as textual prop 1`] =
 `;
 
 exports[`basics > t-set with a body expression can be used as textual prop 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -615,7 +615,7 @@ exports[`basics > t-set with a body expression can be used as textual prop 2`] =
 `;
 
 exports[`basics > t-set works  1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -633,7 +633,7 @@ exports[`basics > t-set works  1`] = `
 `;
 
 exports[`basics > t-set works  2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -648,7 +648,7 @@ exports[`basics > t-set works  2`] = `
 `;
 
 exports[`basics > template string in prop 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -661,7 +661,7 @@ exports[`basics > template string in prop 1`] = `
 `;
 
 exports[`basics > template string in prop 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -672,7 +672,7 @@ exports[`basics > template string in prop 2`] = `
 `;
 
 exports[`bound functions are considered 'alike' 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, createComponent } = helpers;
@@ -687,7 +687,7 @@ exports[`bound functions are considered 'alike' 1`] = `
 `;
 
 exports[`bound functions are considered 'alike' 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -698,7 +698,7 @@ exports[`bound functions are considered 'alike' 2`] = `
 `;
 
 exports[`bound functions is not referentially equal after update 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -711,7 +711,7 @@ exports[`bound functions is not referentially equal after update 1`] = `
 `;
 
 exports[`bound functions is not referentially equal after update 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -723,7 +723,7 @@ exports[`bound functions is not referentially equal after update 2`] = `
 `;
 
 exports[`can bind function prop with bind suffix 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -736,7 +736,7 @@ exports[`can bind function prop with bind suffix 1`] = `
 `;
 
 exports[`can bind function prop with bind suffix 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -747,7 +747,7 @@ exports[`can bind function prop with bind suffix 2`] = `
 `;
 
 exports[`can use .translate suffix 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -760,7 +760,7 @@ exports[`can use .translate suffix 1`] = `
 `;
 
 exports[`can use .translate suffix 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -772,7 +772,7 @@ exports[`can use .translate suffix 2`] = `
 `;
 
 exports[`default props don't cause spurious updates with t-props 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callHandler, safeOutput, createComponent } = helpers;
@@ -792,7 +792,7 @@ exports[`default props don't cause spurious updates with t-props 1`] = `
 `;
 
 exports[`default props don't cause spurious updates with t-props 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -804,7 +804,7 @@ exports[`default props don't cause spurious updates with t-props 2`] = `
 `;
 
 exports[`do not crash when binding anonymous function prop with bind suffix 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -817,7 +817,7 @@ exports[`do not crash when binding anonymous function prop with bind suffix 1`] 
 `;
 
 exports[`do not crash when binding anonymous function prop with bind suffix 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -828,7 +828,7 @@ exports[`do not crash when binding anonymous function prop with bind suffix 2`] 
 `;
 
 exports[`reactive props (issue #1908) > a prop read only in an effect (not the template) still reacts to a value swap 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -844,7 +844,7 @@ exports[`reactive props (issue #1908) > a prop read only in an effect (not the t
 `;
 
 exports[`reactive props (issue #1908) > a prop read only in an effect (not the template) still reacts to a value swap 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -857,7 +857,7 @@ exports[`reactive props (issue #1908) > a prop read only in an effect (not the t
 `;
 
 exports[`reactive props (issue #1908) > effect observing a prop reacts to both in-place mutation and value swap 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -873,7 +873,7 @@ exports[`reactive props (issue #1908) > effect observing a prop reacts to both i
 `;
 
 exports[`reactive props (issue #1908) > effect observing a prop reacts to both in-place mutation and value swap 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -888,7 +888,7 @@ exports[`reactive props (issue #1908) > effect observing a prop reacts to both i
 `;
 
 exports[`reactive props (issue #1908) > making props reactive does not introduce extra renders 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -904,7 +904,7 @@ exports[`reactive props (issue #1908) > making props reactive does not introduce
 `;
 
 exports[`reactive props (issue #1908) > making props reactive does not introduce extra renders 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -919,7 +919,7 @@ exports[`reactive props (issue #1908) > making props reactive does not introduce
 `;
 
 exports[`reactive props (issue #1908) > this.props still reflects the old value inside onWillUpdateProps 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -932,7 +932,7 @@ exports[`reactive props (issue #1908) > this.props still reflects the old value 
 `;
 
 exports[`reactive props (issue #1908) > this.props still reflects the old value inside onWillUpdateProps 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -947,7 +947,7 @@ exports[`reactive props (issue #1908) > this.props still reflects the old value 
 `;
 
 exports[`reactive props (issue #1908) > useProps() tracks new and deleted keys from t-props 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -960,7 +960,7 @@ exports[`reactive props (issue #1908) > useProps() tracks new and deleted keys f
 `;
 
 exports[`reactive props (issue #1908) > useProps() tracks new and deleted keys from t-props 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -975,7 +975,7 @@ exports[`reactive props (issue #1908) > useProps() tracks new and deleted keys f
 `;
 
 exports[`schema defaults and signal-driven props 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -988,7 +988,7 @@ exports[`schema defaults and signal-driven props 1`] = `
 `;
 
 exports[`schema defaults and signal-driven props 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;

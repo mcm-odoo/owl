@@ -1019,10 +1019,14 @@ export class CodeGenerator {
     }
     const key = this.generateComponentKey();
     this.helpers.add("callTemplate");
-    this.insertBlock(`callTemplate(${subTemplate}, this, app, ${ctxExpr}, node, ${key})`, block!, {
-      ...ctx,
-      forceNewBlock: !block,
-    });
+    this.insertBlock(
+      `callTemplate(${subTemplate}, this, templates, ${ctxExpr}, node, ${key})`,
+      block!,
+      {
+        ...ctx,
+        forceNewBlock: !block,
+      }
+    );
     return block.varName;
   }
 

@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`t-if > a t-if next to a div 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -19,7 +19,7 @@ exports[`t-if > a t-if next to a div 1`] = `
 `;
 
 exports[`t-if > a t-if with two inner nodes 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -39,7 +39,7 @@ exports[`t-if > a t-if with two inner nodes 1`] = `
 `;
 
 exports[`t-if > boolean value condition elif (no outside node) 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -60,7 +60,7 @@ exports[`t-if > boolean value condition elif (no outside node) 1`] = `
 `;
 
 exports[`t-if > boolean value condition elif 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -83,7 +83,7 @@ exports[`t-if > boolean value condition elif 1`] = `
 `;
 
 exports[`t-if > boolean value condition else 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -102,7 +102,7 @@ exports[`t-if > boolean value condition else 1`] = `
 `;
 
 exports[`t-if > boolean value condition false else 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -121,7 +121,7 @@ exports[`t-if > boolean value condition false else 1`] = `
 `;
 
 exports[`t-if > boolean value condition missing 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -138,7 +138,7 @@ exports[`t-if > boolean value condition missing 1`] = `
 `;
 
 exports[`t-if > can use some boolean operators in expressions 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -176,7 +176,7 @@ exports[`t-if > can use some boolean operators in expressions 1`] = `
 `;
 
 exports[`t-if > div containing a t-if with two inner nodes 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -197,7 +197,7 @@ exports[`t-if > div containing a t-if with two inner nodes 1`] = `
 `;
 
 exports[`t-if > dynamic content after t-if with two children nodes 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -220,7 +220,7 @@ exports[`t-if > dynamic content after t-if with two children nodes 1`] = `
 `;
 
 exports[`t-if > just a t-if 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -235,7 +235,7 @@ exports[`t-if > just a t-if 1`] = `
 `;
 
 exports[`t-if > simple t-if/t-else 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -252,7 +252,7 @@ exports[`t-if > simple t-if/t-else 1`] = `
 `;
 
 exports[`t-if > simple t-if/t-else in a div 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -271,7 +271,7 @@ exports[`t-if > simple t-if/t-else in a div 1`] = `
 `;
 
 exports[`t-if > t-if and t-else with two nodes 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -293,7 +293,7 @@ exports[`t-if > t-if and t-else with two nodes 1`] = `
 `;
 
 exports[`t-if > t-if in a div 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -310,7 +310,7 @@ exports[`t-if > t-if in a div 1`] = `
 `;
 
 exports[`t-if > t-if in a t-if 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -332,7 +332,7 @@ exports[`t-if > t-if in a t-if 1`] = `
 `;
 
 exports[`t-if > t-if with empty content 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -348,7 +348,7 @@ exports[`t-if > t-if with empty content 1`] = `
 `;
 
 exports[`t-if > t-if/t-else with more content 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -367,7 +367,7 @@ exports[`t-if > t-if/t-else with more content 1`] = `
 `;
 
 exports[`t-if > t-out with t-elif 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -387,7 +387,7 @@ exports[`t-if > t-out with t-elif 1`] = `
 `;
 
 exports[`t-if > t-out with t-if 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -405,7 +405,7 @@ exports[`t-if > t-out with t-if 1`] = `
 `;
 
 exports[`t-if > t-set, then t-if 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -425,7 +425,7 @@ exports[`t-if > t-set, then t-if 1`] = `
 `;
 
 exports[`t-if > t-set, then t-if, part 2 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -446,7 +446,7 @@ exports[`t-if > t-set, then t-if, part 2 1`] = `
 `;
 
 exports[`t-if > t-set, then t-if, part 3 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -470,7 +470,7 @@ exports[`t-if > t-set, then t-if, part 3 1`] = `
 `;
 
 exports[`t-if > two consecutive t-if 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -488,7 +488,7 @@ exports[`t-if > two consecutive t-if 1`] = `
 `;
 
 exports[`t-if > two consecutive t-if in a div 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -508,7 +508,7 @@ exports[`t-if > two consecutive t-if in a div 1`] = `
 `;
 
 exports[`t-if > two t-ifs next to each other 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;

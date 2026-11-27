@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Cascading renders after microtaskTick 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent, prepareList, safeOutput, withKey } = helpers;
@@ -25,7 +25,7 @@ exports[`Cascading renders after microtaskTick 1`] = `
 `;
 
 exports[`Cascading renders after microtaskTick 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, createComponent, withKey } = helpers;
@@ -46,7 +46,7 @@ exports[`Cascading renders after microtaskTick 2`] = `
 `;
 
 exports[`Cascading renders after microtaskTick 3`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -58,7 +58,7 @@ exports[`Cascading renders after microtaskTick 3`] = `
 `;
 
 exports[`Scheduler.processTasks can be patched after the app is created 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -70,7 +70,7 @@ exports[`Scheduler.processTasks can be patched after the app is created 1`] = `
 `;
 
 exports[`another scenario with delayed rendering 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -90,7 +90,7 @@ exports[`another scenario with delayed rendering 1`] = `
 `;
 
 exports[`calling render in destroy 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -104,7 +104,7 @@ exports[`calling render in destroy 1`] = `
 `;
 
 exports[`calling render in destroy 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -117,7 +117,7 @@ exports[`calling render in destroy 2`] = `
 `;
 
 exports[`calling render in destroy 3`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -132,7 +132,7 @@ exports[`calling render in destroy 3`] = `
 `;
 
 exports[`cancelled components are destroyed immediately 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -150,7 +150,7 @@ exports[`cancelled components are destroyed immediately 1`] = `
 `;
 
 exports[`changing state before first render does not trigger a render (with parent) 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -169,7 +169,7 @@ exports[`changing state before first render does not trigger a render (with pare
 `;
 
 exports[`component destroyed just after render 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -182,7 +182,7 @@ exports[`component destroyed just after render 1`] = `
 `;
 
 exports[`component destroyed just after render 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -196,7 +196,7 @@ exports[`component destroyed just after render 2`] = `
 `;
 
 exports[`concurrent renderings scenario 1 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -212,7 +212,7 @@ exports[`concurrent renderings scenario 1 1`] = `
 `;
 
 exports[`concurrent renderings scenario 1 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -228,7 +228,7 @@ exports[`concurrent renderings scenario 1 2`] = `
 `;
 
 exports[`concurrent renderings scenario 1 3`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -244,7 +244,7 @@ exports[`concurrent renderings scenario 1 3`] = `
 `;
 
 exports[`concurrent renderings scenario 2 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, createComponent } = helpers;
@@ -261,7 +261,7 @@ exports[`concurrent renderings scenario 2 1`] = `
 `;
 
 exports[`concurrent renderings scenario 2 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -277,7 +277,7 @@ exports[`concurrent renderings scenario 2 2`] = `
 `;
 
 exports[`concurrent renderings scenario 3 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -293,7 +293,7 @@ exports[`concurrent renderings scenario 3 1`] = `
 `;
 
 exports[`concurrent renderings scenario 3 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -309,7 +309,7 @@ exports[`concurrent renderings scenario 3 2`] = `
 `;
 
 exports[`concurrent renderings scenario 3 3`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -325,7 +325,7 @@ exports[`concurrent renderings scenario 3 3`] = `
 `;
 
 exports[`concurrent renderings scenario 5 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -340,7 +340,7 @@ exports[`concurrent renderings scenario 5 1`] = `
 `;
 
 exports[`concurrent renderings scenario 7 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -356,7 +356,7 @@ exports[`concurrent renderings scenario 7 1`] = `
 `;
 
 exports[`concurrent renderings scenario 8 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -372,7 +372,7 @@ exports[`concurrent renderings scenario 8 1`] = `
 `;
 
 exports[`concurrent renderings scenario 9 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, createComponent } = helpers;
@@ -391,7 +391,7 @@ exports[`concurrent renderings scenario 9 1`] = `
 `;
 
 exports[`concurrent renderings scenario 9 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -406,7 +406,7 @@ exports[`concurrent renderings scenario 9 2`] = `
 `;
 
 exports[`concurrent renderings scenario 9 3`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -422,7 +422,7 @@ exports[`concurrent renderings scenario 9 3`] = `
 `;
 
 exports[`concurrent renderings scenario 9 4`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -438,7 +438,7 @@ exports[`concurrent renderings scenario 9 4`] = `
 `;
 
 exports[`concurrent renderings scenario 10 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -454,7 +454,7 @@ exports[`concurrent renderings scenario 10 1`] = `
 `;
 
 exports[`concurrent renderings scenario 10 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -473,7 +473,7 @@ exports[`concurrent renderings scenario 10 2`] = `
 `;
 
 exports[`concurrent renderings scenario 11 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -489,7 +489,7 @@ exports[`concurrent renderings scenario 11 1`] = `
 `;
 
 exports[`concurrent renderings scenario 11 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -505,7 +505,7 @@ exports[`concurrent renderings scenario 11 2`] = `
 `;
 
 exports[`concurrent renderings scenario 12 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -521,7 +521,7 @@ exports[`concurrent renderings scenario 12 1`] = `
 `;
 
 exports[`concurrent renderings scenario 13 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -542,7 +542,7 @@ exports[`concurrent renderings scenario 13 1`] = `
 `;
 
 exports[`concurrent renderings scenario 13 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -557,7 +557,7 @@ exports[`concurrent renderings scenario 13 2`] = `
 `;
 
 exports[`concurrent renderings scenario 14 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -573,7 +573,7 @@ exports[`concurrent renderings scenario 14 1`] = `
 `;
 
 exports[`concurrent renderings scenario 14 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -589,7 +589,7 @@ exports[`concurrent renderings scenario 14 2`] = `
 `;
 
 exports[`concurrent renderings scenario 14 3`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -606,7 +606,7 @@ exports[`concurrent renderings scenario 14 3`] = `
 `;
 
 exports[`concurrent renderings scenario 16 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -619,7 +619,7 @@ exports[`concurrent renderings scenario 16 1`] = `
 `;
 
 exports[`concurrent renderings scenario 16 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -632,7 +632,7 @@ exports[`concurrent renderings scenario 16 2`] = `
 `;
 
 exports[`concurrent renderings scenario 16 3`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, createComponent } = helpers;
@@ -655,7 +655,7 @@ exports[`concurrent renderings scenario 16 3`] = `
 `;
 
 exports[`concurrent renderings scenario 16 4`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -666,7 +666,7 @@ exports[`concurrent renderings scenario 16 4`] = `
 `;
 
 exports[`creating two async components, scenario 1 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -687,7 +687,7 @@ exports[`creating two async components, scenario 1 1`] = `
 `;
 
 exports[`creating two async components, scenario 1 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -702,7 +702,7 @@ exports[`creating two async components, scenario 1 2`] = `
 `;
 
 exports[`creating two async components, scenario 2 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -723,7 +723,7 @@ exports[`creating two async components, scenario 2 1`] = `
 `;
 
 exports[`creating two async components, scenario 2 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -738,7 +738,7 @@ exports[`creating two async components, scenario 2 2`] = `
 `;
 
 exports[`creating two async components, scenario 2 3`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -753,7 +753,7 @@ exports[`creating two async components, scenario 2 3`] = `
 `;
 
 exports[`delay willUpdateProps 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -768,7 +768,7 @@ exports[`delay willUpdateProps 1`] = `
 `;
 
 exports[`delay willUpdateProps with rendering grandchild 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -781,7 +781,7 @@ exports[`delay willUpdateProps with rendering grandchild 1`] = `
 `;
 
 exports[`delay willUpdateProps with rendering grandchild 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -797,7 +797,7 @@ exports[`delay willUpdateProps with rendering grandchild 2`] = `
 `;
 
 exports[`delayed fiber does not get rendered if it was cancelled 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -812,7 +812,7 @@ exports[`delayed fiber does not get rendered if it was cancelled 1`] = `
 `;
 
 exports[`delayed fiber does not get rendered if it was cancelled 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -827,7 +827,7 @@ exports[`delayed fiber does not get rendered if it was cancelled 2`] = `
 `;
 
 exports[`delayed fiber does not get rendered if it was cancelled 3`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -842,7 +842,7 @@ exports[`delayed fiber does not get rendered if it was cancelled 3`] = `
 `;
 
 exports[`delayed render does not go through when t-component value changed 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -858,7 +858,7 @@ exports[`delayed render does not go through when t-component value changed 1`] =
 `;
 
 exports[`delayed render does not go through when t-component value changed 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -872,7 +872,7 @@ exports[`delayed render does not go through when t-component value changed 2`] =
 `;
 
 exports[`delayed render does not go through when t-component value changed 3`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -883,7 +883,7 @@ exports[`delayed render does not go through when t-component value changed 3`] =
 `;
 
 exports[`delayed rendering, but then initial rendering is cancelled by yet another render 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -896,7 +896,7 @@ exports[`delayed rendering, but then initial rendering is cancelled by yet anoth
 `;
 
 exports[`delayed rendering, but then initial rendering is cancelled by yet another render 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -909,7 +909,7 @@ exports[`delayed rendering, but then initial rendering is cancelled by yet anoth
 `;
 
 exports[`delayed rendering, but then initial rendering is cancelled by yet another render 3`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent, safeOutput } = helpers;
@@ -927,7 +927,7 @@ exports[`delayed rendering, but then initial rendering is cancelled by yet anoth
 `;
 
 exports[`delayed rendering, but then initial rendering is cancelled by yet another render 4`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callHandler, safeOutput } = helpers;
@@ -944,7 +944,7 @@ exports[`delayed rendering, but then initial rendering is cancelled by yet anoth
 `;
 
 exports[`delayed rendering, destruction, stuff happens 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -959,7 +959,7 @@ exports[`delayed rendering, destruction, stuff happens 1`] = `
 `;
 
 exports[`delayed rendering, destruction, stuff happens 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -977,7 +977,7 @@ exports[`delayed rendering, destruction, stuff happens 2`] = `
 `;
 
 exports[`delayed rendering, destruction, stuff happens 3`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent, safeOutput } = helpers;
@@ -996,7 +996,7 @@ exports[`delayed rendering, destruction, stuff happens 3`] = `
 `;
 
 exports[`delayed rendering, destruction, stuff happens 4`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callHandler, safeOutput } = helpers;
@@ -1015,7 +1015,7 @@ exports[`delayed rendering, destruction, stuff happens 4`] = `
 `;
 
 exports[`delayed rendering, reusing fiber and stuff 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, createComponent } = helpers;
@@ -1032,7 +1032,7 @@ exports[`delayed rendering, reusing fiber and stuff 1`] = `
 `;
 
 exports[`delayed rendering, reusing fiber then component is destroyed and  stuff 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -1050,7 +1050,7 @@ exports[`delayed rendering, reusing fiber then component is destroyed and  stuff
 `;
 
 exports[`delayed rendering, reusing fiber then component is destroyed and  stuff 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, createComponent } = helpers;
@@ -1065,7 +1065,7 @@ exports[`delayed rendering, reusing fiber then component is destroyed and  stuff
 `;
 
 exports[`delayed rendering, then component is destroyed and  stuff 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, createComponent } = helpers;
@@ -1083,7 +1083,7 @@ exports[`delayed rendering, then component is destroyed and  stuff 1`] = `
 `;
 
 exports[`destroyed component causes other soon to be destroyed component to rerender, weird stuff happens 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -1104,7 +1104,7 @@ exports[`destroyed component causes other soon to be destroyed component to rere
 `;
 
 exports[`destroyed component causes other soon to be destroyed component to rerender, weird stuff happens 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -1118,7 +1118,7 @@ exports[`destroyed component causes other soon to be destroyed component to rere
 `;
 
 exports[`destroyed component causes other soon to be destroyed component to rerender, weird stuff happens 3`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -1130,7 +1130,7 @@ exports[`destroyed component causes other soon to be destroyed component to rere
 `;
 
 exports[`destroying/recreating a subcomponent, other scenario 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -1148,7 +1148,7 @@ exports[`destroying/recreating a subcomponent, other scenario 1`] = `
 `;
 
 exports[`destroying/recreating a subcomponent, other scenario 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -1159,7 +1159,7 @@ exports[`destroying/recreating a subcomponent, other scenario 2`] = `
 `;
 
 exports[`destroying/recreating a subwidget with different props (if start is not over) 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -1178,7 +1178,7 @@ exports[`destroying/recreating a subwidget with different props (if start is not
 `;
 
 exports[`destroying/recreating a subwidget with different props (if start is not over) 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -1193,7 +1193,7 @@ exports[`destroying/recreating a subwidget with different props (if start is not
 `;
 
 exports[`parent and child rendered at exact same time 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -1206,7 +1206,7 @@ exports[`parent and child rendered at exact same time 1`] = `
 `;
 
 exports[`properly behave when destroyed/unmounted while rendering  1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -1225,7 +1225,7 @@ exports[`properly behave when destroyed/unmounted while rendering  1`] = `
 `;
 
 exports[`properly behave when destroyed/unmounted while rendering  2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -1241,7 +1241,7 @@ exports[`properly behave when destroyed/unmounted while rendering  2`] = `
 `;
 
 exports[`rendering component again in next microtick 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callHandler, createComponent } = helpers;
@@ -1262,7 +1262,7 @@ exports[`rendering component again in next microtick 1`] = `
 `;
 
 exports[`rendering component again in next microtick 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -1275,7 +1275,7 @@ exports[`rendering component again in next microtick 2`] = `
 `;
 
 exports[`renderings, destruction, patch, stuff, ... yet another variation 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -1292,7 +1292,7 @@ exports[`renderings, destruction, patch, stuff, ... yet another variation 1`] = 
 `;
 
 exports[`renderings, destruction, patch, stuff, ... yet another variation 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -1310,7 +1310,7 @@ exports[`renderings, destruction, patch, stuff, ... yet another variation 2`] = 
 `;
 
 exports[`renderings, destruction, patch, stuff, ... yet another variation 3`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callHandler, safeOutput } = helpers;
@@ -1329,7 +1329,7 @@ exports[`renderings, destruction, patch, stuff, ... yet another variation 3`] = 
 `;
 
 exports[`renderings, destruction, patch, stuff, ... yet another variation 4`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callHandler, safeOutput } = helpers;
@@ -1348,7 +1348,7 @@ exports[`renderings, destruction, patch, stuff, ... yet another variation 4`] = 
 `;
 
 exports[`sibling rendering: child without willStart renders before async sibling 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -1366,7 +1366,7 @@ exports[`sibling rendering: child without willStart renders before async sibling
 `;
 
 exports[`sibling rendering: child without willStart renders before async sibling 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -1381,7 +1381,7 @@ exports[`sibling rendering: child without willStart renders before async sibling
 `;
 
 exports[`slot content renders synchronously when child has no willStart 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, markRaw, createComponent } = helpers;
@@ -1405,7 +1405,7 @@ exports[`slot content renders synchronously when child has no willStart 1`] = `
 `;
 
 exports[`t-foreach with dynamic async component 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, createComponent, withKey } = helpers;
@@ -1432,7 +1432,7 @@ exports[`t-foreach with dynamic async component 1`] = `
 `;
 
 exports[`t-key on dom node having a component 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -1450,7 +1450,7 @@ exports[`t-key on dom node having a component 1`] = `
 `;
 
 exports[`t-key on dom node having a component 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -1462,7 +1462,7 @@ exports[`t-key on dom node having a component 2`] = `
 `;
 
 exports[`t-key on dynamic async component (toggler is never patched) 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -1477,7 +1477,7 @@ exports[`t-key on dynamic async component (toggler is never patched) 1`] = `
 `;
 
 exports[`t-key on dynamic async component (toggler is never patched) 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -1492,7 +1492,7 @@ exports[`t-key on dynamic async component (toggler is never patched) 2`] = `
 `;
 
 exports[`two renderings initiated between willPatch and patched 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -1512,7 +1512,7 @@ exports[`two renderings initiated between willPatch and patched 1`] = `
 `;
 
 exports[`two renderings initiated between willPatch and patched 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -1528,7 +1528,7 @@ exports[`two renderings initiated between willPatch and patched 2`] = `
 `;
 
 exports[`update a sub-component twice in the same frame 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -1544,7 +1544,7 @@ exports[`update a sub-component twice in the same frame 1`] = `
 `;
 
 exports[`update a sub-component twice in the same frame, 2 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;

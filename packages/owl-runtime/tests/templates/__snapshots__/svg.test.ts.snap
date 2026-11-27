@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`properly support svg > add proper namespace to g tags 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -14,7 +14,7 @@ exports[`properly support svg > add proper namespace to g tags 1`] = `
 `;
 
 exports[`properly support svg > add proper namespace to svg 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -27,7 +27,7 @@ exports[`properly support svg > add proper namespace to svg 1`] = `
 `;
 
 exports[`properly support svg > namespace to g tags not added if already in svg namespace 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -40,7 +40,7 @@ exports[`properly support svg > namespace to g tags not added if already in svg 
 `;
 
 exports[`properly support svg > namespace to svg tags added even if already in svg namespace 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -53,7 +53,7 @@ exports[`properly support svg > namespace to svg tags added even if already in s
 `;
 
 exports[`properly support svg > svg creates new block if it is within html -- 2 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -73,7 +73,7 @@ exports[`properly support svg > svg creates new block if it is within html -- 2 
 `;
 
 exports[`properly support svg > svg creates new block if it is within html 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -88,7 +88,7 @@ exports[`properly support svg > svg creates new block if it is within html 1`] =
 `;
 
 exports[`properly support svg > svg namespace added to sub templates if root tag is path 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callTemplate } = helpers;
@@ -96,14 +96,14 @@ exports[`properly support svg > svg namespace added to sub templates if root tag
   let block1 = createBlock(\`<svg xmlns="http://www.w3.org/2000/svg"><block-child-0 xmlns=""/></svg>\`);
   
   return function template(ctx, node, key = "") {
-    const b2 = callTemplate(\`path\`, this, app, ctx, node, key + \`__1\`);
+    const b2 = callTemplate(\`path\`, this, templates, ctx, node, key + \`__1\`);
     return block1([], [b2]);
   }
 }"
 `;
 
 exports[`properly support svg > svg namespace added to sub templates if root tag is path 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -116,7 +116,7 @@ exports[`properly support svg > svg namespace added to sub templates if root tag
 `;
 
 exports[`properly support svg > svg namespace added to sub-blocks 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   

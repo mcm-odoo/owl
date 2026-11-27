@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`hooks > autofocus hook > input in a t-if 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createRef } = helpers;
@@ -21,7 +21,7 @@ exports[`hooks > autofocus hook > input in a t-if 1`] = `
 `;
 
 exports[`hooks > autofocus hook > simple input 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createRef } = helpers;
@@ -36,7 +36,7 @@ exports[`hooks > autofocus hook > simple input 1`] = `
 `;
 
 exports[`hooks > can use onWillStart, onWillUpdateProps 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -49,7 +49,7 @@ exports[`hooks > can use onWillStart, onWillUpdateProps 1`] = `
 `;
 
 exports[`hooks > onWillUpdateProps receives nextProps 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -62,7 +62,7 @@ exports[`hooks > onWillUpdateProps receives nextProps 1`] = `
 `;
 
 exports[`hooks > two different call to willPatch/patched should work 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -77,7 +77,7 @@ exports[`hooks > two different call to willPatch/patched should work 1`] = `
 `;
 
 exports[`hooks > useEffect hook > effect can depend on stuff in dom 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createRef } = helpers;
@@ -96,7 +96,7 @@ exports[`hooks > useEffect hook > effect can depend on stuff in dom 1`] = `
 `;
 
 exports[`hooks > useListener 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -113,7 +113,7 @@ exports[`hooks > useListener 1`] = `
 `;
 
 exports[`hooks > useListener ignores the event that created its component 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -135,7 +135,7 @@ exports[`hooks > useListener ignores the event that created its component 1`] = 
 `;
 
 exports[`hooks > useListener ignores the event that created its component 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -148,7 +148,7 @@ exports[`hooks > useListener ignores the event that created its component 2`] = 
 `;
 
 exports[`hooks > useListener ignores the event that created its component, from another useListener 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -165,7 +165,7 @@ exports[`hooks > useListener ignores the event that created its component, from 
 `;
 
 exports[`hooks > useListener still receives an event dispatched while it is being attached 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -187,7 +187,7 @@ exports[`hooks > useListener still receives an event dispatched while it is bein
 `;
 
 exports[`hooks > useListener work with references 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createRef, safeOutput } = helpers;

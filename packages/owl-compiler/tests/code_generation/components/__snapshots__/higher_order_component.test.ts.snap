@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`basics > basic use 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -14,7 +14,7 @@ exports[`basics > basic use 1`] = `
 `;
 
 exports[`basics > basic use 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -29,7 +29,7 @@ exports[`basics > basic use 2`] = `
 `;
 
 exports[`basics > can select a sub widget  1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -50,7 +50,7 @@ exports[`basics > can select a sub widget  1`] = `
 `;
 
 exports[`basics > can select a sub widget  2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -63,7 +63,7 @@ exports[`basics > can select a sub widget  2`] = `
 `;
 
 exports[`basics > can select a sub widget  3`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -76,7 +76,7 @@ exports[`basics > can select a sub widget  3`] = `
 `;
 
 exports[`basics > can select a sub widget, part 2 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -97,7 +97,7 @@ exports[`basics > can select a sub widget, part 2 1`] = `
 `;
 
 exports[`basics > sub widget is interactive 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callHandler, safeOutput } = helpers;
@@ -114,7 +114,7 @@ exports[`basics > sub widget is interactive 1`] = `
 `;
 
 exports[`basics > top level sub widget with a parent 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -130,7 +130,7 @@ exports[`basics > top level sub widget with a parent 1`] = `
 `;
 
 exports[`basics > top level sub widget with a parent 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -143,7 +143,7 @@ exports[`basics > top level sub widget with a parent 2`] = `
 `;
 
 exports[`basics > top level sub widget with a parent 3`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   

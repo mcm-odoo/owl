@@ -54,7 +54,7 @@ describe("compile errors", () => {
       .toThrow(`Failed to compile anonymous template: Unexpected identifier 'ctx'
 
 generated code:
-function(app, bdom, helpers) {
+function(templates, bdom, helpers) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
   let block1 = createBlock(\`<div block-attribute-0="class">test</div>\`);

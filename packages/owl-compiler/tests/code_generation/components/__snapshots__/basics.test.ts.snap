@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`basics > GrandChild display is controlled by its GrandParent 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -15,7 +15,7 @@ exports[`basics > GrandChild display is controlled by its GrandParent 1`] = `
 `;
 
 exports[`basics > GrandChild display is controlled by its GrandParent 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -32,7 +32,7 @@ exports[`basics > GrandChild display is controlled by its GrandParent 2`] = `
 `;
 
 exports[`basics > Multi root component 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -49,7 +49,7 @@ exports[`basics > Multi root component 1`] = `
 `;
 
 exports[`basics > a class component inside a class component, no external dom 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -62,7 +62,7 @@ exports[`basics > a class component inside a class component, no external dom 1`
 `;
 
 exports[`basics > a component inside a component 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -78,7 +78,7 @@ exports[`basics > a component inside a component 1`] = `
 `;
 
 exports[`basics > a component inside a component 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -91,7 +91,7 @@ exports[`basics > a component inside a component 2`] = `
 `;
 
 exports[`basics > can be clicked on and updated 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -108,7 +108,7 @@ exports[`basics > can be clicked on and updated 1`] = `
 `;
 
 exports[`basics > can handle empty props 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -124,7 +124,7 @@ exports[`basics > can handle empty props 1`] = `
 `;
 
 exports[`basics > can handle empty props 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -139,19 +139,19 @@ exports[`basics > can handle empty props 2`] = `
 `;
 
 exports[`basics > can inject values in tagged templates 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callTemplate } = helpers;
   
   return function template(ctx, node, key = "") {
-    return callTemplate(\`__template__999\`, this, app, ctx, node, key + \`__1\`);
+    return callTemplate(\`__template__999\`, this, templates, ctx, node, key + \`__1\`);
   }
 }"
 `;
 
 exports[`basics > can inject values in tagged templates 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -166,7 +166,7 @@ exports[`basics > can inject values in tagged templates 2`] = `
 `;
 
 exports[`basics > can mount a component with just some text 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -177,7 +177,7 @@ exports[`basics > can mount a component with just some text 1`] = `
 `;
 
 exports[`basics > can mount a simple component 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -190,7 +190,7 @@ exports[`basics > can mount a simple component 1`] = `
 `;
 
 exports[`basics > can mount a simple component with multiple roots 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -206,7 +206,7 @@ exports[`basics > can mount a simple component with multiple roots 1`] = `
 `;
 
 exports[`basics > can mount a simple component with props 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -221,7 +221,7 @@ exports[`basics > can mount a simple component with props 1`] = `
 `;
 
 exports[`basics > cannot mount on a documentFragment 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -234,7 +234,7 @@ exports[`basics > cannot mount on a documentFragment 1`] = `
 `;
 
 exports[`basics > child can be updated 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -247,7 +247,7 @@ exports[`basics > child can be updated 1`] = `
 `;
 
 exports[`basics > child can be updated 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -259,7 +259,7 @@ exports[`basics > child can be updated 2`] = `
 `;
 
 exports[`basics > class component with dynamic text 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -274,7 +274,7 @@ exports[`basics > class component with dynamic text 1`] = `
 `;
 
 exports[`basics > class parent, class child component with props 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -287,7 +287,7 @@ exports[`basics > class parent, class child component with props 1`] = `
 `;
 
 exports[`basics > component children doesn't leak (if case) 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -304,7 +304,7 @@ exports[`basics > component children doesn't leak (if case) 1`] = `
 `;
 
 exports[`basics > component children doesn't leak (t-key case) 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -318,7 +318,7 @@ exports[`basics > component children doesn't leak (t-key case) 1`] = `
 `;
 
 exports[`basics > do not remove previously rendered dom if not necessary, variation 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -333,7 +333,7 @@ exports[`basics > do not remove previously rendered dom if not necessary, variat
 `;
 
 exports[`basics > higher order components parent and child 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -346,7 +346,7 @@ exports[`basics > higher order components parent and child 1`] = `
 `;
 
 exports[`basics > higher order components parent and child 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -366,7 +366,7 @@ exports[`basics > higher order components parent and child 2`] = `
 `;
 
 exports[`basics > higher order components parent and child 3`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -379,7 +379,7 @@ exports[`basics > higher order components parent and child 3`] = `
 `;
 
 exports[`basics > higher order components parent and child 4`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -392,7 +392,7 @@ exports[`basics > higher order components parent and child 4`] = `
 `;
 
 exports[`basics > list of two sub components inside other nodes 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, createComponent, withKey } = helpers;
@@ -420,7 +420,7 @@ exports[`basics > list of two sub components inside other nodes 1`] = `
 `;
 
 exports[`basics > list of two sub components inside other nodes 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -433,7 +433,7 @@ exports[`basics > list of two sub components inside other nodes 2`] = `
 `;
 
 exports[`basics > parent, child and grandchild 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -446,7 +446,7 @@ exports[`basics > parent, child and grandchild 1`] = `
 `;
 
 exports[`basics > parent, child and grandchild 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -459,7 +459,7 @@ exports[`basics > parent, child and grandchild 2`] = `
 `;
 
 exports[`basics > providePlugins in a root with a custom plugin manager extends it 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -474,7 +474,7 @@ exports[`basics > providePlugins in a root with a custom plugin manager extends 
 `;
 
 exports[`basics > reconciliation alg is not confused in some specific situation 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -493,7 +493,7 @@ exports[`basics > reconciliation alg is not confused in some specific situation 
 `;
 
 exports[`basics > reconciliation alg is not confused in some specific situation 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -506,7 +506,7 @@ exports[`basics > reconciliation alg is not confused in some specific situation 
 `;
 
 exports[`basics > rerendering a widget with a sub widget 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -519,7 +519,7 @@ exports[`basics > rerendering a widget with a sub widget 1`] = `
 `;
 
 exports[`basics > same t-keys in two different places 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -539,7 +539,7 @@ exports[`basics > same t-keys in two different places 1`] = `
 `;
 
 exports[`basics > same t-keys in two different places 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -554,7 +554,7 @@ exports[`basics > same t-keys in two different places 2`] = `
 `;
 
 exports[`basics > simple component with a dynamic text 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -569,7 +569,7 @@ exports[`basics > simple component with a dynamic text 1`] = `
 `;
 
 exports[`basics > simple component, proxy 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -584,7 +584,7 @@ exports[`basics > simple component, proxy 1`] = `
 `;
 
 exports[`basics > sub components between t-ifs 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -612,7 +612,7 @@ exports[`basics > sub components between t-ifs 1`] = `
 `;
 
 exports[`basics > t-elif works with t-component 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -634,7 +634,7 @@ exports[`basics > t-elif works with t-component 1`] = `
 `;
 
 exports[`basics > t-else works with t-component 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -656,7 +656,7 @@ exports[`basics > t-else works with t-component 1`] = `
 `;
 
 exports[`basics > t-if works with t-component 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -675,7 +675,7 @@ exports[`basics > t-if works with t-component 1`] = `
 `;
 
 exports[`basics > t-if works with t-component 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -688,7 +688,7 @@ exports[`basics > t-if works with t-component 2`] = `
 `;
 
 exports[`basics > t-key on a component with t-if, and a sibling component 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -710,7 +710,7 @@ exports[`basics > t-key on a component with t-if, and a sibling component 1`] = 
 `;
 
 exports[`basics > text after a conditional component 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent, safeOutput } = helpers;
@@ -730,7 +730,7 @@ exports[`basics > text after a conditional component 1`] = `
 `;
 
 exports[`basics > text after a conditional component 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -743,7 +743,7 @@ exports[`basics > text after a conditional component 2`] = `
 `;
 
 exports[`basics > three level of components with collapsing root nodes 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -756,7 +756,7 @@ exports[`basics > three level of components with collapsing root nodes 1`] = `
 `;
 
 exports[`basics > two child components 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -772,7 +772,7 @@ exports[`basics > two child components 1`] = `
 `;
 
 exports[`basics > update props of component without concrete own node 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -789,7 +789,7 @@ exports[`basics > update props of component without concrete own node 1`] = `
 `;
 
 exports[`basics > update props of component without concrete own node 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -803,7 +803,7 @@ exports[`basics > update props of component without concrete own node 2`] = `
 `;
 
 exports[`basics > update props of component without concrete own node 3`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -819,7 +819,7 @@ exports[`basics > update props of component without concrete own node 3`] = `
 `;
 
 exports[`basics > updating a component with t-foreach as root 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, safeOutput, withKey } = helpers;
@@ -839,7 +839,7 @@ exports[`basics > updating a component with t-foreach as root 1`] = `
 `;
 
 exports[`basics > updating widget immediately 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -852,7 +852,7 @@ exports[`basics > updating widget immediately 1`] = `
 `;
 
 exports[`basics > updating widget immediately 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -869,7 +869,7 @@ exports[`basics > updating widget immediately 2`] = `
 `;
 
 exports[`basics > widget after a t-foreach 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, withKey, createComponent } = helpers;
@@ -895,7 +895,7 @@ exports[`basics > widget after a t-foreach 1`] = `
 `;
 
 exports[`basics > zero or one child components 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -912,7 +912,7 @@ exports[`basics > zero or one child components 1`] = `
 `;
 
 exports[`mount targets > can mount a component (with position='first-child') 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -925,7 +925,7 @@ exports[`mount targets > can mount a component (with position='first-child') 1`]
 `;
 
 exports[`support svg components > add proper namespace to svg 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -941,7 +941,7 @@ exports[`support svg components > add proper namespace to svg 1`] = `
 `;
 
 exports[`support svg components > add proper namespace to svg 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -954,7 +954,7 @@ exports[`support svg components > add proper namespace to svg 2`] = `
 `;
 
 exports[`t-out in components > can render list of t-out  1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, safeOutput, withKey } = helpers;
@@ -977,7 +977,7 @@ exports[`t-out in components > can render list of t-out  1`] = `
 `;
 
 exports[`t-out in components > can switch the contents of two t-out repeatedly 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -991,7 +991,7 @@ exports[`t-out in components > can switch the contents of two t-out repeatedly 1
 `;
 
 exports[`t-out in components > t-out and updating falsy values,  1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;

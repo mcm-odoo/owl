@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`loading templates > addTemplates does not modify its xml document in place 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -16,7 +16,7 @@ exports[`loading templates > addTemplates does not modify its xml document in pl
 `;
 
 exports[`loading templates > can initialize qweb with a string 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -29,7 +29,7 @@ exports[`loading templates > can initialize qweb with a string 1`] = `
 `;
 
 exports[`loading templates > can initialize qweb with an XMLDocument 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -42,7 +42,7 @@ exports[`loading templates > can initialize qweb with an XMLDocument 1`] = `
 `;
 
 exports[`loading templates > can load a few templates from a xml string 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callTemplate } = helpers;
@@ -50,14 +50,14 @@ exports[`loading templates > can load a few templates from a xml string 1`] = `
   let block1 = createBlock(\`<ul><block-child-0/></ul>\`);
   
   return function template(ctx, node, key = "") {
-    const b2 = callTemplate(\`items\`, this, app, ctx, node, key + \`__1\`);
+    const b2 = callTemplate(\`items\`, this, templates, ctx, node, key + \`__1\`);
     return block1([], [b2]);
   }
 }"
 `;
 
 exports[`loading templates > can load a few templates from a xml string 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -73,7 +73,7 @@ exports[`loading templates > can load a few templates from a xml string 2`] = `
 `;
 
 exports[`loading templates > can load a few templates from an XMLDocument 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callTemplate } = helpers;
@@ -81,14 +81,14 @@ exports[`loading templates > can load a few templates from an XMLDocument 1`] = 
   let block1 = createBlock(\`<ul><block-child-0/></ul>\`);
   
   return function template(ctx, node, key = "") {
-    const b2 = callTemplate(\`items\`, this, app, ctx, node, key + \`__1\`);
+    const b2 = callTemplate(\`items\`, this, templates, ctx, node, key + \`__1\`);
     return block1([], [b2]);
   }
 }"
 `;
 
 exports[`loading templates > can load a few templates from an XMLDocument 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -104,7 +104,7 @@ exports[`loading templates > can load a few templates from an XMLDocument 2`] = 
 `;
 
 exports[`loading templates > getTemplate: element returned (2) 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -117,7 +117,7 @@ exports[`loading templates > getTemplate: element returned (2) 1`] = `
 `;
 
 exports[`loading templates > getTemplate: element returned 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -130,7 +130,7 @@ exports[`loading templates > getTemplate: element returned 1`] = `
 `;
 
 exports[`loading templates > getTemplate: template string returned 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -143,7 +143,7 @@ exports[`loading templates > getTemplate: template string returned 1`] = `
 `;
 
 exports[`loading templates > getTemplate: undefined returned 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -156,7 +156,7 @@ exports[`loading templates > getTemplate: undefined returned 1`] = `
 `;
 
 exports[`template set without components > renders a template whose components are not rendered 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -175,7 +175,7 @@ exports[`template set without components > renders a template whose components a
 `;
 
 exports[`template set without components > throws a clear error when rendering a component 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -191,7 +191,7 @@ exports[`template set without components > throws a clear error when rendering a
 `;
 
 exports[`template set without components > throws a clear error when rendering a signal prop 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { toSignal, createComponent } = helpers;
@@ -207,7 +207,7 @@ exports[`template set without components > throws a clear error when rendering a
 `;
 
 exports[`template set without components > throws a clear error when rendering a slot 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callSlot } = helpers;

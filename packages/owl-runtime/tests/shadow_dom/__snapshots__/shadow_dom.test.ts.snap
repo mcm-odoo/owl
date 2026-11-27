@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`shadow_dom > can bind event handler 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callHandler } = helpers;
@@ -17,7 +17,7 @@ exports[`shadow_dom > can bind event handler 1`] = `
 `;
 
 exports[`shadow_dom > can mount app 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -30,7 +30,7 @@ exports[`shadow_dom > can mount app 1`] = `
 `;
 
 exports[`shadow_dom > can mount app in closed shadow dom 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -43,7 +43,7 @@ exports[`shadow_dom > can mount app in closed shadow dom 1`] = `
 `;
 
 exports[`shadow_dom > can mount app inside a separate HTML document 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -56,7 +56,7 @@ exports[`shadow_dom > can mount app inside a separate HTML document 1`] = `
 `;
 
 exports[`shadow_dom > can mount app inside a shadow child element 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -69,7 +69,7 @@ exports[`shadow_dom > can mount app inside a shadow child element 1`] = `
 `;
 
 exports[`shadow_dom > can mount app inside an element in a shadow root inside an iframe 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -82,7 +82,7 @@ exports[`shadow_dom > can mount app inside an element in a shadow root inside an
 `;
 
 exports[`shadow_dom > ref 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createRef } = helpers;

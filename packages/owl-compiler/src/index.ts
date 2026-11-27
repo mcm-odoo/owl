@@ -10,8 +10,8 @@ export type CustomDirectives = Record<
   (node: Element, value: string, modifier: string[]) => void
 >;
 
-// `any` for the app (TemplateSet): the compiler only passes it through to the
-// helpers; its concrete shape lives in `@odoo/owl-runtime` and the compiler
+// `any` for the template set: the compiler only passes it through to the
+// helpers (for t-call); its concrete shape lives in `@odoo/owl-runtime` and the compiler
 // never inspects it. Keeping it as an opaque named type alias would cause name
 // collisions when owl-runtime re-exports its own `TemplateSet` class through
 // its bundled d.ts. `bdom` and `helpers` are described by the template
@@ -19,7 +19,7 @@ export type CustomDirectives = Record<
 export type Template = (context: any, vnode: any, key?: string) => any;
 
 export type TemplateFunction = (
-  app: any,
+  templates: any,
   bdom: TemplateBlockDom,
   helpers: TemplateHelpers & ComponentHelpers
 ) => Template;
@@ -44,12 +44,12 @@ export function compile(
   const code = codeGenerator.generateCode();
   // template function
   try {
-    return new Function("app, bdom, helpers", code) as TemplateFunction;
+    return new Function("templates, bdom, helpers", code) as TemplateFunction;
   } catch (originalError: any) {
     const { name } = options;
     const nameStr = name ? `template "${name}"` : "anonymous template";
     const err = new OwlError(
-      `Failed to compile ${nameStr}: ${originalError.message}\n\ngenerated code:\nfunction(app, bdom, helpers) {\n${code}\n}`
+      `Failed to compile ${nameStr}: ${originalError.message}\n\ngenerated code:\nfunction(templates, bdom, helpers) {\n${code}\n}`
     );
     err.cause = originalError;
     throw err;

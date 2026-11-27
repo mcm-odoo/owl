@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`props validation > additional props are allowed (array) 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -14,7 +14,7 @@ exports[`props validation > additional props are allowed (array) 1`] = `
 `;
 
 exports[`props validation > can use custom class as type 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -27,7 +27,7 @@ exports[`props validation > can use custom class as type 1`] = `
 `;
 
 exports[`props validation > can use custom class as type 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -39,7 +39,7 @@ exports[`props validation > can use custom class as type 2`] = `
 `;
 
 exports[`props validation > can validate through slots 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent, markRaw } = helpers;
@@ -57,7 +57,7 @@ exports[`props validation > can validate through slots 1`] = `
 `;
 
 exports[`props validation > default values are applied before validating props at update 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -73,7 +73,7 @@ exports[`props validation > default values are applied before validating props a
 `;
 
 exports[`props validation > default values are applied before validating props at update 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -88,7 +88,7 @@ exports[`props validation > default values are applied before validating props a
 `;
 
 exports[`props validation > props are validated in dev mode (code snapshot) 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -104,7 +104,7 @@ exports[`props validation > props are validated in dev mode (code snapshot) 1`] 
 `;
 
 exports[`props validation > validate simple types 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -120,7 +120,7 @@ exports[`props validation > validate simple types 1`] = `
 `;
 
 exports[`props validation > validation is only done in dev mode 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -136,7 +136,7 @@ exports[`props validation > validation is only done in dev mode 1`] = `
 `;
 
 exports[`schema defaults > factory defaults are resolved once per component instance 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -154,7 +154,7 @@ exports[`schema defaults > factory defaults are resolved once per component inst
 `;
 
 exports[`schema defaults > factory defaults are resolved once per component instance 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -169,7 +169,7 @@ exports[`schema defaults > factory defaults are resolved once per component inst
 `;
 
 exports[`schema defaults > falsy default values are applied 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -189,7 +189,7 @@ exports[`schema defaults > falsy default values are applied 1`] = `
 `;
 
 exports[`schema defaults > schema defaults work next to optional props 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -205,7 +205,7 @@ exports[`schema defaults > schema defaults work next to optional props 1`] = `
 `;
 
 exports[`schema.toShape() > a composed (t.and) schema drives props via toShape() 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -218,7 +218,7 @@ exports[`schema.toShape() > a composed (t.and) schema drives props via toShape()
 `;
 
 exports[`schema.toShape() > a composed (t.and) schema drives props via toShape() 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -231,7 +231,7 @@ exports[`schema.toShape() > a composed (t.and) schema drives props via toShape()
 `;
 
 exports[`schema.toShape() > a schema's props reports genuinely missing required keys 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -247,7 +247,7 @@ exports[`schema.toShape() > a schema's props reports genuinely missing required 
 `;
 
 exports[`schema.toShape() > a schema's props still rejects invalid values 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -263,7 +263,7 @@ exports[`schema.toShape() > a schema's props still rejects invalid values 1`] = 
 `;
 
 exports[`schema.toShape() > an object schema drives props via toShape() 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -279,7 +279,7 @@ exports[`schema.toShape() > an object schema drives props via toShape() 1`] = `
 `;
 
 exports[`schema.toShape() > an object schema drives props via toShape() 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -294,7 +294,7 @@ exports[`schema.toShape() > an object schema drives props via toShape() 2`] = `
 `;
 
 exports[`schema.toShape() > applyDefaults completes nested defaults from the same schema 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;

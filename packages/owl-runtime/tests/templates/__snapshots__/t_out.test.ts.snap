@@ -31,7 +31,7 @@ exports[`t-esc is deprecated > t-out is actually called in t-esc's place 1`] = `
 `;
 
 exports[`t-out > literal 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -46,7 +46,7 @@ exports[`t-out > literal 1`] = `
 `;
 
 exports[`t-out > literal, no outside html element 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -58,7 +58,7 @@ exports[`t-out > literal, no outside html element 1`] = `
 `;
 
 exports[`t-out > multiple calls to t-out 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { zero, callTemplate } = helpers;
@@ -72,14 +72,14 @@ exports[`t-out > multiple calls to t-out 1`] = `
   
   return function template(ctx, node, key = "") {
     const lazyBlock1 = callBody1.bind(this, ctx);
-    const b2 = callTemplate(\`sub\`, this, app, Object.assign(Object.create(ctx), {[zero]: lazyBlock1}), node, key + \`__1\`);
+    const b2 = callTemplate(\`sub\`, this, templates, Object.assign(Object.create(ctx), {[zero]: lazyBlock1}), node, key + \`__1\`);
     return block1([], [b2]);
   }
 }"
 `;
 
 exports[`t-out > multiple calls to t-out 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { zero } = helpers;
@@ -95,7 +95,7 @@ exports[`t-out > multiple calls to t-out 2`] = `
 `;
 
 exports[`t-out > not escaping 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -110,7 +110,7 @@ exports[`t-out > not escaping 1`] = `
 `;
 
 exports[`t-out > number literal 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -125,7 +125,7 @@ exports[`t-out > number literal 1`] = `
 `;
 
 exports[`t-out > t-out 0 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { zero, callTemplate } = helpers;
@@ -139,14 +139,14 @@ exports[`t-out > t-out 0 1`] = `
   
   return function template(ctx, node, key = "") {
     const lazyBlock1 = callBody1.bind(this, ctx);
-    const b2 = callTemplate(\`_basic-callee\`, this, app, Object.assign(Object.create(ctx), {[zero]: lazyBlock1}), node, key + \`__1\`);
+    const b2 = callTemplate(\`_basic-callee\`, this, templates, Object.assign(Object.create(ctx), {[zero]: lazyBlock1}), node, key + \`__1\`);
     return block1([], [b2]);
   }
 }"
 `;
 
 exports[`t-out > t-out 0 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { zero } = helpers;
@@ -161,7 +161,7 @@ exports[`t-out > t-out 0 2`] = `
 `;
 
 exports[`t-out > t-out and another sibling node 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -176,7 +176,7 @@ exports[`t-out > t-out and another sibling node 1`] = `
 `;
 
 exports[`t-out > t-out bdom 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { LazyValue, withDefault, safeOutput } = helpers;
@@ -198,7 +198,7 @@ exports[`t-out > t-out bdom 1`] = `
 `;
 
 exports[`t-out > t-out escaped 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -213,7 +213,7 @@ exports[`t-out > t-out escaped 1`] = `
 `;
 
 exports[`t-out > t-out markedup 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -228,7 +228,7 @@ exports[`t-out > t-out markedup 1`] = `
 `;
 
 exports[`t-out > t-out on a node with a body, as a default 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -244,7 +244,7 @@ exports[`t-out > t-out on a node with a body, as a default 1`] = `
 `;
 
 exports[`t-out > t-out on a node with a dom node in body, as a default 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -261,7 +261,7 @@ exports[`t-out > t-out on a node with a dom node in body, as a default 1`] = `
 `;
 
 exports[`t-out > t-out switch escaped 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -276,7 +276,7 @@ exports[`t-out > t-out switch escaped 1`] = `
 `;
 
 exports[`t-out > t-out switch escaped on markup 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -291,7 +291,7 @@ exports[`t-out > t-out switch escaped on markup 1`] = `
 `;
 
 exports[`t-out > t-out switch markup 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -306,7 +306,7 @@ exports[`t-out > t-out switch markup 1`] = `
 `;
 
 exports[`t-out > t-out switch markup on bdom 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { LazyValue, withDefault, safeOutput } = helpers;
@@ -337,7 +337,7 @@ exports[`t-out > t-out switch markup on bdom 1`] = `
 `;
 
 exports[`t-out > t-out switch markup on escaped 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -352,7 +352,7 @@ exports[`t-out > t-out switch markup on escaped 1`] = `
 `;
 
 exports[`t-out > t-out with a <t/> in body 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -364,7 +364,7 @@ exports[`t-out > t-out with a <t/> in body 1`] = `
 `;
 
 exports[`t-out > t-out with arbitrary object 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -379,7 +379,7 @@ exports[`t-out > t-out with arbitrary object 1`] = `
 `;
 
 exports[`t-out > t-out with arbitrary object 2 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -394,7 +394,7 @@ exports[`t-out > t-out with arbitrary object 2 1`] = `
 `;
 
 exports[`t-out > t-out with comment 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -409,7 +409,7 @@ exports[`t-out > t-out with comment 1`] = `
 `;
 
 exports[`t-out > t-out with just a t-set t-value in body 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -421,7 +421,7 @@ exports[`t-out > t-out with just a t-set t-value in body 1`] = `
 `;
 
 exports[`t-out > t-out with the 0 number 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -433,7 +433,7 @@ exports[`t-out > t-out with the 0 number 1`] = `
 `;
 
 exports[`t-out > t-out with the 0 number, in a p 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -448,7 +448,7 @@ exports[`t-out > t-out with the 0 number, in a p 1`] = `
 `;
 
 exports[`t-out > top level t-out with null 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -460,7 +460,7 @@ exports[`t-out > top level t-out with null 1`] = `
 `;
 
 exports[`t-out > top level t-out with undefined 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -472,7 +472,7 @@ exports[`t-out > top level t-out with undefined 1`] = `
 `;
 
 exports[`t-out > variable 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -487,7 +487,7 @@ exports[`t-out > variable 1`] = `
 `;
 
 exports[`t-out > with a String class 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -502,7 +502,7 @@ exports[`t-out > with a String class 1`] = `
 `;
 
 exports[`t-out > with an extended String class 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;

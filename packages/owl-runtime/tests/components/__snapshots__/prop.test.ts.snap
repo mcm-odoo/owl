@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`basics > can be mixed with useProps() 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -17,7 +17,7 @@ exports[`basics > can be mixed with useProps() 1`] = `
 `;
 
 exports[`basics > can be mixed with useProps() 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -33,7 +33,7 @@ exports[`basics > can be mixed with useProps() 2`] = `
 `;
 
 exports[`basics > default value when prop is absent 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -49,7 +49,7 @@ exports[`basics > default value when prop is absent 1`] = `
 `;
 
 exports[`basics > default value when prop is absent 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -64,7 +64,7 @@ exports[`basics > default value when prop is absent 2`] = `
 `;
 
 exports[`basics > multiple prop fields in same component 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -80,7 +80,7 @@ exports[`basics > multiple prop fields in same component 1`] = `
 `;
 
 exports[`basics > multiple prop fields in same component 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -96,7 +96,7 @@ exports[`basics > multiple prop fields in same component 2`] = `
 `;
 
 exports[`basics > prop accepts instanceOf type 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -112,7 +112,7 @@ exports[`basics > prop accepts instanceOf type 1`] = `
 `;
 
 exports[`basics > prop accepts instanceOf type 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -127,7 +127,7 @@ exports[`basics > prop accepts instanceOf type 2`] = `
 `;
 
 exports[`basics > provided value takes precedence over default 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -143,7 +143,7 @@ exports[`basics > provided value takes precedence over default 1`] = `
 `;
 
 exports[`basics > provided value takes precedence over default 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -158,7 +158,7 @@ exports[`basics > provided value takes precedence over default 2`] = `
 `;
 
 exports[`basics > reads the named prop 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -174,7 +174,7 @@ exports[`basics > reads the named prop 1`] = `
 `;
 
 exports[`basics > reads the named prop 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -189,7 +189,7 @@ exports[`basics > reads the named prop 2`] = `
 `;
 
 exports[`basics > type argument is optional (accepts any value) 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -205,7 +205,7 @@ exports[`basics > type argument is optional (accepts any value) 1`] = `
 `;
 
 exports[`basics > type argument is optional (accepts any value) 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -220,7 +220,7 @@ exports[`basics > type argument is optional (accepts any value) 2`] = `
 `;
 
 exports[`dev mode > default value skips validation when prop is absent 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -235,7 +235,7 @@ exports[`dev mode > default value skips validation when prop is absent 1`] = `
 `;
 
 exports[`dev mode > does not throw if signal reference is stable across re-renders 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -248,7 +248,7 @@ exports[`dev mode > does not throw if signal reference is stable across re-rende
 `;
 
 exports[`dev mode > does not throw if signal reference is stable across re-renders 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -261,7 +261,7 @@ exports[`dev mode > does not throw if signal reference is stable across re-rende
 `;
 
 exports[`dev mode > omitted prop with default does not trigger static-prop error on re-render 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -274,7 +274,7 @@ exports[`dev mode > omitted prop with default does not trigger static-prop error
 `;
 
 exports[`dev mode > omitted prop with default does not trigger static-prop error on re-render 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -289,7 +289,7 @@ exports[`dev mode > omitted prop with default does not trigger static-prop error
 `;
 
 exports[`dev mode > skips immutability check in non-dev mode 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -302,7 +302,7 @@ exports[`dev mode > skips immutability check in non-dev mode 1`] = `
 `;
 
 exports[`dev mode > skips immutability check in non-dev mode 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -315,7 +315,7 @@ exports[`dev mode > skips immutability check in non-dev mode 2`] = `
 `;
 
 exports[`dev mode > skips validation in non-dev mode 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -328,7 +328,7 @@ exports[`dev mode > skips validation in non-dev mode 1`] = `
 `;
 
 exports[`dev mode > throws if prop reference changes on re-render 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -341,7 +341,7 @@ exports[`dev mode > throws if prop reference changes on re-render 1`] = `
 `;
 
 exports[`dev mode > throws if prop reference changes on re-render 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -354,7 +354,7 @@ exports[`dev mode > throws if prop reference changes on re-render 2`] = `
 `;
 
 exports[`dev mode > validates initial type on mount (child component) 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;

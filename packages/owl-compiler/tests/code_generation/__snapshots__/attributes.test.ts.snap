@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`attributes > changing a class with t-att-class (preexisting class 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -15,7 +15,7 @@ exports[`attributes > changing a class with t-att-class (preexisting class 1`] =
 `;
 
 exports[`attributes > changing a class with t-att-class 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -29,7 +29,7 @@ exports[`attributes > changing a class with t-att-class 1`] = `
 `;
 
 exports[`attributes > class and t-att-class should combine together 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -43,7 +43,7 @@ exports[`attributes > class and t-att-class should combine together 1`] = `
 `;
 
 exports[`attributes > class and t-attf-class with ternary operation 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -57,7 +57,7 @@ exports[`attributes > class and t-attf-class with ternary operation 1`] = `
 `;
 
 exports[`attributes > dynamic attribute with a dash 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -71,7 +71,7 @@ exports[`attributes > dynamic attribute with a dash 1`] = `
 `;
 
 exports[`attributes > dynamic attributes 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -85,7 +85,7 @@ exports[`attributes > dynamic attributes 1`] = `
 `;
 
 exports[`attributes > dynamic attributes with backticks 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -99,7 +99,7 @@ exports[`attributes > dynamic attributes with backticks 1`] = `
 `;
 
 exports[`attributes > dynamic class attribute 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -113,7 +113,7 @@ exports[`attributes > dynamic class attribute 1`] = `
 `;
 
 exports[`attributes > dynamic class attribute evaluating to 0 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -127,7 +127,7 @@ exports[`attributes > dynamic class attribute evaluating to 0 1`] = `
 `;
 
 exports[`attributes > dynamic formatted attributes with a dash 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -141,7 +141,7 @@ exports[`attributes > dynamic formatted attributes with a dash 1`] = `
 `;
 
 exports[`attributes > dynamic undefined generic attribute 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -155,7 +155,7 @@ exports[`attributes > dynamic undefined generic attribute 1`] = `
 `;
 
 exports[`attributes > fixed variable 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -169,7 +169,7 @@ exports[`attributes > fixed variable 1`] = `
 `;
 
 exports[`attributes > format expression 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -183,7 +183,7 @@ exports[`attributes > format expression 1`] = `
 `;
 
 exports[`attributes > format literal 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -197,7 +197,7 @@ exports[`attributes > format literal 1`] = `
 `;
 
 exports[`attributes > format multiple 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -211,7 +211,7 @@ exports[`attributes > format multiple 1`] = `
 `;
 
 exports[`attributes > format value 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -225,7 +225,7 @@ exports[`attributes > format value 1`] = `
 `;
 
 exports[`attributes > from object variables set previously 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -241,7 +241,7 @@ exports[`attributes > from object variables set previously 1`] = `
 `;
 
 exports[`attributes > from variables set previously (no external node) 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -257,7 +257,7 @@ exports[`attributes > from variables set previously (no external node) 1`] = `
 `;
 
 exports[`attributes > from variables set previously 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -273,7 +273,7 @@ exports[`attributes > from variables set previously 1`] = `
 `;
 
 exports[`attributes > static attributes 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -286,7 +286,7 @@ exports[`attributes > static attributes 1`] = `
 `;
 
 exports[`attributes > static attributes on void elements 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -299,7 +299,7 @@ exports[`attributes > static attributes on void elements 1`] = `
 `;
 
 exports[`attributes > static attributes with backslash or backtick 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -312,7 +312,7 @@ exports[`attributes > static attributes with backslash or backtick 1`] = `
 `;
 
 exports[`attributes > static attributes with backticks 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -325,7 +325,7 @@ exports[`attributes > static attributes with backticks 1`] = `
 `;
 
 exports[`attributes > static attributes with dashes 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -338,7 +338,7 @@ exports[`attributes > static attributes with dashes 1`] = `
 `;
 
 exports[`attributes > string interpolation, alternate syntax 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -352,7 +352,7 @@ exports[`attributes > string interpolation, alternate syntax 1`] = `
 `;
 
 exports[`attributes > t-att-class and class should combine together 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -366,7 +366,7 @@ exports[`attributes > t-att-class and class should combine together 1`] = `
 `;
 
 exports[`attributes > t-att-class with multiple classes 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -380,7 +380,7 @@ exports[`attributes > t-att-class with multiple classes 1`] = `
 `;
 
 exports[`attributes > t-att-class with multiple classes 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -394,7 +394,7 @@ exports[`attributes > t-att-class with multiple classes 2`] = `
 `;
 
 exports[`attributes > t-att-class with multiple classes 3`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -408,7 +408,7 @@ exports[`attributes > t-att-class with multiple classes 3`] = `
 `;
 
 exports[`attributes > t-att-class with multiple classes, some of which are duplicate 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -422,7 +422,7 @@ exports[`attributes > t-att-class with multiple classes, some of which are dupli
 `;
 
 exports[`attributes > t-att-class with object 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -436,7 +436,7 @@ exports[`attributes > t-att-class with object 1`] = `
 `;
 
 exports[`attributes > t-att-class with object 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -450,7 +450,7 @@ exports[`attributes > t-att-class with object 2`] = `
 `;
 
 exports[`attributes > t-att-class with object 3`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -464,7 +464,7 @@ exports[`attributes > t-att-class with object 3`] = `
 `;
 
 exports[`attributes > t-attf-class 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -478,7 +478,7 @@ exports[`attributes > t-attf-class 1`] = `
 `;
 
 exports[`attributes > t-attf-class should combine with class 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -492,7 +492,7 @@ exports[`attributes > t-attf-class should combine with class 1`] = `
 `;
 
 exports[`attributes > t-attf-class with multiple classes 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -506,7 +506,7 @@ exports[`attributes > t-attf-class with multiple classes 1`] = `
 `;
 
 exports[`attributes > t-attf-class with multiple classes separated by multiple spaces 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -520,7 +520,7 @@ exports[`attributes > t-attf-class with multiple classes separated by multiple s
 `;
 
 exports[`attributes > tuple literal 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -534,7 +534,7 @@ exports[`attributes > tuple literal 1`] = `
 `;
 
 exports[`attributes > tuple variable 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -548,7 +548,7 @@ exports[`attributes > tuple variable 1`] = `
 `;
 
 exports[`attributes > two classes 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -561,7 +561,7 @@ exports[`attributes > two classes 1`] = `
 `;
 
 exports[`attributes > two dynamic attributes 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -576,7 +576,7 @@ exports[`attributes > two dynamic attributes 1`] = `
 `;
 
 exports[`attributes > updating classes (with obj notation) 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -590,7 +590,7 @@ exports[`attributes > updating classes (with obj notation) 1`] = `
 `;
 
 exports[`attributes > various combinations of class, t-att-class, and t-att 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -604,7 +604,7 @@ exports[`attributes > various combinations of class, t-att-class, and t-att 1`] 
 `;
 
 exports[`attributes > various combinations of class, t-att-class, and t-att 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -619,7 +619,7 @@ exports[`attributes > various combinations of class, t-att-class, and t-att 2`] 
 `;
 
 exports[`attributes > various combinations of class, t-att-class, and t-att 3`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -634,7 +634,7 @@ exports[`attributes > various combinations of class, t-att-class, and t-att 3`] 
 `;
 
 exports[`attributes > various combinations of class, t-att-class, and t-att 4`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -649,7 +649,7 @@ exports[`attributes > various combinations of class, t-att-class, and t-att 4`] 
 `;
 
 exports[`attributes > various combinations of class, t-att-class, and t-att 5`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -664,7 +664,7 @@ exports[`attributes > various combinations of class, t-att-class, and t-att 5`] 
 `;
 
 exports[`attributes > various combinations of class, t-att-class, and t-att 6`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -678,7 +678,7 @@ exports[`attributes > various combinations of class, t-att-class, and t-att 6`] 
 `;
 
 exports[`attributes > various combinations of class, t-att-class, and t-att 7`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -692,7 +692,7 @@ exports[`attributes > various combinations of class, t-att-class, and t-att 7`] 
 `;
 
 exports[`attributes > various combinations of class, t-att-class, and t-att 8`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -707,7 +707,7 @@ exports[`attributes > various combinations of class, t-att-class, and t-att 8`] 
 `;
 
 exports[`attributes > various escapes 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -723,7 +723,7 @@ exports[`attributes > various escapes 1`] = `
 `;
 
 exports[`attributes > various escapes 2 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   

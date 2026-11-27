@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`event handling > Invalid handler throws an error 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callHandler } = helpers;
@@ -17,7 +17,7 @@ exports[`event handling > Invalid handler throws an error 1`] = `
 `;
 
 exports[`event handling > handler is not called if component is destroyed 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callHandler } = helpers;
@@ -33,7 +33,7 @@ exports[`event handling > handler is not called if component is destroyed 1`] = 
 `;
 
 exports[`event handling > handler receive the event as argument 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callHandler, createComponent, safeOutput } = helpers;
@@ -52,7 +52,7 @@ exports[`event handling > handler receive the event as argument 1`] = `
 `;
 
 exports[`event handling > handler receive the event as argument 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -65,7 +65,7 @@ exports[`event handling > handler receive the event as argument 2`] = `
 `;
 
 exports[`event handling > handler works when app is mounted in an iframe 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callHandler } = helpers;
@@ -81,7 +81,7 @@ exports[`event handling > handler works when app is mounted in an iframe 1`] = `
 `;
 
 exports[`event handling > input blur event is not called if component is destroyed 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -100,7 +100,7 @@ exports[`event handling > input blur event is not called if component is destroy
 `;
 
 exports[`event handling > input blur event is not called if component is destroyed 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callHandler } = helpers;
@@ -116,7 +116,7 @@ exports[`event handling > input blur event is not called if component is destroy
 `;
 
 exports[`event handling > objects from scope are properly captured by t-on 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, withKey } = helpers;
@@ -142,7 +142,7 @@ exports[`event handling > objects from scope are properly captured by t-on 1`] =
 `;
 
 exports[`event handling > support for callable expression in event handler 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, callHandler } = helpers;
@@ -159,7 +159,7 @@ exports[`event handling > support for callable expression in event handler 1`] =
 `;
 
 exports[`event handling > t-on with handler bound to dynamic argument on a t-foreach 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, withKey } = helpers;
@@ -185,7 +185,7 @@ exports[`event handling > t-on with handler bound to dynamic argument on a t-for
 `;
 
 exports[`event handling > unnamed slot should call the event only once 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { markRaw, createComponent, createCatcher, callHandler } = helpers;
@@ -212,7 +212,7 @@ exports[`event handling > unnamed slot should call the event only once 1`] = `
 `;
 
 exports[`event handling > unnamed slot should call the event only once 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callSlot } = helpers;

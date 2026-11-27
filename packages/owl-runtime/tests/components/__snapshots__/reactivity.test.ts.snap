@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`components and computed > Child is not rerender when reactive is computed 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, createComponent } = helpers;
@@ -16,7 +16,7 @@ exports[`components and computed > Child is not rerender when reactive is comput
 `;
 
 exports[`components and computed > Child is not rerender when reactive is computed 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -27,7 +27,7 @@ exports[`components and computed > Child is not rerender when reactive is comput
 `;
 
 exports[`components and computed > simple component and computed value 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -41,7 +41,7 @@ exports[`components and computed > simple component and computed value 1`] = `
 `;
 
 exports[`computed with equals in components > a recompute with a shallow-equal result does not re-render 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, prepareList, withKey } = helpers;
@@ -67,7 +67,7 @@ exports[`computed with equals in components > a recompute with a shallow-equal r
 `;
 
 exports[`reactive cleanup on component destruction > benchmark-like scenario: signal.Array rows with computed isSelected 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, createComponent, withKey } = helpers;
@@ -91,7 +91,7 @@ exports[`reactive cleanup on component destruction > benchmark-like scenario: si
 `;
 
 exports[`reactive cleanup on component destruction > benchmark-like scenario: signal.Array rows with computed isSelected 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -108,7 +108,7 @@ exports[`reactive cleanup on component destruction > benchmark-like scenario: si
 `;
 
 exports[`reactive cleanup on component destruction > destroying a component with computed cleans up signal observers 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -127,7 +127,7 @@ exports[`reactive cleanup on component destruction > destroying a component with
 `;
 
 exports[`reactive cleanup on component destruction > destroying a component with computed cleans up signal observers 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -142,7 +142,7 @@ exports[`reactive cleanup on component destruction > destroying a component with
 `;
 
 exports[`reactive cleanup on component destruction > destroying multiple children with computeds cleans up all signal observers 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, createComponent, withKey } = helpers;
@@ -166,7 +166,7 @@ exports[`reactive cleanup on component destruction > destroying multiple childre
 `;
 
 exports[`reactive cleanup on component destruction > destroying multiple children with computeds cleans up all signal observers 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -181,7 +181,7 @@ exports[`reactive cleanup on component destruction > destroying multiple childre
 `;
 
 exports[`reactivity in lifecycle > Child component doesn't render when state they depend on changes but their parent is about to unmount them 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -198,7 +198,7 @@ exports[`reactivity in lifecycle > Child component doesn't render when state the
 `;
 
 exports[`reactivity in lifecycle > Child component doesn't render when state they depend on changes but their parent is about to unmount them 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -210,7 +210,7 @@ exports[`reactivity in lifecycle > Child component doesn't render when state the
 `;
 
 exports[`reactivity in lifecycle > Component is automatically subscribed to proxy object received as prop 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -225,7 +225,7 @@ exports[`reactivity in lifecycle > Component is automatically subscribed to prox
 `;
 
 exports[`reactivity in lifecycle > Component is automatically subscribed to proxy object received as prop 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -241,7 +241,7 @@ exports[`reactivity in lifecycle > Component is automatically subscribed to prox
 `;
 
 exports[`reactivity in lifecycle > an external proxy object should be tracked 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, createComponent } = helpers;
@@ -258,7 +258,7 @@ exports[`reactivity in lifecycle > an external proxy object should be tracked 1`
 `;
 
 exports[`reactivity in lifecycle > an external proxy object should be tracked 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -273,7 +273,7 @@ exports[`reactivity in lifecycle > an external proxy object should be tracked 2`
 `;
 
 exports[`reactivity in lifecycle > can use a state hook 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -288,7 +288,7 @@ exports[`reactivity in lifecycle > can use a state hook 1`] = `
 `;
 
 exports[`reactivity in lifecycle > can use a state hook 2 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -305,7 +305,7 @@ exports[`reactivity in lifecycle > can use a state hook 2 1`] = `
 `;
 
 exports[`reactivity in lifecycle > can use a state hook on Map 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -320,7 +320,7 @@ exports[`reactivity in lifecycle > can use a state hook on Map 1`] = `
 `;
 
 exports[`reactivity in lifecycle > change state while mounting component 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -337,7 +337,7 @@ exports[`reactivity in lifecycle > change state while mounting component 1`] = `
 `;
 
 exports[`reactivity in lifecycle > child re-renders when shared atom changes while parent has an in-flight fiber 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent, safeOutput } = helpers;
@@ -355,7 +355,7 @@ exports[`reactivity in lifecycle > child re-renders when shared atom changes whi
 `;
 
 exports[`reactivity in lifecycle > child re-renders when shared atom changes while parent has an in-flight fiber 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -373,7 +373,7 @@ exports[`reactivity in lifecycle > child re-renders when shared atom changes whi
 `;
 
 exports[`reactivity in lifecycle > state changes in willUnmount do not trigger rerender 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -392,7 +392,7 @@ exports[`reactivity in lifecycle > state changes in willUnmount do not trigger r
 `;
 
 exports[`reactivity in lifecycle > state changes in willUnmount do not trigger rerender 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -410,7 +410,7 @@ exports[`reactivity in lifecycle > state changes in willUnmount do not trigger r
 `;
 
 exports[`reading reactive state in setup should work as expected 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -423,7 +423,7 @@ exports[`reading reactive state in setup should work as expected 1`] = `
 `;
 
 exports[`reading reactive state in setup should work as expected 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;

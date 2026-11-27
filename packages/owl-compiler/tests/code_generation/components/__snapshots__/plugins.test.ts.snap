@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`a global plugin can import the current app 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -12,7 +12,7 @@ exports[`a global plugin can import the current app 1`] = `
 `;
 
 exports[`basic use 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -24,7 +24,7 @@ exports[`basic use 1`] = `
 `;
 
 exports[`components can give config to plugins 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -39,7 +39,7 @@ exports[`components can give config to plugins 1`] = `
 `;
 
 exports[`components can register resources 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -54,7 +54,7 @@ exports[`components can register resources 1`] = `
 `;
 
 exports[`components can start plugins 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -69,7 +69,7 @@ exports[`components can start plugins 1`] = `
 `;
 
 exports[`components mounted by plugin 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -81,7 +81,7 @@ exports[`components mounted by plugin 1`] = `
 `;
 
 exports[`components start plugins at their level 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -96,7 +96,7 @@ exports[`components start plugins at their level 1`] = `
 `;
 
 exports[`components start plugins at their level 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, createComponent } = helpers;
@@ -113,7 +113,7 @@ exports[`components start plugins at their level 2`] = `
 `;
 
 exports[`components start plugins at their level 3`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -129,7 +129,7 @@ exports[`components start plugins at their level 3`] = `
 `;
 
 exports[`components, plugins, useEffect 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -143,7 +143,7 @@ exports[`components, plugins, useEffect 1`] = `
 `;
 
 exports[`plugin config are validated 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -155,7 +155,7 @@ exports[`plugin config are validated 1`] = `
 `;
 
 exports[`shadow plugin 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, createComponent } = helpers;
@@ -171,7 +171,7 @@ exports[`shadow plugin 1`] = `
 `;
 
 exports[`shadow plugin 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;

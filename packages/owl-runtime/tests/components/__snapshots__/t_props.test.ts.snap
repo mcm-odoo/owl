@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`t-props > basic use 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -17,7 +17,7 @@ exports[`t-props > basic use 1`] = `
 `;
 
 exports[`t-props > basic use 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -32,7 +32,7 @@ exports[`t-props > basic use 2`] = `
 `;
 
 exports[`t-props > child receives a copy of the t-props object, not the original 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -45,7 +45,7 @@ exports[`t-props > child receives a copy of the t-props object, not the original
 `;
 
 exports[`t-props > child receives a copy of the t-props object, not the original 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -58,7 +58,7 @@ exports[`t-props > child receives a copy of the t-props object, not the original
 `;
 
 exports[`t-props > t-props and other props 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -74,7 +74,7 @@ exports[`t-props > t-props and other props 1`] = `
 `;
 
 exports[`t-props > t-props and other props 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -90,7 +90,7 @@ exports[`t-props > t-props and other props 2`] = `
 `;
 
 exports[`t-props > t-props only 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -106,7 +106,7 @@ exports[`t-props > t-props only 1`] = `
 `;
 
 exports[`t-props > t-props only 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -121,7 +121,7 @@ exports[`t-props > t-props only 2`] = `
 `;
 
 exports[`t-props > t-props with props 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -137,7 +137,7 @@ exports[`t-props > t-props with props 1`] = `
 `;
 
 exports[`t-props > t-props with props 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   

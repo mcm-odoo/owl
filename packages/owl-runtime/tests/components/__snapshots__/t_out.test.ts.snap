@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`components in t-out > simple list 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, LazyValue, createComponent, withDefault, safeOutput, withKey } = helpers;
@@ -27,7 +27,7 @@ exports[`components in t-out > simple list 1`] = `
 `;
 
 exports[`components in t-out > simple list 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   

@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`hooks > autofocus hook > input in a t-if 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createRef } = helpers;
@@ -21,7 +21,7 @@ exports[`hooks > autofocus hook > input in a t-if 1`] = `
 `;
 
 exports[`hooks > autofocus hook > simple input 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createRef } = helpers;
@@ -36,7 +36,7 @@ exports[`hooks > autofocus hook > simple input 1`] = `
 `;
 
 exports[`hooks > can use onWillStart, onWillUpdateProps 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -49,7 +49,7 @@ exports[`hooks > can use onWillStart, onWillUpdateProps 1`] = `
 `;
 
 exports[`hooks > can use onWillStart, onWillUpdateProps 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -64,7 +64,7 @@ exports[`hooks > can use onWillStart, onWillUpdateProps 2`] = `
 `;
 
 exports[`hooks > mounted callbacks should be called in reverse order from willUnmount callbacks 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -79,7 +79,7 @@ exports[`hooks > mounted callbacks should be called in reverse order from willUn
 `;
 
 exports[`hooks > onWillUpdateProps receives nextProps (dev mode) 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -92,7 +92,7 @@ exports[`hooks > onWillUpdateProps receives nextProps (dev mode) 1`] = `
 `;
 
 exports[`hooks > onWillUpdateProps receives nextProps (dev mode) 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -107,7 +107,7 @@ exports[`hooks > onWillUpdateProps receives nextProps (dev mode) 2`] = `
 `;
 
 exports[`hooks > onWillUpdateProps receives nextProps 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -120,7 +120,7 @@ exports[`hooks > onWillUpdateProps receives nextProps 1`] = `
 `;
 
 exports[`hooks > onWillUpdateProps receives nextProps 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -135,7 +135,7 @@ exports[`hooks > onWillUpdateProps receives nextProps 2`] = `
 `;
 
 exports[`hooks > two different call to willPatch/patched should work 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -150,7 +150,7 @@ exports[`hooks > two different call to willPatch/patched should work 1`] = `
 `;
 
 exports[`hooks > useEffect hook > dependencies prevent effects from rerunning when unchanged 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -163,7 +163,7 @@ exports[`hooks > useEffect hook > dependencies prevent effects from rerunning wh
 `;
 
 exports[`hooks > useEffect hook > effect can depend on stuff in dom 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createRef } = helpers;
@@ -182,7 +182,7 @@ exports[`hooks > useEffect hook > effect can depend on stuff in dom 1`] = `
 `;
 
 exports[`hooks > useEffect hook > effect runs on mount, is reapplied on patch, and is cleaned up on unmount and before reapplying 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -195,7 +195,7 @@ exports[`hooks > useEffect hook > effect runs on mount, is reapplied on patch, a
 `;
 
 exports[`hooks > useEffect hook > effect that depends on a value is rerun if value changes 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -210,7 +210,7 @@ exports[`hooks > useEffect hook > effect that depends on a value is rerun if val
 `;
 
 exports[`hooks > useEffect hook > properly behaves when the effect function throws 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -223,7 +223,7 @@ exports[`hooks > useEffect hook > properly behaves when the effect function thro
 `;
 
 exports[`hooks > useImmediateEffect hook > effect re-runs synchronously on change and is cleaned up on destroy 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -238,7 +238,7 @@ exports[`hooks > useImmediateEffect hook > effect re-runs synchronously on chang
 `;
 
 exports[`hooks > useListener 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -255,7 +255,7 @@ exports[`hooks > useListener 1`] = `
 `;
 
 exports[`hooks > useListener 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -270,7 +270,7 @@ exports[`hooks > useListener 2`] = `
 `;
 
 exports[`hooks > useListener ignores the event that created its component 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -292,7 +292,7 @@ exports[`hooks > useListener ignores the event that created its component 1`] = 
 `;
 
 exports[`hooks > useListener ignores the event that created its component 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -305,7 +305,7 @@ exports[`hooks > useListener ignores the event that created its component 2`] = 
 `;
 
 exports[`hooks > useListener ignores the event that created its component, from another useListener 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -322,7 +322,7 @@ exports[`hooks > useListener ignores the event that created its component, from 
 `;
 
 exports[`hooks > useListener ignores the event that created its component, from another useListener 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -335,7 +335,7 @@ exports[`hooks > useListener ignores the event that created its component, from 
 `;
 
 exports[`hooks > useListener keeps the event target as \`this\` 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -348,7 +348,7 @@ exports[`hooks > useListener keeps the event target as \`this\` 1`] = `
 `;
 
 exports[`hooks > useListener still receives an event dispatched while it is being attached 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -370,7 +370,7 @@ exports[`hooks > useListener still receives an event dispatched while it is bein
 `;
 
 exports[`hooks > useListener still receives an event dispatched while it is being attached 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -383,7 +383,7 @@ exports[`hooks > useListener still receives an event dispatched while it is bein
 `;
 
 exports[`hooks > useListener work with references 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createRef, safeOutput } = helpers;
@@ -399,7 +399,7 @@ exports[`hooks > useListener work with references 1`] = `
 `;
 
 exports[`hooks > useOnChange hook > callback destroying its app does not run again 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -412,7 +412,7 @@ exports[`hooks > useOnChange hook > callback destroying its app does not run aga
 `;
 
 exports[`hooks > useOnChange hook > callback does not run if the dependency values are unchanged 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -425,7 +425,7 @@ exports[`hooks > useOnChange hook > callback does not run if the dependency valu
 `;
 
 exports[`hooks > useOnChange hook > callback receives each dependency as an argument 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -438,7 +438,7 @@ exports[`hooks > useOnChange hook > callback receives each dependency as an argu
 `;
 
 exports[`hooks > useOnChange hook > callback runs on mount, on dependency change and is cleaned up 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -451,7 +451,7 @@ exports[`hooks > useOnChange hook > callback runs on mount, on dependency change
 `;
 
 exports[`hooks > useOnChange hook > callback writing one of its dependencies keeps running on the next changes 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -464,7 +464,7 @@ exports[`hooks > useOnChange hook > callback writing one of its dependencies kee
 `;
 
 exports[`hooks > useOnChange hook > does not run the callback on mount with initialRun=false 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -477,7 +477,7 @@ exports[`hooks > useOnChange hook > does not run the callback on mount with init
 `;
 
 exports[`hooks > useOnChange hook > reactive values read in the callback are not dependencies 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   

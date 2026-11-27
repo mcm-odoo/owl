@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`t-foreach > does not pollute the rendering context 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, safeOutput, withKey } = helpers;
@@ -24,7 +24,7 @@ exports[`t-foreach > does not pollute the rendering context 1`] = `
 `;
 
 exports[`t-foreach > iterate on items (on a element node) 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, safeOutput, withKey } = helpers;
@@ -49,7 +49,7 @@ exports[`t-foreach > iterate on items (on a element node) 1`] = `
 `;
 
 exports[`t-foreach > iterate on items 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, safeOutput, withKey } = helpers;
@@ -81,7 +81,7 @@ exports[`t-foreach > iterate on items 1`] = `
 `;
 
 exports[`t-foreach > iterate, Map param 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, safeOutput, withKey } = helpers;
@@ -110,7 +110,7 @@ exports[`t-foreach > iterate, Map param 1`] = `
 `;
 
 exports[`t-foreach > iterate, dict param 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, safeOutput, withKey } = helpers;
@@ -142,7 +142,7 @@ exports[`t-foreach > iterate, dict param 1`] = `
 `;
 
 exports[`t-foreach > iterate, generator param 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, safeOutput, withKey } = helpers;
@@ -171,7 +171,7 @@ exports[`t-foreach > iterate, generator param 1`] = `
 `;
 
 exports[`t-foreach > iterate, iterable param 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, safeOutput, withKey } = helpers;
@@ -200,7 +200,7 @@ exports[`t-foreach > iterate, iterable param 1`] = `
 `;
 
 exports[`t-foreach > iterate, position 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, safeOutput, withKey } = helpers;
@@ -237,7 +237,7 @@ exports[`t-foreach > iterate, position 1`] = `
 `;
 
 exports[`t-foreach > iterate, string param 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, safeOutput, withKey } = helpers;
@@ -266,7 +266,7 @@ exports[`t-foreach > iterate, string param 1`] = `
 `;
 
 exports[`t-foreach > simple iteration (in a node) 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, safeOutput, withKey } = helpers;
@@ -289,7 +289,7 @@ exports[`t-foreach > simple iteration (in a node) 1`] = `
 `;
 
 exports[`t-foreach > simple iteration 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, safeOutput, withKey } = helpers;
@@ -309,7 +309,7 @@ exports[`t-foreach > simple iteration 1`] = `
 `;
 
 exports[`t-foreach > simple iteration with two nodes inside 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, safeOutput, withKey } = helpers;
@@ -336,7 +336,7 @@ exports[`t-foreach > simple iteration with two nodes inside 1`] = `
 `;
 
 exports[`t-foreach > t-call with body in t-foreach in t-foreach 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, callTemplate, withKey, safeOutput } = helpers;
@@ -365,7 +365,7 @@ exports[`t-foreach > t-call with body in t-foreach in t-foreach 1`] = `
         ctx[\`b_index\`] = i2;
         ctx[\`b_value\`] = v_block4[i2];
         const key2 = ctx['b'];
-        c_block4[i2] = withKey(callTemplate(\`sub\`, this, app, Object.assign(Object.create(ctx), {c: 'x'+'_'+ctx['a']+'_'+ctx['b']}), node, key + \`__1__\${key1}__\${key2}\`), key2);
+        c_block4[i2] = withKey(callTemplate(\`sub\`, this, templates, Object.assign(Object.create(ctx), {c: 'x'+'_'+ctx['a']+'_'+ctx['b']}), node, key + \`__1__\${key1}__\${key2}\`), key2);
       }
       const b4 = list(c_block4);
       const b7 = safeOutput(ctx['c']);
@@ -382,7 +382,7 @@ exports[`t-foreach > t-call with body in t-foreach in t-foreach 1`] = `
 `;
 
 exports[`t-foreach > t-call with body in t-foreach in t-foreach 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -401,7 +401,7 @@ exports[`t-foreach > t-call with body in t-foreach in t-foreach 2`] = `
 `;
 
 exports[`t-foreach > t-call without body in t-foreach in t-foreach 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, callTemplate, withKey, safeOutput } = helpers;
@@ -430,7 +430,7 @@ exports[`t-foreach > t-call without body in t-foreach in t-foreach 1`] = `
         ctx[\`b_index\`] = i2;
         ctx[\`b_value\`] = v_block4[i2];
         const key2 = ctx['b'];
-        c_block4[i2] = withKey(callTemplate(\`sub\`, this, app, ctx, node, key + \`__1__\${key1}__\${key2}\`), key2);
+        c_block4[i2] = withKey(callTemplate(\`sub\`, this, templates, ctx, node, key + \`__1__\${key1}__\${key2}\`), key2);
       }
       const b4 = list(c_block4);
       const b7 = safeOutput(ctx['c']);
@@ -447,7 +447,7 @@ exports[`t-foreach > t-call without body in t-foreach in t-foreach 1`] = `
 `;
 
 exports[`t-foreach > t-call without body in t-foreach in t-foreach 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -468,7 +468,7 @@ exports[`t-foreach > t-call without body in t-foreach in t-foreach 2`] = `
 `;
 
 exports[`t-foreach > t-foreach in t-foreach 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, safeOutput, withKey } = helpers;
@@ -503,7 +503,7 @@ exports[`t-foreach > t-foreach in t-foreach 1`] = `
 `;
 
 exports[`t-foreach > t-foreach with t-if inside (no external node) 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, safeOutput, withKey } = helpers;
@@ -530,7 +530,7 @@ exports[`t-foreach > t-foreach with t-if inside (no external node) 1`] = `
 `;
 
 exports[`t-foreach > t-foreach with t-if inside 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, safeOutput, withKey } = helpers;
@@ -559,7 +559,7 @@ exports[`t-foreach > t-foreach with t-if inside 1`] = `
 `;
 
 exports[`t-foreach > t-key on t-foreach 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, withKey } = helpers;
@@ -583,7 +583,7 @@ exports[`t-foreach > t-key on t-foreach 1`] = `
 `;
 
 exports[`t-foreach > throws error if invalid loop expression 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, withKey } = helpers;
@@ -609,7 +609,7 @@ exports[`t-foreach > throws error if invalid loop expression 1`] = `
 `;
 
 exports[`t-foreach with loops and multiple t-set 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, safeOutput, withKey } = helpers;

@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`t-model directive > .lazy modifier 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { modelExpr, toNumber, safeOutput } = helpers;
@@ -19,7 +19,7 @@ exports[`t-model directive > .lazy modifier 1`] = `
 `;
 
 exports[`t-model directive > .number modifier 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { modelExpr, toNumber, safeOutput } = helpers;
@@ -37,7 +37,7 @@ exports[`t-model directive > .number modifier 1`] = `
 `;
 
 exports[`t-model directive > .trim modifier 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { modelExpr, toNumber, safeOutput } = helpers;
@@ -55,7 +55,7 @@ exports[`t-model directive > .trim modifier 1`] = `
 `;
 
 exports[`t-model directive > basic use, on an input 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { modelExpr, toNumber, safeOutput } = helpers;
@@ -73,7 +73,7 @@ exports[`t-model directive > basic use, on an input 1`] = `
 `;
 
 exports[`t-model directive > basic use, on an input with bracket expression 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { modelExpr, toNumber, safeOutput } = helpers;
@@ -91,7 +91,7 @@ exports[`t-model directive > basic use, on an input with bracket expression 1`] 
 `;
 
 exports[`t-model directive > basic use, on another key in component 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { modelExpr, toNumber, safeOutput } = helpers;
@@ -109,7 +109,7 @@ exports[`t-model directive > basic use, on another key in component 1`] = `
 `;
 
 exports[`t-model directive > can also define t-on directive on same event, part 1 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { modelExpr, toNumber, callHandler } = helpers;
@@ -128,7 +128,7 @@ exports[`t-model directive > can also define t-on directive on same event, part 
 `;
 
 exports[`t-model directive > can also define t-on directive on same event, part 2 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { modelExpr, toNumber, callHandler } = helpers;
@@ -157,7 +157,7 @@ exports[`t-model directive > can also define t-on directive on same event, part 
 `;
 
 exports[`t-model directive > following a scope protecting directive (e.g. t-set) 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { modelExpr, toNumber } = helpers;
@@ -176,7 +176,7 @@ exports[`t-model directive > following a scope protecting directive (e.g. t-set)
 `;
 
 exports[`t-model directive > in a t-foreach 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, modelExpr, toNumber, withKey } = helpers;
@@ -203,7 +203,7 @@ exports[`t-model directive > in a t-foreach 1`] = `
 `;
 
 exports[`t-model directive > in a t-foreach, part 2 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, modelExpr, toNumber, withKey } = helpers;
@@ -231,7 +231,7 @@ exports[`t-model directive > in a t-foreach, part 2 1`] = `
 `;
 
 exports[`t-model directive > in a t-foreach, part 3 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, modelExpr, toNumber, withKey } = helpers;
@@ -259,7 +259,7 @@ exports[`t-model directive > in a t-foreach, part 3 1`] = `
 `;
 
 exports[`t-model directive > on a select 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { modelExpr, toNumber, safeOutput } = helpers;
@@ -277,7 +277,7 @@ exports[`t-model directive > on a select 1`] = `
 `;
 
 exports[`t-model directive > on a select, initial state 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { modelExpr, toNumber } = helpers;
@@ -294,7 +294,7 @@ exports[`t-model directive > on a select, initial state 1`] = `
 `;
 
 exports[`t-model directive > on a sub state key 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { modelExpr, toNumber, safeOutput } = helpers;
@@ -312,7 +312,7 @@ exports[`t-model directive > on a sub state key 1`] = `
 `;
 
 exports[`t-model directive > on an input type=radio 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { modelExpr, toNumber, safeOutput } = helpers;
@@ -333,7 +333,7 @@ exports[`t-model directive > on an input type=radio 1`] = `
 `;
 
 exports[`t-model directive > on an input type=radio, with initial value 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { modelExpr, toNumber } = helpers;
@@ -353,7 +353,7 @@ exports[`t-model directive > on an input type=radio, with initial value 1`] = `
 `;
 
 exports[`t-model directive > on an input, type=checkbox 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { modelExpr, toNumber } = helpers;
@@ -376,7 +376,7 @@ exports[`t-model directive > on an input, type=checkbox 1`] = `
 `;
 
 exports[`t-model directive > on an textarea 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { modelExpr, toNumber, safeOutput } = helpers;
@@ -394,7 +394,7 @@ exports[`t-model directive > on an textarea 1`] = `
 `;
 
 exports[`t-model directive > t-model is applied before t-on-input 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { modelExpr, toNumber, callHandler } = helpers;
@@ -413,7 +413,7 @@ exports[`t-model directive > t-model is applied before t-on-input 1`] = `
 `;
 
 exports[`t-model directive > t-model on an input with an undefined value 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { modelExpr, toNumber } = helpers;
@@ -430,7 +430,7 @@ exports[`t-model directive > t-model on an input with an undefined value 1`] = `
 `;
 
 exports[`t-model directive > t-model on select with static options 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { modelExpr, toNumber, safeOutput } = helpers;
@@ -450,7 +450,7 @@ exports[`t-model directive > t-model on select with static options 1`] = `
 `;
 
 exports[`t-model directive > t-model with dynamic number values on select options in foreach 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { modelExpr, toNumber, prepareList, safeOutput, withKey } = helpers;
@@ -480,7 +480,7 @@ exports[`t-model directive > t-model with dynamic number values on select option
 `;
 
 exports[`t-model directive > t-model with dynamic values on select options -- 2 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { modelExpr, toNumber, safeOutput } = helpers;
@@ -503,7 +503,7 @@ exports[`t-model directive > t-model with dynamic values on select options -- 2 
 `;
 
 exports[`t-model directive > t-model with dynamic values on select options -- 3 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { modelExpr, toNumber, safeOutput } = helpers;
@@ -525,7 +525,7 @@ exports[`t-model directive > t-model with dynamic values on select options -- 3 
 `;
 
 exports[`t-model directive > t-model with dynamic values on select options 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { modelExpr, toNumber, safeOutput } = helpers;
@@ -548,7 +548,7 @@ exports[`t-model directive > t-model with dynamic values on select options 1`] =
 `;
 
 exports[`t-model directive > t-model with dynamic values on select options in foreach 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { modelExpr, toNumber, prepareList, safeOutput, withKey } = helpers;
@@ -578,7 +578,7 @@ exports[`t-model directive > t-model with dynamic values on select options in fo
 `;
 
 exports[`t-model directive > t-model with radio button group in t-foreach 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callHandler, prepareList, modelExpr, toNumber, withKey } = helpers;
@@ -609,7 +609,7 @@ exports[`t-model directive > t-model with radio button group in t-foreach 1`] = 
 `;
 
 exports[`t-model directive > throws if invalid expression 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { modelExpr, toNumber } = helpers;
@@ -626,7 +626,7 @@ exports[`t-model directive > throws if invalid expression 1`] = `
 `;
 
 exports[`t-model directive > two inputs in a div alternating with a t-if 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { modelExpr, toNumber } = helpers;
@@ -655,7 +655,7 @@ exports[`t-model directive > two inputs in a div alternating with a t-if 1`] = `
 `;
 
 exports[`t-model directive > with expression having a changing key 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { modelExpr, toNumber, safeOutput } = helpers;
@@ -673,7 +673,7 @@ exports[`t-model directive > with expression having a changing key 1`] = `
 `;
 
 exports[`t-model.proxy directive > basic use, on an input 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { toNumber, safeOutput } = helpers;
@@ -690,7 +690,7 @@ exports[`t-model.proxy directive > basic use, on an input 1`] = `
 `;
 
 exports[`t-model.proxy directive > deeply nested path 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { toNumber, safeOutput } = helpers;
@@ -707,7 +707,7 @@ exports[`t-model.proxy directive > deeply nested path 1`] = `
 `;
 
 exports[`t-model.proxy directive > on a select 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { toNumber, safeOutput } = helpers;
@@ -724,7 +724,7 @@ exports[`t-model.proxy directive > on a select 1`] = `
 `;
 
 exports[`t-model.proxy directive > on a textarea 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { toNumber, safeOutput } = helpers;
@@ -741,7 +741,7 @@ exports[`t-model.proxy directive > on a textarea 1`] = `
 `;
 
 exports[`t-model.proxy directive > on an input type=radio 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { toNumber, safeOutput } = helpers;
@@ -760,7 +760,7 @@ exports[`t-model.proxy directive > on an input type=radio 1`] = `
 `;
 
 exports[`t-model.proxy directive > on an input with bracket expression 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { toNumber, safeOutput } = helpers;
@@ -777,7 +777,7 @@ exports[`t-model.proxy directive > on an input with bracket expression 1`] = `
 `;
 
 exports[`t-model.proxy directive > on an input, type=checkbox 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { toNumber } = helpers;
@@ -799,7 +799,7 @@ exports[`t-model.proxy directive > on an input, type=checkbox 1`] = `
 `;
 
 exports[`t-model.proxy directive > with .lazy modifier 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { toNumber, safeOutput } = helpers;
@@ -816,7 +816,7 @@ exports[`t-model.proxy directive > with .lazy modifier 1`] = `
 `;
 
 exports[`t-model.proxy directive > with .number modifier 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { toNumber, safeOutput } = helpers;
@@ -833,7 +833,7 @@ exports[`t-model.proxy directive > with .number modifier 1`] = `
 `;
 
 exports[`t-model.proxy directive > with .trim modifier 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { toNumber, safeOutput } = helpers;

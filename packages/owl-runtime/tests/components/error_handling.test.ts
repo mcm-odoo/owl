@@ -233,7 +233,7 @@ describe("basics", () => {
     const expectedErrorMessage = `Failed to compile anonymous template: Unexpected identifier 'ctx'
 
 generated code:
-function(app, bdom, helpers) {
+function(templates, bdom, helpers) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
   let block1 = createBlock(\`<div block-attribute-0="class">test</div>\`);
@@ -258,7 +258,7 @@ function(app, bdom, helpers) {
     const expectedErrorMessage = `Failed to compile anonymous template: Unexpected identifier 'ctx'
 
 generated code:
-function(app, bdom, helpers) {
+function(templates, bdom, helpers) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
   let block1 = createBlock(\`<div block-attribute-0="class">test</div>\`);

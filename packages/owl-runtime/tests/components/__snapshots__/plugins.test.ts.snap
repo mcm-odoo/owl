@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`a global plugin can import the current app 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -12,7 +12,7 @@ exports[`a global plugin can import the current app 1`] = `
 `;
 
 exports[`basic use (setup) 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -24,7 +24,7 @@ exports[`basic use (setup) 1`] = `
 `;
 
 exports[`basic use 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -36,7 +36,7 @@ exports[`basic use 1`] = `
 `;
 
 exports[`can be started with resource 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -48,7 +48,7 @@ exports[`can be started with resource 1`] = `
 `;
 
 exports[`components can give config to plugins 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -63,7 +63,7 @@ exports[`components can give config to plugins 1`] = `
 `;
 
 exports[`components can register resources 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -78,7 +78,7 @@ exports[`components can register resources 1`] = `
 `;
 
 exports[`components can register resources 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -93,7 +93,7 @@ exports[`components can register resources 2`] = `
 `;
 
 exports[`components can start plugins 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -108,7 +108,7 @@ exports[`components can start plugins 1`] = `
 `;
 
 exports[`components mounted by plugin 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -120,7 +120,7 @@ exports[`components mounted by plugin 1`] = `
 `;
 
 exports[`components mounted by plugin 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -131,7 +131,7 @@ exports[`components mounted by plugin 2`] = `
 `;
 
 exports[`components start plugins at their level 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -146,7 +146,7 @@ exports[`components start plugins at their level 1`] = `
 `;
 
 exports[`components start plugins at their level 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, createComponent } = helpers;
@@ -163,7 +163,7 @@ exports[`components start plugins at their level 2`] = `
 `;
 
 exports[`components start plugins at their level 3`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -179,7 +179,7 @@ exports[`components start plugins at their level 3`] = `
 `;
 
 exports[`components, plugins, useEffect 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -193,7 +193,7 @@ exports[`components, plugins, useEffect 1`] = `
 `;
 
 exports[`get plugin which is not started 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -204,7 +204,7 @@ exports[`get plugin which is not started 1`] = `
 `;
 
 exports[`optional plugin config work as expected (no config given) 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -216,7 +216,7 @@ exports[`optional plugin config work as expected (no config given) 1`] = `
 `;
 
 exports[`optional plugin config work as expected (no value given) 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -228,7 +228,7 @@ exports[`optional plugin config work as expected (no value given) 1`] = `
 `;
 
 exports[`optional plugin config work as expected (value given) 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -240,7 +240,7 @@ exports[`optional plugin config work as expected (value given) 1`] = `
 `;
 
 exports[`plugin config are validated 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -252,7 +252,7 @@ exports[`plugin config are validated 1`] = `
 `;
 
 exports[`plugins added to resource starts automatically 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -263,7 +263,7 @@ exports[`plugins added to resource starts automatically 1`] = `
 `;
 
 exports[`providePlugins respects plugin sequence 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -276,7 +276,7 @@ exports[`providePlugins respects plugin sequence 1`] = `
 `;
 
 exports[`providePlugins respects plugin sequence 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -289,7 +289,7 @@ exports[`providePlugins respects plugin sequence 2`] = `
 `;
 
 exports[`scoped plugin methods are guarded by the consumer's lifetime 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   
@@ -300,7 +300,7 @@ exports[`scoped plugin methods are guarded by the consumer's lifetime 1`] = `
 `;
 
 exports[`shadow plugin 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput, createComponent } = helpers;
@@ -316,7 +316,7 @@ exports[`shadow plugin 1`] = `
 `;
 
 exports[`shadow plugin 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -329,7 +329,7 @@ exports[`shadow plugin 2`] = `
 `;
 
 exports[`shadow plugin 3`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { safeOutput } = helpers;
@@ -341,7 +341,7 @@ exports[`shadow plugin 3`] = `
 `;
 
 exports[`usePlugin returns the scoped view when the plugin defines one 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   

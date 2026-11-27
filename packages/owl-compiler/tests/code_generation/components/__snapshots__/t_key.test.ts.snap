@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`t-key > t-foreach with t-key switch component position 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, createComponent, withKey } = helpers;
@@ -26,7 +26,7 @@ exports[`t-key > t-foreach with t-key switch component position 1`] = `
 `;
 
 exports[`t-key > t-key change on a component rendering an empty list 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -46,7 +46,7 @@ exports[`t-key > t-key change on a component rendering an empty list 1`] = `
 `;
 
 exports[`t-key > t-key change on a component rendering an empty list 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { prepareList, safeOutput, withKey } = helpers;
@@ -67,7 +67,7 @@ exports[`t-key > t-key change on a component rendering an empty list 2`] = `
 `;
 
 exports[`t-key > t-key on Component 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -81,7 +81,7 @@ exports[`t-key > t-key on Component 1`] = `
 `;
 
 exports[`t-key > t-key on Component as a function 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -98,7 +98,7 @@ exports[`t-key > t-key on Component as a function 1`] = `
 `;
 
 exports[`t-key > t-key on multiple Components 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -118,7 +118,7 @@ exports[`t-key > t-key on multiple Components 1`] = `
 `;
 
 exports[`t-key > t-key on multiple Components with t-call 1 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callTemplate } = helpers;
@@ -126,15 +126,15 @@ exports[`t-key > t-key on multiple Components with t-call 1 1`] = `
   let block1 = createBlock(\`<span><block-child-0/><block-child-1/></span>\`);
   
   return function template(ctx, node, key = "") {
-    const b2 = callTemplate(\`calledTemplate\`, this, app, Object.assign(Object.create(ctx), {key: ctx['this'].key1}), node, key + \`__1\`);
-    const b3 = callTemplate(\`calledTemplate\`, this, app, Object.assign(Object.create(ctx), {key: ctx['this'].key2}), node, key + \`__2\`);
+    const b2 = callTemplate(\`calledTemplate\`, this, templates, Object.assign(Object.create(ctx), {key: ctx['this'].key1}), node, key + \`__1\`);
+    const b3 = callTemplate(\`calledTemplate\`, this, templates, Object.assign(Object.create(ctx), {key: ctx['this'].key2}), node, key + \`__2\`);
     return block1([], [b2, b3]);
   }
 }"
 `;
 
 exports[`t-key > t-key on multiple Components with t-call 1 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
@@ -148,7 +148,7 @@ exports[`t-key > t-key on multiple Components with t-call 1 2`] = `
 `;
 
 exports[`t-key > t-key on multiple Components with t-call 2 1`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { callTemplate } = helpers;
@@ -156,14 +156,14 @@ exports[`t-key > t-key on multiple Components with t-call 2 1`] = `
   let block1 = createBlock(\`<span><block-child-0/></span>\`);
   
   return function template(ctx, node, key = "") {
-    const b2 = callTemplate(\`calledTemplate\`, this, app, Object.assign(Object.create(ctx), {'key1': ctx['this'].key1, 'key2': ctx['this'].key2}), node, key + \`__1\`);
+    const b2 = callTemplate(\`calledTemplate\`, this, templates, Object.assign(Object.create(ctx), {'key1': ctx['this'].key1, 'key2': ctx['this'].key2}), node, key + \`__1\`);
     return block1([], [b2]);
   }
 }"
 `;
 
 exports[`t-key > t-key on multiple Components with t-call 2 2`] = `
-"function anonymous(app, bdom, helpers
+"function anonymous(templates, bdom, helpers
 ) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
   let { createComponent } = helpers;
