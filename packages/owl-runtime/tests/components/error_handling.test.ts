@@ -230,15 +230,16 @@ describe("basics", () => {
     } catch (e) {
       error = e as Error;
     }
-    const expectedErrorMessage = `Failed to compile anonymous template: Unexpected identifier 'ctx'
+    const expectedErrorMessage = `Failed to compile template "__template__999": Unexpected identifier 'ctx'
 
 generated code:
 function(templates, bdom, helpers) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div block-attribute-0="class">test</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     let attr1 = ctx['a']ctx['b'];
     return block1([attr1]);
   }
@@ -255,15 +256,16 @@ function(templates, bdom, helpers) {
       static components = { Child };
       static template = xml`<Child/>`;
     }
-    const expectedErrorMessage = `Failed to compile anonymous template: Unexpected identifier 'ctx'
+    const expectedErrorMessage = `Failed to compile template "__template__999": Unexpected identifier 'ctx'
 
 generated code:
 function(templates, bdom, helpers) {
   let { text, createBlock, list, multi, html, toggler } = bdom;
+  // Template name: "__template__999"
   
   let block1 = createBlock(\`<div block-attribute-0="class">test</div>\`);
   
-  return function template(ctx, node, key = "") {
+  return function __template__999(ctx, node, key = "") {
     let attr1 = ctx['a']ctx['b'];
     return block1([attr1]);
   }
