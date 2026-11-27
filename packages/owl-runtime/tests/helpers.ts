@@ -83,11 +83,6 @@ export function trim(str: string): string {
 let shouldSnapshot = false;
 let snapshottedTemplates: Set<string> = new Set();
 
-export function snapshotTemplate(template: string) {
-  const fn = compile(template);
-  expect(fn.toString()).toMatchSnapshot();
-}
-
 export function renderToBdom(template: string, context: any = {}, node?: any): BDom {
   if (!node) {
     if (!context.__owl__) {

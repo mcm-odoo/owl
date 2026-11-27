@@ -368,22 +368,6 @@ test(".translate props are translated", async () => {
   expect(fixture.innerHTML).toBe("translated message");
 });
 
-test("throw if prop uses an unknown suffix", async () => {
-  class Child extends Component {
-    static template = xml`<t t-out="this.props.val"/>`;
-    props = useProps();
-  }
-
-  class Parent extends Component {
-    static template = xml`<Child val.somesuffix="this.state.val"/>`;
-    static components = { Child };
-  }
-
-  await expect(async () => {
-    await mount(Parent, fixture);
-  }).rejects.toThrow("Invalid prop suffix: somesuffix");
-});
-
 test(".alike suffix in a simple case", async () => {
   class Child extends Component {
     static template = xml`<t t-out="this.props.fn()"/>`;

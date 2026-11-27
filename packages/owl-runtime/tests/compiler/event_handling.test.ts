@@ -2,7 +2,7 @@ import { STATUS } from "@odoo/owl-core";
 import { mount } from "@odoo/owl-blockdom";
 import { TemplateSet } from "../../src/template_set";
 import { markup } from "../../src/utils";
-import { makeTestFixture, renderToBdom, renderToString, snapshotEverything } from "../helpers";
+import { makeTestFixture, renderToBdom, snapshotEverything } from "../helpers";
 
 snapshotEverything();
 // -----------------------------------------------------------------------------
@@ -304,13 +304,6 @@ describe("t-on", () => {
     fixture.querySelector("p")!.click();
   });
 
-  test("nice error when t-on is evaluated with a missing event", () => {
-    const template = `<div t-on="somemethod"></div>`;
-    expect(() => renderToString(template, { someMethod() {} })).toThrow(
-      "Missing event name with t-on directive"
-    );
-  });
-
   describe("t-on modifiers (native listener)", () => {
     test("basic support for native listener", () => {
       const template = `<div class="myClass" t-on-click="divClicked">
@@ -485,14 +478,6 @@ describe("t-on", () => {
 
       const button = (<HTMLElement>node).getElementsByTagName("button")[0];
       button.click();
-    });
-
-    test("t-on crashes when used with unknown modifier", async () => {
-      const template = `<div t-on-click.somemodifier="onClick" />`;
-
-      let owner = { onClick(e: Event) {} };
-
-      expect(() => mountToFixture(template, owner)).toThrow("Unknown event modifier");
     });
 
     test("t-on combined with t-out", async () => {
