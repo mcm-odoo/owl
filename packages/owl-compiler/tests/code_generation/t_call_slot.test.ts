@@ -1,4 +1,4 @@
-import { compile, parseXML } from "@odoo/owl-compiler";
+import { compile, parseXML } from "../../src";
 
 describe("t-call-slot", () => {
   test("compile t-props correctly multiple time", () => {

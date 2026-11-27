@@ -1,0 +1,377 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`components and computed > Child is not rerender when reactive is computed 1`] = `
+"function anonymous(app, bdom, helpers
+) {
+  let { text, createBlock, list, multi, html, toggler } = bdom;
+  let { safeOutput, createComponent } = helpers;
+  const comp1 = createComponent(\`Child\`, true, false, false, []);
+  
+  return function template(ctx, node, key = "") {
+    const b2 = safeOutput(ctx['this'].c());
+    const b3 = comp1({}, key + \`__1\`, node, this, null);
+    return multi([b2, b3]);
+  }
+}"
+`;
+
+exports[`components and computed > simple component and computed value 1`] = `
+"function anonymous(app, bdom, helpers
+) {
+  let { text, createBlock, list, multi, html, toggler } = bdom;
+  let { safeOutput } = helpers;
+  
+  return function template(ctx, node, key = "") {
+    const b2 = safeOutput(ctx['this'].value++);
+    const b3 = safeOutput(ctx['this'].c());
+    return multi([b2, b3]);
+  }
+}"
+`;
+
+exports[`computed with equals in components > a recompute with a shallow-equal result does not re-render 1`] = `
+"function anonymous(app, bdom, helpers
+) {
+  let { text, createBlock, list, multi, html, toggler } = bdom;
+  let { safeOutput, prepareList, withKey } = helpers;
+  
+  let block1 = createBlock(\`<ul><block-child-0/><block-child-1/></ul>\`);
+  let block4 = createBlock(\`<li><block-child-0/></li>\`);
+  
+  return function template(ctx, node, key = "") {
+    const b2 = safeOutput(ctx['this'].track());
+    const ctx1 = ctx;
+    const [k_block3, v_block3, l_block3, c_block3] = prepareList(ctx['this'].visible());;
+    for (let i1 = 0; i1 < l_block3; i1++) {
+      let ctx = Object.create(ctx1);
+      ctx[\`todo\`] = k_block3[i1];
+      const key1 = ctx['todo'].id;
+      const b5 = safeOutput(ctx['todo'].text);
+      c_block3[i1] = withKey(block4([], [b5]), key1);
+    }
+    const b3 = list(c_block3);
+    return block1([], [b2, b3]);
+  }
+}"
+`;
+
+exports[`reactive cleanup on component destruction > benchmark-like scenario: signal.Array rows with computed isSelected 1`] = `
+"function anonymous(app, bdom, helpers
+) {
+  let { text, createBlock, list, multi, html, toggler } = bdom;
+  let { prepareList, createComponent, withKey } = helpers;
+  const comp1 = createComponent(\`TableRow\`, true, false, false, ["row","selected"]);
+  
+  let block1 = createBlock(\`<table><tbody><block-child-0/></tbody></table>\`);
+  
+  return function template(ctx, node, key = "") {
+    const ctx1 = ctx;
+    const [k_block2, v_block2, l_block2, c_block2] = prepareList(ctx['this'].rows());;
+    for (let i1 = 0; i1 < l_block2; i1++) {
+      let ctx = Object.create(ctx1);
+      ctx[\`row\`] = k_block2[i1];
+      const key1 = ctx['row'].id;
+      c_block2[i1] = withKey(comp1({row: ctx['row'],selected: ctx['this'].selectedId}, key + \`__1__\${key1}\`, node, this, null), key1);
+    }
+    const b2 = list(c_block2);
+    return block1([], [b2]);
+  }
+}"
+`;
+
+exports[`reactive cleanup on component destruction > benchmark-like scenario: signal.Array rows with computed isSelected 2`] = `
+"function anonymous(app, bdom, helpers
+) {
+  let { text, createBlock, list, multi, html, toggler } = bdom;
+  let { safeOutput } = helpers;
+  
+  let block1 = createBlock(\`<tr block-attribute-0="class"><td><block-child-0/></td><td><a><block-child-1/></a></td></tr>\`);
+  
+  return function template(ctx, node, key = "") {
+    let attr1 = ctx['this'].isSelected()?'danger':'';
+    const b2 = safeOutput(ctx['this'].p.row.id);
+    const b3 = safeOutput(ctx['this'].p.row.label());
+    return block1([attr1], [b2, b3]);
+  }
+}"
+`;
+
+exports[`reactive cleanup on component destruction > destroying a component with computed cleans up signal observers 1`] = `
+"function anonymous(app, bdom, helpers
+) {
+  let { text, createBlock, list, multi, html, toggler } = bdom;
+  let { createComponent } = helpers;
+  const comp1 = createComponent(\`Child\`, true, false, false, ["selected"]);
+  
+  let block1 = createBlock(\`<div><block-child-0/></div>\`);
+  
+  return function template(ctx, node, key = "") {
+    let b2;
+    if (ctx['this'].show()) {
+      b2 = comp1({selected: ctx['this'].selectedId}, key + \`__1\`, node, this, null);
+    }
+    return block1([], [b2]);
+  }
+}"
+`;
+
+exports[`reactive cleanup on component destruction > destroying a component with computed cleans up signal observers 2`] = `
+"function anonymous(app, bdom, helpers
+) {
+  let { text, createBlock, list, multi, html, toggler } = bdom;
+  let { safeOutput } = helpers;
+  
+  let block1 = createBlock(\`<span><block-child-0/></span>\`);
+  
+  return function template(ctx, node, key = "") {
+    const b2 = safeOutput(ctx['this'].isSelected());
+    return block1([], [b2]);
+  }
+}"
+`;
+
+exports[`reactive cleanup on component destruction > destroying multiple children with computeds cleans up all signal observers 1`] = `
+"function anonymous(app, bdom, helpers
+) {
+  let { text, createBlock, list, multi, html, toggler } = bdom;
+  let { prepareList, createComponent, withKey } = helpers;
+  const comp1 = createComponent(\`Row\`, true, false, false, ["id","selected"]);
+  
+  let block1 = createBlock(\`<div><block-child-0/></div>\`);
+  
+  return function template(ctx, node, key = "") {
+    const ctx1 = ctx;
+    const [k_block2, v_block2, l_block2, c_block2] = prepareList(ctx['this'].rows());;
+    for (let i1 = 0; i1 < l_block2; i1++) {
+      let ctx = Object.create(ctx1);
+      ctx[\`row\`] = k_block2[i1];
+      const key1 = ctx['row'];
+      c_block2[i1] = withKey(comp1({id: ctx['row'],selected: ctx['this'].selectedId}, key + \`__1__\${key1}\`, node, this, null), key1);
+    }
+    const b2 = list(c_block2);
+    return block1([], [b2]);
+  }
+}"
+`;
+
+exports[`reactivity in lifecycle > Child component doesn't render when state they depend on changes but their parent is about to unmount them 1`] = `
+"function anonymous(app, bdom, helpers
+) {
+  let { text, createBlock, list, multi, html, toggler } = bdom;
+  let { createComponent } = helpers;
+  const comp1 = createComponent(\`Child\`, true, false, false, ["state"]);
+  
+  return function template(ctx, node, key = "") {
+    let b2;
+    if (ctx['this'].state.renderChild) {
+      b2 = comp1({state: ctx['this'].state}, key + \`__1\`, node, this, null);
+    }
+    return multi([b2]);
+  }
+}"
+`;
+
+exports[`reactivity in lifecycle > Child component doesn't render when state they depend on changes but their parent is about to unmount them 2`] = `
+"function anonymous(app, bdom, helpers
+) {
+  let { text, createBlock, list, multi, html, toggler } = bdom;
+  let { safeOutput } = helpers;
+  
+  return function template(ctx, node, key = "") {
+    return safeOutput(ctx['this'].props.state.content.a);
+  }
+}"
+`;
+
+exports[`reactivity in lifecycle > Component is automatically subscribed to proxy object received as prop 1`] = `
+"function anonymous(app, bdom, helpers
+) {
+  let { text, createBlock, list, multi, html, toggler } = bdom;
+  let { createComponent } = helpers;
+  const comp1 = createComponent(\`Child\`, true, false, false, ["obj","proxyObj"]);
+  
+  return function template(ctx, node, key = "") {
+    ctx = Object.create(ctx);
+    ctx["noop"] = ctx['this'].notify();
+    return comp1({obj: ctx['this'].obj,proxyObj: ctx['this'].proxyObj}, key + \`__1\`, node, this, null);
+  }
+}"
+`;
+
+exports[`reactivity in lifecycle > Component is automatically subscribed to proxy object received as prop 2`] = `
+"function anonymous(app, bdom, helpers
+) {
+  let { text, createBlock, list, multi, html, toggler } = bdom;
+  let { safeOutput } = helpers;
+  
+  return function template(ctx, node, key = "") {
+    ctx = Object.create(ctx);
+    ctx["noop"] = ctx['this'].notify();
+    const b2 = safeOutput(ctx['this'].props.obj.a);
+    const b3 = safeOutput(ctx['this'].props.proxyObj.b);
+    return multi([b2, b3]);
+  }
+}"
+`;
+
+exports[`reactivity in lifecycle > an external proxy object should be tracked 1`] = `
+"function anonymous(app, bdom, helpers
+) {
+  let { text, createBlock, list, multi, html, toggler } = bdom;
+  let { safeOutput, createComponent } = helpers;
+  const comp1 = createComponent(\`TestSubComponent\`, true, false, false, []);
+  
+  let block1 = createBlock(\`<div><block-child-0/><block-child-1/></div>\`);
+  
+  return function template(ctx, node, key = "") {
+    const b2 = safeOutput(ctx['this'].obj1.value);
+    const b3 = comp1({}, key + \`__1\`, node, this, null);
+    return block1([], [b2, b3]);
+  }
+}"
+`;
+
+exports[`reactivity in lifecycle > an external proxy object should be tracked 2`] = `
+"function anonymous(app, bdom, helpers
+) {
+  let { text, createBlock, list, multi, html, toggler } = bdom;
+  let { safeOutput } = helpers;
+  
+  let block1 = createBlock(\`<div><block-child-0/></div>\`);
+  
+  return function template(ctx, node, key = "") {
+    const b2 = safeOutput(ctx['this'].obj2.value);
+    return block1([], [b2]);
+  }
+}"
+`;
+
+exports[`reactivity in lifecycle > can use a state hook 1`] = `
+"function anonymous(app, bdom, helpers
+) {
+  let { text, createBlock, list, multi, html, toggler } = bdom;
+  let { safeOutput } = helpers;
+  
+  let block1 = createBlock(\`<div><block-child-0/></div>\`);
+  
+  return function template(ctx, node, key = "") {
+    const b2 = safeOutput(ctx['this'].counter.value);
+    return block1([], [b2]);
+  }
+}"
+`;
+
+exports[`reactivity in lifecycle > can use a state hook 2 1`] = `
+"function anonymous(app, bdom, helpers
+) {
+  let { text, createBlock, list, multi, html, toggler } = bdom;
+  let { safeOutput } = helpers;
+  
+  let block1 = createBlock(\`<div><block-child-0/></div>\`);
+  
+  return function template(ctx, node, key = "") {
+    ctx = Object.create(ctx);
+    ctx["noop"] = ctx['this'].notify();
+    const b2 = safeOutput(ctx['this'].state.a);
+    return block1([], [b2]);
+  }
+}"
+`;
+
+exports[`reactivity in lifecycle > can use a state hook on Map 1`] = `
+"function anonymous(app, bdom, helpers
+) {
+  let { text, createBlock, list, multi, html, toggler } = bdom;
+  let { safeOutput } = helpers;
+  
+  let block1 = createBlock(\`<div><block-child-0/></div>\`);
+  
+  return function template(ctx, node, key = "") {
+    const b2 = safeOutput(ctx['this'].counter.get('value'));
+    return block1([], [b2]);
+  }
+}"
+`;
+
+exports[`reactivity in lifecycle > change state while mounting component 1`] = `
+"function anonymous(app, bdom, helpers
+) {
+  let { text, createBlock, list, multi, html, toggler } = bdom;
+  let { safeOutput } = helpers;
+  
+  let block1 = createBlock(\`<div><block-child-0/></div>\`);
+  
+  return function template(ctx, node, key = "") {
+    ctx = Object.create(ctx);
+    ctx["noop"] = ctx['this'].notify();
+    const b2 = safeOutput(ctx['this'].state.val);
+    return block1([], [b2]);
+  }
+}"
+`;
+
+exports[`reactivity in lifecycle > child re-renders when shared atom changes while parent has an in-flight fiber 1`] = `
+"function anonymous(app, bdom, helpers
+) {
+  let { text, createBlock, list, multi, html, toggler } = bdom;
+  let { createComponent, safeOutput } = helpers;
+  const comp1 = createComponent(\`Child\`, true, false, false, ["bv"]);
+  
+  return function template(ctx, node, key = "") {
+    const b2 = comp1({bv: ctx['this'].b()}, key + \`__1\`, node, this, null);
+    const b3 = text(\`parent:a=\`);
+    const b4 = safeOutput(ctx['this'].a());
+    const b5 = text(\`:b=\`);
+    const b6 = safeOutput(ctx['this'].b());
+    return multi([b2, b3, b4, b5, b6]);
+  }
+}"
+`;
+
+exports[`reactivity in lifecycle > child re-renders when shared atom changes while parent has an in-flight fiber 2`] = `
+"function anonymous(app, bdom, helpers
+) {
+  let { text, createBlock, list, multi, html, toggler } = bdom;
+  let { safeOutput } = helpers;
+  
+  return function template(ctx, node, key = "") {
+    ctx = Object.create(ctx);
+    ctx["_"] = ctx['this'].notify();
+    const b2 = text(\`child:bv=\`);
+    const b3 = safeOutput(ctx['this'].props.bv);
+    const b4 = text(\`:a=\`);
+    const b5 = safeOutput(ctx['this'].a());
+    return multi([b2, b3, b4, b5]);
+  }
+}"
+`;
+
+exports[`reactivity in lifecycle > state changes in willUnmount do not trigger rerender 1`] = `
+"function anonymous(app, bdom, helpers
+) {
+  let { text, createBlock, list, multi, html, toggler } = bdom;
+  let { safeOutput } = helpers;
+  
+  let block1 = createBlock(\`<span><block-child-0/><block-child-1/></span>\`);
+  
+  return function template(ctx, node, key = "") {
+    ctx = Object.create(ctx);
+    ctx["noop"] = ctx['this'].notify();
+    const b2 = safeOutput(ctx['this'].props.val);
+    const b3 = safeOutput(ctx['this'].state.n);
+    return block1([], [b2, b3]);
+  }
+}"
+`;
+
+exports[`reading reactive state in setup should work as expected 1`] = `
+"function anonymous(app, bdom, helpers
+) {
+  let { text, createBlock, list, multi, html, toggler } = bdom;
+  let { safeOutput } = helpers;
+  
+  return function template(ctx, node, key = "") {
+    return safeOutput(ctx['this'].c());
+  }
+}"
+`;
