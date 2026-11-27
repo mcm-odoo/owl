@@ -99,12 +99,9 @@ export function renderToBdom(template: string, context: any = {}, node?: any): B
     snapshottedTemplates.add(template);
     expect(fn.toString()).toMatchSnapshot();
   }
-  const app = {
-    createComponent() {},
-    createDynamicComponent() {},
-  };
   const helpers = { ...templateHelpers, ...componentHelpers, __globals__: {} };
-  return fn(app as any, blockDom, helpers).call(context, context, node);
+  // no template set: templates rendered this way cannot use t-call
+  return fn(null, blockDom, helpers).call(context, context, node);
 }
 
 export function renderToString(template: string, context: any = {}, node?: any): string {
